@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03622ded-6e74-4021-8ed8-e50f0f68325f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.ant-targets-build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/schema-to-java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/spdx/schema-to-java.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cMrZRFIfZwXhnRGLj7Ux6aHZon" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="Maven.schema-to-java []">
+    <configuration name="demo" type="AntRunConfiguration">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BindGen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jibx.binding.generator.BindGen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jibx.binding.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="maven-jibx-plugin [] (1)" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="maven-jibx-plugin []" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="schema-to-java []" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Ant Target.demo" />
+      <item itemvalue="Application.BindGen" />
+      <item itemvalue="Maven.maven-jibx-plugin [] (1)" />
+      <item itemvalue="Maven.maven-jibx-plugin []" />
+      <item itemvalue="Maven.schema-to-java []" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BindGen" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03622ded-6e74-4021-8ed8-e50f0f68325f" name="Default Changelist" comment="" />
+      <created>1590349358456</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590349358456</updated>
+    </task>
+    <task id="LOCAL-00001" summary="setup check">
+      <created>1590351780406</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590351780406</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="setup check" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup check" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="625" y="167" width="726" height="771" key="#BindGen" timestamp="1590414983209">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="625" y="167" width="726" height="771" key="#BindGen/67.27.1853.1053@67.27.1853.1053" timestamp="1590414983209" />
+    <state x="448" y="463" width="187" height="178" key="#Custom_Plugin_Repositories" timestamp="1590486673454">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="448" y="463" width="187" height="178" key="#Custom_Plugin_Repositories/67.27.1853.1053@67.27.1853.1053" timestamp="1590486673454" />
+    <state x="147" y="196" width="800" height="712" key="#Plugins" timestamp="1590486681199">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="147" y="196" width="800" height="712" key="#Plugins/67.27.1853.1053@67.27.1853.1053" timestamp="1590486681199" />
+    <state x="476" y="130" width="1024" height="845" key="#Project_Structure" timestamp="1590608713329">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="476" y="130" width="1024" height="845" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1590608713329" />
+    <state x="67" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590606921818">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="67" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1590606921818" />
+    <state x="679" y="354" width="619" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590351563202">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="679" y="354" width="619" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1590351563202" />
+    <state x="307" y="344" width="525" height="416" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590418413928">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="307" y="344" width="525" height="416" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1590418413928" />
+    <state x="229" y="134" width="579" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1590349506300">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="229" y="134" width="579" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1590349506300" />
+    <state x="101" y="100" width="912" height="904" key="CommitChangelistDialog2" timestamp="1590351780326">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="101" y="100" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1590351780326" />
+    <state x="738" y="428" width="489" height="248" key="DetectedRootsChooserDialog" timestamp="1590404189866">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="738" y="428" width="489" height="248" key="DetectedRootsChooserDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1590404189866" />
+    <state x="615" y="296" width="907" height="513" key="FileChooserDialogImpl" timestamp="1590605020057">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="615" y="296" width="907" height="513" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1590605020057" />
+    <state width="1807" height="313" key="GridCell.Tab.0.bottom" timestamp="1590776570286">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="313" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590776570286" />
+    <state width="1807" height="313" key="GridCell.Tab.0.center" timestamp="1590776570285">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="313" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590776570285" />
+    <state width="1807" height="313" key="GridCell.Tab.0.left" timestamp="1590776570285">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="313" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590776570285" />
+    <state width="1807" height="313" key="GridCell.Tab.0.right" timestamp="1590776570286">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="313" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590776570286" />
+    <state width="1807" height="342" key="GridCell.Tab.1.bottom" timestamp="1590594856754">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="342" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1590594856754" />
+    <state width="1807" height="342" key="GridCell.Tab.1.center" timestamp="1590594856753">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="342" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1590594856753" />
+    <state width="1807" height="342" key="GridCell.Tab.1.left" timestamp="1590594856753">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="342" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1590594856753" />
+    <state width="1807" height="342" key="GridCell.Tab.1.right" timestamp="1590594856754">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="342" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1590594856754" />
+    <state x="198" y="85" width="1024" height="845" key="SettingsEditor" timestamp="1590606849181">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="198" y="85" width="1024" height="845" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1590606849181" />
+    <state x="267" y="244" width="570" height="616" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590414277604">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="267" y="244" width="570" height="616" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1590414277604" />
+    <state x="67" y="211" width="1372" height="592" key="new project wizard" timestamp="1590402009360">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="67" y="211" width="1372" height="592" key="new project wizard/67.27.1853.1053@67.27.1853.1053" timestamp="1590402009360" />
+    <state x="657" y="253" key="run.anything.popup" timestamp="1590606840567">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1590606840567" />
+  </component>
+</project>
