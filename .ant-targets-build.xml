@@ -1,7 +1,0 @@
-build
-build-project
-build-refprojects
-build-subprojects
-clean
-cleanall
-init
