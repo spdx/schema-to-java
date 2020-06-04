@@ -13,12 +13,13 @@
  			<plugin>
         	<groupId>org.jibx</groupId>
         	<artifactId>jibx-maven-plugin</artifactId>
-       		<version>1.2.6</version>
+       		<version>1.2.5</version>
        			 <configuration>
      			 <includes>
        			 <includes>*-binding.xml</includes>
      			 </includes>
     			  </configuration>
+    			  
       			  <executions>
         		  	  <execution>
              	  	 <id>generate-java-code-from-schema</id>
@@ -31,10 +32,18 @@
                         	<includeSchema>example1.xsd</includeSchema>
                     	</includeSchemas>
                     	<options>
-                        	<package>my.package</package>
+                        	<package>com.poc.jibx</package>
                     	</options>
                 </configuration>
             		</execution>
+            		     <execution>
+                           <id>bind-xml</id>
+                            <goals>
+                            <goal>bind</goal>
+                            </goals>
+                           </execution>
+            		
+            		
            			 <execution>
                 		<id>compile-binding</id>
                 			<goals>
