@@ -50,7 +50,7 @@
                     			<goal>bind</goal>
              			   </goals>
                 		<configuration>
-                   			 <schemaBindingDirectory>target/generated-sources</schemaBindingDirectory>
+                   			 <schemaBindingDirectory>src/main/source-code</schemaBindingDirectory>
                    			<load>true</load>
                    			<validate>true</validate>
                     <!--<verbose>true</verbose>-->

@@ -1,0 +1,1584 @@
+<binding xmlns:ns1="urn:spdx-xml:1.0" xmlns:structures="http://release.niem.gov/niem/structures/4.0/" trim-whitespace="true">
+  <namespace uri="urn:spdx-xml:1.0" default="elements"/>
+  <mapping abstract="true" type-name="ns1:APINameType" class="spdxxml.APINameType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.APINameType" name="APIName">
+    <structure map-as="ns1:APINameType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:AlgorithmCodeType" class="spdxxml.AlgorithmCodeType">
+    <value style="text" get-method="getAlgorithmCodeSimpleType" set-method="setAlgorithmCodeSimpleType" format="ns1:AlgorithmCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.AlgorithmCodeType" name="AlgorithmCode">
+    <structure map-as="ns1:AlgorithmCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:AnnotationDateType" class="spdxxml.AnnotationDateType">
+    <value style="text" get-method="getDateTime" set-method="setDateTime"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.AnnotationDateType" name="AnnotationDate">
+    <structure map-as="ns1:AnnotationDateType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:AnnotationType" class="spdxxml.AnnotationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.DateType" get-method="getDate" set-method="setDate" usage="optional"/>
+    <structure type="spdxxml.AnnotationTypeCodeType" get-method="getAnnotationTypeCode" set-method="setAnnotationTypeCode" usage="optional"/>
+    <structure type="spdxxml.CommentTextType" get-method="getCommentText" set-method="setCommentText" usage="optional"/>
+    <structure type="spdxxml.AnnotatorTextType" get-method="getAnnotatorText" set-method="setAnnotatorText" usage="optional"/>
+    <collection item-type="spdxxml.AnnotationAugmentationPoint" get-method="getAnnotationAugmentationPointList" set-method="setAnnotationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.AnnotationType" name="Annotation">
+    <structure map-as="ns1:AnnotationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:AnnotationTypeCodeType" class="spdxxml.AnnotationTypeCodeType">
+    <value style="text" get-method="getAnnotationTypeCodeSimpleType" set-method="setAnnotationTypeCodeSimpleType" format="ns1:AnnotationTypeCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.AnnotationTypeCodeType" name="AnnotationTypeCode">
+    <structure map-as="ns1:AnnotationTypeCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:AnnotatorTextType" class="spdxxml.AnnotatorTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.AnnotatorTextType" name="AnnotatorText">
+    <structure map-as="ns1:AnnotatorTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:AnyLicenseInfoType" class="spdxxml.AnyLicenseInfoType">
+    <structure map-as="structures:ObjectType"/>
+    <collection item-type="spdxxml.AnyLicenseInfoAugmentationPoint" get-method="getAnyLicenseInfoAugmentationPointList" set-method="setAnyLicenseInfoAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:AuthoritativeDigitalSignatureIndicatorType" class="spdxxml.AuthoritativeDigitalSignatureIndicatorType">
+    <value style="text" get-method="isBoolean" set-method="setBoolean"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.AuthoritativeDigitalSignatureIndicatorType" name="AuthoritativeDigitalSignatureIndicator">
+    <structure map-as="ns1:AuthoritativeDigitalSignatureIndicatorType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:AuthoritativeSourceInformationType" class="spdxxml.AuthoritativeSourceInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.SourceHashText" get-method="getSourceHashText" set-method="setSourceHashText" usage="optional"/>
+    <structure type="spdxxml.SourceURIText" get-method="getSourceURIText" set-method="setSourceURIText" usage="optional"/>
+    <structure type="spdxxml.AuthoritativeDigitalSignatureIndicatorType" get-method="getAuthoritativeDigitalSignatureIndicator" set-method="setAuthoritativeDigitalSignatureIndicator" usage="optional"/>
+    <collection item-type="spdxxml.AuthoritativeSourceInformationAugmentationPoint" get-method="getAuthoritativeSourceInformationAugmentationPointList" set-method="setAuthoritativeSourceInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.AuthoritativeSourceInformationType" name="AuthoritativeSourceInformation">
+    <structure map-as="ns1:AuthoritativeSourceInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:BuildMetaType" class="spdxxml.BuildMetaType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.BuildMetaType" name="BuildMetaText">
+    <structure map-as="ns1:BuildMetaType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ByteOffsetPointerType" class="spdxxml.ByteOffsetPointerType">
+    <structure map-as="ns1:OffsetPointerType"/>
+    <collection item-type="spdxxml.ByteOffsetPointerAugmentationPoint" get-method="getByteOffsetPointerAugmentationPointList" set-method="setByteOffsetPointerAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ByteOffsetPointerType" name="ByteOffsetPointer">
+    <structure map-as="ns1:ByteOffsetPointerType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ChecksumType" class="spdxxml.ChecksumType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.ChecksumValueType" get-method="getChecksumValue" set-method="setChecksumValue" usage="optional"/>
+    <structure type="spdxxml.AlgorithmCodeType" get-method="getAlgorithmCode" set-method="setAlgorithmCode" usage="optional"/>
+    <collection item-type="spdxxml.ChecksumAugmentationPoint" get-method="getChecksumAugmentationPointList" set-method="setChecksumAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ChecksumType" name="Checksum">
+    <structure map-as="ns1:ChecksumType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ChecksumValueType" class="spdxxml.ChecksumValueType">
+    <value style="text" get-method="getHexBinary" set-method="setHexBinary"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ChecksumValueType" name="ChecksumValue">
+    <structure map-as="ns1:ChecksumValueType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CommentTextType" class="spdxxml.CommentTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.CommentTextType" name="CommentText">
+    <structure map-as="ns1:CommentTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CommitLogsType" class="spdxxml.CommitLogsType">
+    <structure map-as="structures:ObjectType"/>
+    <collection item-type="spdxxml.CommitLogText" get-method="getCommitLogTextList" set-method="setCommitLogTextList" create-type="java.util.ArrayList"/>
+    <collection item-type="spdxxml.CommitLogsAugmentationPoint" get-method="getCommitLogsAugmentationPointList" set-method="setCommitLogsAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.CommitLogsType" name="CommitLogs">
+    <structure map-as="ns1:CommitLogsType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CommonVulnerabilityScoringSystemV2Type" class="spdxxml.CommonVulnerabilityScoringSystemV2Type">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.VectorStringText" get-method="getVectorStringText" set-method="setVectorStringText" usage="optional"/>
+    <structure type="spdxxml.AccessVectorText" get-method="getAccessVectorText" set-method="setAccessVectorText" usage="optional"/>
+    <structure type="spdxxml.AccessComplexityText" get-method="getAccessComplexityText" set-method="setAccessComplexityText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityAuthenticationText" get-method="getVulnerabilityAuthenticationText" set-method="setVulnerabilityAuthenticationText" usage="optional"/>
+    <structure type="spdxxml.ConfidentialityImpactText" get-method="getConfidentialityImpactText" set-method="setConfidentialityImpactText" usage="optional"/>
+    <structure type="spdxxml.IntegrityImpactText" get-method="getIntegrityImpactText" set-method="setIntegrityImpactText" usage="optional"/>
+    <structure type="spdxxml.AvailabilityImpactText" get-method="getAvailabilityImpactText" set-method="setAvailabilityImpactText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityBaseScoreValue" get-method="getVulnerabilityBaseScoreValue" set-method="setVulnerabilityBaseScoreValue" usage="optional"/>
+    <collection item-type="spdxxml.CommonVulnerabilityScoringSystemV2AugmentationPoint" get-method="getCommonVulnerabilityScoringSystemV2AugmentationPointList" set-method="setCommonVulnerabilityScoringSystemV2AugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.CommonVulnerabilityScoringSystemV2Type" name="CommonVulnerabilityScoringSystemV2">
+    <structure map-as="ns1:CommonVulnerabilityScoringSystemV2Type"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CommonVulnerabilityScoringSystemV3Type" class="spdxxml.CommonVulnerabilityScoringSystemV3Type">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.VectorStringText" get-method="getVectorStringText" set-method="setVectorStringText" usage="optional"/>
+    <structure type="spdxxml.AccessVectorText" get-method="getAccessVectorText" set-method="setAccessVectorText" usage="optional"/>
+    <structure type="spdxxml.AccessComplexityText" get-method="getAccessComplexityText" set-method="setAccessComplexityText" usage="optional"/>
+    <structure type="spdxxml.PrivilegesRequiredText" get-method="getPrivilegesRequiredText" set-method="setPrivilegesRequiredText" usage="optional"/>
+    <structure type="spdxxml.UserInteractionText" get-method="getUserInteractionText" set-method="setUserInteractionText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityScopeText" get-method="getVulnerabilityScopeText" set-method="setVulnerabilityScopeText" usage="optional"/>
+    <structure type="spdxxml.ConfidentialityImpactText" get-method="getConfidentialityImpactText" set-method="setConfidentialityImpactText" usage="optional"/>
+    <structure type="spdxxml.IntegrityImpactText" get-method="getIntegrityImpactText" set-method="setIntegrityImpactText" usage="optional"/>
+    <structure type="spdxxml.AvailabilityImpactText" get-method="getAvailabilityImpactText" set-method="setAvailabilityImpactText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityBaseScoreValue" get-method="getVulnerabilityBaseScoreValue" set-method="setVulnerabilityBaseScoreValue" usage="optional"/>
+    <structure type="spdxxml.BaseSeverityText" get-method="getBaseSeverityText" set-method="setBaseSeverityText" usage="optional"/>
+    <collection item-type="spdxxml.CommonVulnerabilityScoringSystemV3AugmentationPoint" get-method="getCommonVulnerabilityScoringSystemV3AugmentationPointList" set-method="setCommonVulnerabilityScoringSystemV3AugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.CommonVulnerabilityScoringSystemV3Type" name="CommonVulnerabilityScoringSystemV3">
+    <structure map-as="ns1:CommonVulnerabilityScoringSystemV3Type"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CompanyInformationType" class="spdxxml.CompanyInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.NameText" get-method="getNameText" set-method="setNameText" usage="optional"/>
+    <collection item-type="spdxxml.CompanyInformationAugmentationPoint" get-method="getCompanyInformationAugmentationPointList" set-method="setCompanyInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.CompanyInformationType" name="CompanyInformation">
+    <structure map-as="ns1:CompanyInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CompilerType" class="spdxxml.CompilerType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.NameText" get-method="getNameText" set-method="setNameText" usage="optional"/>
+    <structure type="spdxxml.CompilerVersionText" get-method="getCompilerVersionText" set-method="setCompilerVersionText" usage="optional"/>
+    <collection item-type="spdxxml.CompilerAugmentationPoint" get-method="getCompilerAugmentationPointList" set-method="setCompilerAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.CompilerType" name="Compiler">
+    <structure map-as="ns1:CompilerType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CompoundPointerType" class="spdxxml.CompoundPointerType">
+    <structure map-as="ns1:PointerType"/>
+    <collection item-type="spdxxml.CompoundPointerAugmentationPoint" get-method="getCompoundPointerAugmentationPointList" set-method="setCompoundPointerAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.CompoundPointerType" name="CompoundPointer">
+    <structure map-as="ns1:CompoundPointerType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ComputerFileNameType" class="spdxxml.ComputerFileNameType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ComputerFileNameType" name="ComputerFileNameText">
+    <structure map-as="ns1:ComputerFileNameType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ComputerFileType" class="spdxxml.ComputerFileType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ComputerFileType" name="FileText">
+    <structure map-as="ns1:ComputerFileType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ConjunctiveLicenseSetType" class="spdxxml.ConjunctiveLicenseSetType">
+    <structure map-as="ns1:AnyLicenseInfoType"/>
+    <collection item-type="spdxxml.Member" get-method="getMemberList" set-method="setMemberList" create-type="java.util.ArrayList"/>
+    <collection item-type="spdxxml.ConjunctiveLicenseSetAugmentationPoint" get-method="getConjunctiveLicenseSetAugmentationPointList" set-method="setConjunctiveLicenseSetAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ConjunctiveLicenseSetType" name="ConjunctiveLicenseSet">
+    <structure map-as="ns1:ConjunctiveLicenseSetType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ContainerType" class="spdxxml.ContainerType">
+    <structure map-as="structures:ObjectType"/>
+    <collection item-type="spdxxml.ContainerAugmentationPoint" get-method="getContainerAugmentationPointList" set-method="setContainerAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ContainerType" name="Container">
+    <structure map-as="ns1:ContainerType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ContextualExampleTextType" class="spdxxml.ContextualExampleTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ContextualExampleTextType" name="ContextualExampleText">
+    <structure map-as="ns1:ContextualExampleTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CopyrightTextCodeType" class="spdxxml.CopyrightTextCodeType">
+    <value style="text" get-method="getCopyrightTextCodeSimpleType" set-method="setCopyrightTextCodeSimpleType" format="ns1:CopyrightTextCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.CopyrightTextCodeType" name="CopyrightTextCode">
+    <structure map-as="ns1:CopyrightTextCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CopyrightTextType" class="spdxxml.CopyrightTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.CopyrightTextType" name="CopyrightText">
+    <structure map-as="ns1:CopyrightTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CreatedDateTimeType" class="spdxxml.CreatedDateTimeType">
+    <value style="text" get-method="getDateTime" set-method="setDateTime"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.CreatedDateTimeType" name="CreatedDateTime">
+    <structure map-as="ns1:CreatedDateTimeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CreationInfoType" class="spdxxml.CreationInfoType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.LicenseListVersionTextType" get-method="getLicenseListVersionText" set-method="setLicenseListVersionText" usage="optional"/>
+    <structure type="spdxxml.CreatedDateTimeType" get-method="getCreatedDateTime" set-method="setCreatedDateTime" usage="optional"/>
+    <structure type="spdxxml.CommentTextType" get-method="getCommentText" set-method="setCommentText" usage="optional"/>
+    <structure type="spdxxml.CreatorTextType" get-method="getCreatorText" set-method="setCreatorText" usage="optional"/>
+    <collection item-type="spdxxml.CreationInfoAugmentationPoint" get-method="getCreationInfoAugmentationPointList" set-method="setCreationInfoAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.CreationInfoType" name="CreationInfo">
+    <structure map-as="ns1:CreationInfoType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CreatorTextType" class="spdxxml.CreatorTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.CreatorTextType" name="CreatorText">
+    <structure map-as="ns1:CreatorTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DataCountType" class="spdxxml.DataCountType">
+    <value style="text" get-method="getInteger" set-method="setInteger"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DateTimeType" class="spdxxml.DateTimeType">
+    <value style="text" get-method="getDateTime" set-method="setDateTime"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DateType" class="spdxxml.DateType">
+    <value style="text" get-method="getDateTime" set-method="setDateTime"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.DateType" name="Date">
+    <structure map-as="ns1:DateType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DeliveryInformationType" class="spdxxml.DeliveryInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.DeliveringOrganizationText" get-method="getDeliveringOrganizationText" set-method="setDeliveringOrganizationText" usage="optional"/>
+    <structure type="spdxxml.DestinationText" get-method="getDestinationText" set-method="setDestinationText" usage="optional"/>
+    <structure type="spdxxml.HashText" get-method="getHashText" set-method="setHashText" usage="optional"/>
+    <structure type="spdxxml.LastRegistryUpdateDate" get-method="getLastRegistryUpdateDate" set-method="setLastRegistryUpdateDate" usage="optional"/>
+    <collection item-type="spdxxml.DeliveryInformationAugmentationPoint" get-method="getDeliveryInformationAugmentationPointList" set-method="setDeliveryInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.DeliveryInformationType" name="DeliveryInformation">
+    <structure map-as="ns1:DeliveryInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DependenciesType" class="spdxxml.DependenciesType">
+    <structure map-as="structures:ObjectType"/>
+    <collection item-type="spdxxml.DependencyType" get-method="getDependencyList" set-method="setDependencyList" create-type="java.util.ArrayList"/>
+    <collection item-type="spdxxml.DependenciesAugmentationPoint" get-method="getDependenciesAugmentationPointList" set-method="setDependenciesAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.DependenciesType" name="Dependencies">
+    <structure map-as="ns1:DependenciesType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DependencyInformationType" class="spdxxml.DependencyInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.DependenciesType" get-method="getDependencies" set-method="setDependencies" usage="optional"/>
+    <structure type="spdxxml.CompilerType" get-method="getCompiler" set-method="setCompiler" usage="optional"/>
+    <collection item-type="spdxxml.DependencyInformationAugmentationPoint" get-method="getDependencyInformationAugmentationPointList" set-method="setDependencyInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.DependencyInformationType" name="DependencyInformation">
+    <structure map-as="ns1:DependencyInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DependencyType" class="spdxxml.DependencyType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.NameText" get-method="getNameText" set-method="setNameText" usage="optional"/>
+    <structure type="spdxxml.DependencyVersionText" get-method="getDependencyVersionText" set-method="setDependencyVersionText" usage="optional"/>
+    <collection item-type="spdxxml.DependencyAugmentationPoint" get-method="getDependencyAugmentationPointList" set-method="setDependencyAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.DependencyType" name="Dependency">
+    <structure map-as="ns1:DependencyType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DescriptionTextType" class="spdxxml.DescriptionTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.DescriptionTextType" name="DescriptionText">
+    <structure map-as="ns1:DescriptionTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DisjunctiveLicenseSetType" class="spdxxml.DisjunctiveLicenseSetType">
+    <structure map-as="ns1:AnyLicenseInfoType"/>
+    <collection item-type="spdxxml.Member" get-method="getMemberList" set-method="setMemberList" create-type="java.util.ArrayList"/>
+    <collection item-type="spdxxml.DisjunctiveLicenseSetAugmentationPoint" get-method="getDisjunctiveLicenseSetAugmentationPointList" set-method="setDisjunctiveLicenseSetAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.DisjunctiveLicenseSetType" name="DisjunctiveLicenseSet">
+    <structure map-as="ns1:DisjunctiveLicenseSetType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DocumentationURIType" class="spdxxml.DocumentationURIType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.DocumentationURIType" name="DocumentationURI">
+    <structure map-as="ns1:DocumentationURIType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DownloadLocationCodeType" class="spdxxml.DownloadLocationCodeType">
+    <value style="text" get-method="getDownloadLocationCodeSimpleType" set-method="setDownloadLocationCodeSimpleType" format="ns1:DownloadLocationCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.DownloadLocationCodeType" name="DownloadLocationCode">
+    <structure map-as="ns1:DownloadLocationCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:DownloadLocationURIType" class="spdxxml.DownloadLocationURIType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.DownloadLocationURIType" name="DownloadLocationURI">
+    <structure map-as="ns1:DownloadLocationURIType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:EcosystemInformationType" class="spdxxml.EcosystemInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.EcosystemType" get-method="getEcosystem" set-method="setEcosystem" usage="optional"/>
+    <structure type="spdxxml.CompanyInformationType" get-method="getCompanyInformation" set-method="setCompanyInformation" usage="optional"/>
+    <collection item-type="spdxxml.EcosystemInformationAugmentationPoint" get-method="getEcosystemInformationAugmentationPointList" set-method="setEcosystemInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.EcosystemInformationType" name="EcosystemInformation">
+    <structure map-as="ns1:EcosystemInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:EcosystemType" class="spdxxml.EcosystemType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.CommitterQuantity" get-method="getCommitterQuantity" set-method="setCommitterQuantity" usage="optional"/>
+    <structure type="spdxxml.LanguagesType" get-method="getLanguages" set-method="setLanguages" usage="optional"/>
+    <structure type="spdxxml.CommitLogsType" get-method="getCommitLogs" set-method="setCommitLogs" usage="optional"/>
+    <collection item-type="spdxxml.EcosystemAugmentationPoint" get-method="getEcosystemAugmentationPointList" set-method="setEcosystemAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.EcosystemType" name="Ecosystem">
+    <structure map-as="ns1:EcosystemType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:EndOfLifeIndicatorType" class="spdxxml.EndOfLifeIndicatorType">
+    <value style="text" get-method="isBoolean" set-method="setBoolean"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.EndOfLifeIndicatorType" name="EndOfLifeIndicator">
+    <structure map-as="ns1:EndOfLifeIndicatorType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:EngineDetailsType" class="spdxxml.EngineDetailsType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.EngineVersionText" get-method="getEngineVersionText" set-method="setEngineVersionText" usage="optional"/>
+    <structure type="spdxxml.DatabaseVersionText" get-method="getDatabaseVersionText" set-method="setDatabaseVersionText" usage="optional"/>
+    <collection item-type="spdxxml.EngineDetailsAugmentationPoint" get-method="getEngineDetailsAugmentationPointList" set-method="setEngineDetailsAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.EngineDetailsType" name="EngineDetails">
+    <structure map-as="ns1:EngineDetailsType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ExampleTextType" class="spdxxml.ExampleTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ExampleTextType" name="ExampleText">
+    <structure map-as="ns1:ExampleTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ExternalDocumentIDType" class="spdxxml.ExternalDocumentIDType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ExternalDocumentIDType" name="ExternalDocumentID">
+    <structure map-as="ns1:ExternalDocumentIDType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ExternalDocumentRefType" class="spdxxml.ExternalDocumentRefType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.ChecksumType" get-method="getChecksum" set-method="setChecksum" usage="optional"/>
+    <structure type="spdxxml.ExternalDocumentIDType" get-method="getExternalDocumentID" set-method="setExternalDocumentID" usage="optional"/>
+    <structure type="spdxxml.SpdxDocumentID" get-method="getSpdxDocumentID" set-method="setSpdxDocumentID" usage="optional"/>
+    <collection item-type="spdxxml.ExternalDocumentRefAugmentationPoint" get-method="getExternalDocumentRefAugmentationPointList" set-method="setExternalDocumentRefAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ExternalDocumentRefType" name="ExternalDocumentRef">
+    <structure map-as="ns1:ExternalDocumentRefType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ExternalRefType" class="spdxxml.ExternalRefType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.CommentTextType" get-method="getCommentText" set-method="setCommentText" usage="optional"/>
+    <structure type="spdxxml.ReferenceLocatorTextType" get-method="getReferenceLocatorText" set-method="setReferenceLocatorText" usage="optional"/>
+    <structure type="spdxxml.ReferenceIDType" get-method="getReferenceID" set-method="setReferenceID" usage="optional"/>
+    <structure type="spdxxml.ReferenceCategoryCodeType" get-method="getReferenceCategoryCode" set-method="setReferenceCategoryCode" usage="optional"/>
+    <collection item-type="spdxxml.ExternalRefAugmentationPoint" get-method="getExternalRefAugmentationPointList" set-method="setExternalRefAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ExternalRefType" name="ExternalRef">
+    <structure map-as="ns1:ExternalRefType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ExternalReferenceSiteURIType" class="spdxxml.ExternalReferenceSiteURIType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ExternalReferenceSiteURIType" name="ExternalReferenceSiteURI">
+    <structure map-as="ns1:ExternalReferenceSiteURIType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ExtractedLicenseInfoType" class="spdxxml.ExtractedLicenseInfoType">
+    <structure map-as="ns1:SimpleLicensingInfoType"/>
+    <structure type="spdxxml.ExtractedTextType" get-method="getExtractedText" set-method="setExtractedText" usage="optional"/>
+    <collection item-type="spdxxml.ExtractedLicenseInfoAugmentationPoint" get-method="getExtractedLicenseInfoAugmentationPointList" set-method="setExtractedLicenseInfoAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ExtractedLicenseInfoType" name="ExtractedLicenseInfo">
+    <structure map-as="ns1:ExtractedLicenseInfoType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ExtractedTextType" class="spdxxml.ExtractedTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ExtractedTextType" name="ExtractedText">
+    <structure map-as="ns1:ExtractedTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:FileContributorTextType" class="spdxxml.FileContributorTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.FileContributorTextType" name="FileContributorText">
+    <structure map-as="ns1:FileContributorTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:FileExtensionType" class="spdxxml.FileExtensionType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.FileExtensionType" name="FileExtensionText">
+    <structure map-as="ns1:FileExtensionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:FileInformationType" class="spdxxml.FileInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.ComputerFileNameType" get-method="getComputerFileNameText" set-method="setComputerFileNameText" usage="optional"/>
+    <structure type="spdxxml.FileExtensionType" get-method="getFileExtensionText" set-method="setFileExtensionText" usage="optional"/>
+    <collection item-type="spdxxml.FileInformationAugmentationPoint" get-method="getFileInformationAugmentationPointList" set-method="setFileInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.FileInformationType" name="FileInformation">
+    <structure map-as="ns1:FileInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:FileNameType" class="spdxxml.FileNameType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.FileNameType" name="FileName">
+    <structure map-as="ns1:FileNameType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:FileType" class="spdxxml.FileType">
+    <structure map-as="ns1:SpdxItemType"/>
+    <structure type="spdxxml.NoticeTextType" get-method="getNoticeText" set-method="setNoticeText" usage="optional"/>
+    <structure type="spdxxml.FileContributorTextType" get-method="getFileContributorText" set-method="setFileContributorText" usage="optional"/>
+    <structure type="spdxxml.FileNameType" get-method="getFileName" set-method="setFileName" usage="optional"/>
+    <structure type="spdxxml.FileTypeCodeType" get-method="getFileTypeCode" set-method="setFileTypeCode" usage="optional"/>
+    <structure type="spdxxml.ChecksumType" get-method="getChecksum" set-method="setChecksum" usage="optional"/>
+    <collection item-type="spdxxml.FileAugmentationPoint" get-method="getFileAugmentationPointList" set-method="setFileAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.FileType" name="File">
+    <structure map-as="ns1:FileType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:FileTypeCodeType" class="spdxxml.FileTypeCodeType">
+    <value style="text" get-method="getFileTypeCodeSimpleType" set-method="setFileTypeCodeSimpleType" format="ns1:FileTypeCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.FileTypeCodeType" name="FileTypeCode">
+    <structure map-as="ns1:FileTypeCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:FilesAnalyzedIndicatorType" class="spdxxml.FilesAnalyzedIndicatorType">
+    <value style="text" get-method="isBoolean" set-method="setBoolean"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.FilesAnalyzedIndicatorType" name="FilesAnalyzedIndicator">
+    <structure map-as="ns1:FilesAnalyzedIndicatorType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:FloatValueType" class="spdxxml.FloatValueType">
+    <value style="text" get-method="getFloat" set-method="setFloat"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:GovernanceRiskComplianceType" class="spdxxml.GovernanceRiskComplianceType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.RiskCodeType" get-method="getRiskCode" set-method="setRiskCode" usage="optional"/>
+    <structure type="spdxxml.StatementOfAssuranceText" get-method="getStatementOfAssuranceText" set-method="setStatementOfAssuranceText" usage="optional"/>
+    <collection item-type="spdxxml.GovernanceRiskComplianceAugmentationPoint" get-method="getGovernanceRiskComplianceAugmentationPointList" set-method="setGovernanceRiskComplianceAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.GovernanceRiskComplianceType" name="GovernanceRiskCompliance">
+    <structure map-as="ns1:GovernanceRiskComplianceType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:HomepageURIType" class="spdxxml.HomepageURIType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.HomepageURIType" name="HomepageURI">
+    <structure map-as="ns1:HomepageURIType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:IsDeprecatedLicenseIDType" class="spdxxml.IsDeprecatedLicenseIDType">
+    <value style="text" get-method="isBoolean" set-method="setBoolean"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.IsDeprecatedLicenseIDType" name="IsDeprecatedLicenseID">
+    <structure map-as="ns1:IsDeprecatedLicenseIDType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:IsFsfLibreType" class="spdxxml.IsFsfLibreType">
+    <value style="text" get-method="isBoolean" set-method="setBoolean"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.IsFsfLibreType" name="IsFsfLibreIndicator">
+    <structure map-as="ns1:IsFsfLibreType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:IsOsiApprovedIndicatorType" class="spdxxml.IsOsiApprovedIndicatorType">
+    <value style="text" get-method="isBoolean" set-method="setBoolean"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.IsOsiApprovedIndicatorType" name="IsOsiApprovedIndicator">
+    <structure map-as="ns1:IsOsiApprovedIndicatorType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LanguagesType" class="spdxxml.LanguagesType">
+    <structure map-as="structures:ObjectType"/>
+    <collection item-type="spdxxml.LanguageText" get-method="getLanguageTextList" set-method="setLanguageTextList" create-type="java.util.ArrayList"/>
+    <collection item-type="spdxxml.LanguagesAugmentationPoint" get-method="getLanguagesAugmentationPointList" set-method="setLanguagesAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.LanguagesType" name="Languages">
+    <structure map-as="ns1:LanguagesType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseCategoryCodeType" class="spdxxml.LicenseCategoryCodeType">
+    <value style="text" get-method="getLicenseCategoryCodeSimpleType" set-method="setLicenseCategoryCodeSimpleType" format="ns1:LicenseCategoryCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseCategoryCodeType" name="LicenseCategoryCode">
+    <structure map-as="ns1:LicenseCategoryCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseCodeType" class="spdxxml.LicenseCodeType">
+    <value style="text" get-method="getLicenseCodeSimpleType" set-method="setLicenseCodeSimpleType" format="ns1:LicenseCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseCodeType" name="LicenseCode">
+    <structure map-as="ns1:LicenseCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseCommentsTextType" class="spdxxml.LicenseCommentsTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseCommentsTextType" name="LicenseCommentsText">
+    <structure map-as="ns1:LicenseCommentsTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseConcludedCodeType" class="spdxxml.LicenseConcludedCodeType">
+    <value style="text" get-method="getLicenseConcludedCodeSimpleType" set-method="setLicenseConcludedCodeSimpleType" format="ns1:LicenseConcludedCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseConcludedCodeType" name="LicenseConcludedCode">
+    <structure map-as="ns1:LicenseConcludedCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseDeclaredCodeType" class="spdxxml.LicenseDeclaredCodeType">
+    <value style="text" get-method="getLicenseDeclaredCodeSimpleType" set-method="setLicenseDeclaredCodeSimpleType" format="ns1:LicenseDeclaredCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseDeclaredCodeType" name="LicenseDeclaredCode">
+    <structure map-as="ns1:LicenseDeclaredCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseExceptionIDType" class="spdxxml.LicenseExceptionIDType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseExceptionIDType" name="LicenseExceptionID">
+    <structure map-as="ns1:LicenseExceptionIDType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseExceptionTextType" class="spdxxml.LicenseExceptionTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseExceptionTextType" name="LicenseExceptionText">
+    <structure map-as="ns1:LicenseExceptionTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseExceptionType" class="spdxxml.LicenseExceptionType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.LicenseExceptionTextType" get-method="getLicenseExceptionText" set-method="setLicenseExceptionText" usage="optional"/>
+    <structure type="spdxxml.CommentTextType" get-method="getCommentText" set-method="setCommentText" usage="optional"/>
+    <structure type="spdxxml.ExampleTextType" get-method="getExampleText" set-method="setExampleText" usage="optional"/>
+    <structure type="spdxxml.NameType" get-method="getName" set-method="setName" usage="optional"/>
+    <structure type="spdxxml.SeeAlsoURIType" get-method="getSeeAlsoURI" set-method="setSeeAlsoURI" usage="optional"/>
+    <structure type="spdxxml.LicenseExceptionIDType" get-method="getLicenseExceptionID" set-method="setLicenseExceptionID" usage="optional"/>
+    <collection item-type="spdxxml.LicenseExceptionAugmentationPoint" get-method="getLicenseExceptionAugmentationPointList" set-method="setLicenseExceptionAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseExceptionType" name="LicenseException">
+    <structure map-as="ns1:LicenseExceptionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseIDType" class="spdxxml.LicenseIDType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseInfoFromFilesCodeType" class="spdxxml.LicenseInfoFromFilesCodeType">
+    <value style="text" get-method="getLicenseInfoFromFilesCodeSimpleType" set-method="setLicenseInfoFromFilesCodeSimpleType" format="ns1:LicenseInfoFromFilesCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseInfoFromFilesCodeType" name="LicenseInfoFromFilesCode">
+    <structure map-as="ns1:LicenseInfoFromFilesCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseInformationType" class="spdxxml.LicenseInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.LicenseCategoryCodeType" get-method="getLicenseCategoryCode" set-method="setLicenseCategoryCode" usage="optional"/>
+    <collection item-type="spdxxml.LicenseCodeType" get-method="getLicenseCodeList" set-method="setLicenseCodeList" create-type="java.util.ArrayList"/>
+    <structure type="spdxxml.EndOfLifeIndicatorType" get-method="getEndOfLifeIndicator" set-method="setEndOfLifeIndicator" usage="optional"/>
+    <collection item-type="spdxxml.LicenseInformationAugmentationPoint" get-method="getLicenseInformationAugmentationPointList" set-method="setLicenseInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseInformationType" name="LicenseInformation">
+    <structure map-as="ns1:LicenseInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseListVersionTextType" class="spdxxml.LicenseListVersionTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseListVersionTextType" name="LicenseListVersionText">
+    <structure map-as="ns1:LicenseListVersionTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseTextType" class="spdxxml.LicenseTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseTextType" name="LicenseText">
+    <structure map-as="ns1:LicenseTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseType" class="spdxxml.LicenseType">
+    <structure map-as="ns1:SimpleLicensingInfoType"/>
+    <structure type="spdxxml.IsDeprecatedLicenseIDType" get-method="getIsDeprecatedLicenseID" set-method="setIsDeprecatedLicenseID" usage="optional"/>
+    <structure type="spdxxml.IsOsiApprovedIndicatorType" get-method="getIsOsiApprovedIndicator" set-method="setIsOsiApprovedIndicator" usage="optional"/>
+    <structure type="spdxxml.IsFsfLibreType" get-method="getIsFsfLibreIndicator" set-method="setIsFsfLibreIndicator" usage="optional"/>
+    <structure type="spdxxml.StandardLicenseHeaderTextType" get-method="getStandardLicenseHeaderText" set-method="setStandardLicenseHeaderText" usage="optional"/>
+    <structure type="spdxxml.LicenseTextType" get-method="getLicenseText" set-method="setLicenseText" usage="optional"/>
+    <structure type="spdxxml.StandardLicenseTemplateTextType" get-method="getStandardLicenseTemplateText" set-method="setStandardLicenseTemplateText" usage="optional"/>
+    <collection item-type="spdxxml.LicenseAugmentationPoint" get-method="getLicenseAugmentationPointList" set-method="setLicenseAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseType" name="License">
+    <structure map-as="ns1:LicenseType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LineCharPointerType" class="spdxxml.LineCharPointerType">
+    <structure map-as="ns1:OffsetPointerType"/>
+    <collection item-type="spdxxml.LineCharPointerAugmentationPoint" get-method="getLineCharPointerAugmentationPointList" set-method="setLineCharPointerAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.LineCharPointerType" name="LineCharPointer">
+    <structure map-as="ns1:LineCharPointerType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LineNumberNumericType" class="spdxxml.LineNumberNumericType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LineNumberNumericType" name="LineNumberNumeric">
+    <structure map-as="ns1:LineNumberNumericType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LineTextType" class="spdxxml.LineTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ListedLicenseType" class="spdxxml.ListedLicenseType">
+    <structure map-as="ns1:LicenseType"/>
+    <collection item-type="spdxxml.ListedLicenseAugmentationPoint" get-method="getListedLicenseAugmentationPointList" set-method="setListedLicenseAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ListedLicenseType" name="ListedLicense">
+    <structure map-as="ns1:ListedLicenseType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LocatorFormatTextType" class="spdxxml.LocatorFormatTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.LocatorFormatTextType" name="LocatorFormatText">
+    <structure map-as="ns1:LocatorFormatTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:MajorVersionType" class="spdxxml.MajorVersionType">
+    <value style="text" get-method="getInteger" set-method="setInteger"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.MajorVersionType" name="MajorVersionNumeric">
+    <structure map-as="ns1:MajorVersionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:MinorVersionType" class="spdxxml.MinorVersionType">
+    <value style="text" get-method="getInteger" set-method="setInteger"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.MinorVersionType" name="MinorVersionNumeric">
+    <structure map-as="ns1:MinorVersionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:NameType" class="spdxxml.NameType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.NameType" name="Name">
+    <structure map-as="ns1:NameType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:NoticeTextType" class="spdxxml.NoticeTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.NoticeTextType" name="NoticeText">
+    <structure map-as="ns1:NoticeTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:OffsetNumericType" class="spdxxml.OffsetNumericType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.OffsetNumericType" name="OffsetNumeric">
+    <structure map-as="ns1:OffsetNumericType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:OffsetPointerType" class="spdxxml.OffsetPointerType">
+    <structure map-as="ns1:SinglePointerType"/>
+    <collection item-type="spdxxml.OffsetPointerAugmentationPoint" get-method="getOffsetPointerAugmentationPointList" set-method="setOffsetPointerAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.OffsetPointerType" name="OffsetPointer">
+    <structure map-as="ns1:OffsetPointerType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:OrLaterOperatorType" class="spdxxml.OrLaterOperatorType">
+    <structure map-as="ns1:AnyLicenseInfoType"/>
+    <structure type="spdxxml.Member" get-method="getMember" set-method="setMember" usage="optional"/>
+    <collection item-type="spdxxml.OrLaterOperatorAugmentationPoint" get-method="getOrLaterOperatorAugmentationPointList" set-method="setOrLaterOperatorAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.OrLaterOperatorType" name="OrLaterOperator">
+    <structure map-as="ns1:OrLaterOperatorType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:OriginatorTextType" class="spdxxml.OriginatorTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.OriginatorTextType" name="OriginatorText">
+    <structure map-as="ns1:OriginatorTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PackageFileNameType" class="spdxxml.PackageFileNameType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PackageFileNameType" name="PackageFileName">
+    <structure map-as="ns1:PackageFileNameType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PackageNameType" class="spdxxml.PackageNameType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PackageNameType" name="PackageName">
+    <structure map-as="ns1:PackageNameType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PackageType" class="spdxxml.PackageType">
+    <structure map-as="ns1:SpdxItemType"/>
+    <structure type="spdxxml.ExternalRefType" get-method="getExternalRef" set-method="setExternalRef" usage="optional"/>
+    <structure type="spdxxml.PackageFileNameType" get-method="getPackageFileName" set-method="setPackageFileName" usage="optional"/>
+    <structure type="spdxxml.FilesAnalyzedIndicatorType" get-method="getFilesAnalyzedIndicator" set-method="setFilesAnalyzedIndicator" usage="optional"/>
+    <structure type="spdxxml.DescriptionTextType" get-method="getDescriptionText" set-method="setDescriptionText" usage="optional"/>
+    <structure type="spdxxml.HomepageURIType" get-method="getHomepageURI" set-method="setHomepageURI" usage="optional"/>
+    <structure type="spdxxml.OriginatorTextType" get-method="getOriginatorText" set-method="setOriginatorText" usage="optional"/>
+    <structure type="spdxxml.DownloadLocationURIType" get-method="getDownloadLocationURI" set-method="setDownloadLocationURI" usage="optional"/>
+    <structure type="spdxxml.SourceInfoTextType" get-method="getSourceInfoText" set-method="setSourceInfoText" usage="optional"/>
+    <structure type="spdxxml.SupplierTextType" get-method="getSupplierText" set-method="setSupplierText" usage="optional"/>
+    <structure type="spdxxml.PackageVerificationCodeType" get-method="getPackageVerificationCode" set-method="setPackageVerificationCode" usage="optional"/>
+    <structure type="spdxxml.LicenseDeclaredCodeType" get-method="getLicenseDeclaredCode" set-method="setLicenseDeclaredCode" usage="optional"/>
+    <structure type="spdxxml.VersionInfoTextType" get-method="getVersionInfoText" set-method="setVersionInfoText" usage="optional"/>
+    <structure type="spdxxml.SummaryTextType" get-method="getSummaryText" set-method="setSummaryText" usage="optional"/>
+    <structure type="spdxxml.ChecksumType" get-method="getChecksum" set-method="setChecksum" usage="optional"/>
+    <collection item-type="spdxxml.PackageAugmentationPoint" get-method="getPackageAugmentationPointList" set-method="setPackageAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PackageVerificationCodeType" class="spdxxml.PackageVerificationCodeType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.PackageVerificationCodeValueType" get-method="getPackageVerificationCodeValue" set-method="setPackageVerificationCodeValue" usage="optional"/>
+    <structure type="spdxxml.VerificationCodeExcludedFileTextType" get-method="getVerificationCodeExcludedFileText" set-method="setVerificationCodeExcludedFileText" usage="optional"/>
+    <collection item-type="spdxxml.PackageVerificationCodeAugmentationPoint" get-method="getPackageVerificationCodeAugmentationPointList" set-method="setPackageVerificationCodeAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.PackageVerificationCodeType" name="PackageVerificationCode">
+    <structure map-as="ns1:PackageVerificationCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PackageVerificationCodeValueType" class="spdxxml.PackageVerificationCodeValueType">
+    <value style="text" get-method="getHexBinary" set-method="setHexBinary"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PackageVerificationCodeValueType" name="PackageVerificationCodeValue">
+    <structure map-as="ns1:PackageVerificationCodeValueType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ParagraphTextType" class="spdxxml.ParagraphTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PatchVersionType" class="spdxxml.PatchVersionType">
+    <value style="text" get-method="getInteger" set-method="setInteger"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PatchVersionType" name="PatchVersionText">
+    <structure map-as="ns1:PatchVersionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PointerType" class="spdxxml.PointerType">
+    <structure map-as="structures:ObjectType"/>
+    <collection item-type="spdxxml.PointerAugmentationPoint" get-method="getPointerAugmentationPointList" set-method="setPointerAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PreReleaseVersionType" class="spdxxml.PreReleaseVersionType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PreReleaseVersionType" name="PreReleaseVersionText">
+    <structure map-as="ns1:PreReleaseVersionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ProjectType" class="spdxxml.ProjectType">
+    <structure map-as="structures:ObjectType"/>
+    <collection item-type="spdxxml.ProjectAugmentationPoint" get-method="getProjectAugmentationPointList" set-method="setProjectAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ProjectType" name="Project">
+    <structure map-as="ns1:ProjectType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PythonDevelopmentVersionReleaseType" class="spdxxml.PythonDevelopmentVersionReleaseType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PythonEpochVersionType" class="spdxxml.PythonEpochVersionType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PythonEpochVersionType" name="PythonEpochSegmentText">
+    <structure map-as="ns1:PythonEpochVersionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PythonPostReleaseVersionType" class="spdxxml.PythonPostReleaseVersionType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PythonPostReleaseVersionType" name="PythonPostReleaseSegmentText">
+    <structure map-as="ns1:PythonPostReleaseVersionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PythonPreReleaseVersionType" class="spdxxml.PythonPreReleaseVersionType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PythonReleaseVersionType" class="spdxxml.PythonReleaseVersionType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PythonReleaseVersionType" name="PythonReleaseSegmentText">
+    <structure map-as="ns1:PythonReleaseVersionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PythonSemanticVersionIndicatorType" class="spdxxml.PythonSemanticVersionIndicatorType">
+    <value style="text" get-method="isBoolean" set-method="setBoolean"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PythonSemanticVersionIndicatorType" name="PythonSemanticVersionIndicator">
+    <structure map-as="ns1:PythonSemanticVersionIndicatorType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PythonSemanticVersionType" class="spdxxml.PythonSemanticVersionType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.PythonEpochVersionType" get-method="getPythonEpochSegmentText" set-method="setPythonEpochSegmentText" usage="optional"/>
+    <structure type="spdxxml.PythonReleaseVersionType" get-method="getPythonReleaseSegmentText" set-method="setPythonReleaseSegmentText" usage="optional"/>
+    <structure type="spdxxml.PythonPreReleaseSegmentText" get-method="getPythonPreReleaseSegmentText" set-method="setPythonPreReleaseSegmentText" usage="optional"/>
+    <structure type="spdxxml.PythonPostReleaseVersionType" get-method="getPythonPostReleaseSegmentText" set-method="setPythonPostReleaseSegmentText" usage="optional"/>
+    <structure type="spdxxml.PythonDevelopmentReleaseSegmentText" get-method="getPythonDevelopmentReleaseSegmentText" set-method="setPythonDevelopmentReleaseSegmentText" usage="optional"/>
+    <collection item-type="spdxxml.PythonSemanticVersionAugmentationPoint" get-method="getPythonSemanticVersionAugmentationPointList" set-method="setPythonSemanticVersionAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.PythonSemanticVersionType" name="PythonSemanticVersion">
+    <structure map-as="ns1:PythonSemanticVersionType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:PythonVersionTextType" class="spdxxml.PythonVersionTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.PythonVersionTextType" name="PythonVersionText">
+    <structure map-as="ns1:PythonVersionTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ReferenceCategoryCodeType" class="spdxxml.ReferenceCategoryCodeType">
+    <value style="text" get-method="getReferenceCategoryCodeSimpleType" set-method="setReferenceCategoryCodeSimpleType" format="ns1:ReferenceCategoryCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ReferenceCategoryCodeType" name="ReferenceCategoryCode">
+    <structure map-as="ns1:ReferenceCategoryCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ReferenceIDType" class="spdxxml.ReferenceIDType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.ExternalReferenceSiteURIType" get-method="getExternalReferenceSiteURI" set-method="setExternalReferenceSiteURI" usage="optional"/>
+    <structure type="spdxxml.ContextualExampleTextType" get-method="getContextualExampleText" set-method="setContextualExampleText" usage="optional"/>
+    <structure type="spdxxml.DocumentationURIType" get-method="getDocumentationURI" set-method="setDocumentationURI" usage="optional"/>
+    <collection item-type="spdxxml.ReferenceIDAugmentationPoint" get-method="getReferenceIDAugmentationPointList" set-method="setReferenceIDAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ReferenceIDType" name="ReferenceID">
+    <structure map-as="ns1:ReferenceIDType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ReferenceLocatorTextType" class="spdxxml.ReferenceLocatorTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.ReferenceLocatorTextType" name="ReferenceLocatorText">
+    <structure map-as="ns1:ReferenceLocatorTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ReferenceType" class="spdxxml.ReferenceType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:RelationshipType" class="spdxxml.RelationshipType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.RelationshipTypeCodeType" get-method="getRelationshipTypeCode" set-method="setRelationshipTypeCode" usage="optional"/>
+    <structure type="spdxxml.CommentTextType" get-method="getCommentText" set-method="setCommentText" usage="optional"/>
+    <structure type="spdxxml.RelatedSpdxElementID" get-method="getRelatedSpdxElementID" set-method="setRelatedSpdxElementID" usage="optional"/>
+    <collection item-type="spdxxml.RelationshipAugmentationPoint" get-method="getRelationshipAugmentationPointList" set-method="setRelationshipAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:RelationshipTypeCodeType" class="spdxxml.RelationshipTypeCodeType">
+    <value style="text" get-method="getRelationshipTypeCodeSimpleType" set-method="setRelationshipTypeCodeSimpleType" format="ns1:RelationshipTypeCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.RelationshipTypeCodeType" name="RelationshipTypeCode">
+    <structure map-as="ns1:RelationshipTypeCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:RiskCodeType" class="spdxxml.RiskCodeType">
+    <value style="text" get-method="getRiskCodeSimpleType" set-method="setRiskCodeSimpleType" format="ns1:RiskCodeSimpleType"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.RiskCodeType" name="RiskCode">
+    <structure map-as="ns1:RiskCodeType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ScoreDetailsType" class="spdxxml.ScoreDetailsType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.CommonVulnerabilityScoringSystemV2Type" get-method="getCommonVulnerabilityScoringSystemV2" set-method="setCommonVulnerabilityScoringSystemV2" usage="optional"/>
+    <structure type="spdxxml.CommonVulnerabilityScoringSystemV3Type" get-method="getCommonVulnerabilityScoringSystemV3" set-method="setCommonVulnerabilityScoringSystemV3" usage="optional"/>
+    <collection item-type="spdxxml.ScoreDetailsAugmentationPoint" get-method="getScoreDetailsAugmentationPointList" set-method="setScoreDetailsAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.ScoreDetailsType" name="ScoreDetails">
+    <structure map-as="ns1:ScoreDetailsType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SeeAlsoURIType" class="spdxxml.SeeAlsoURIType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.SeeAlsoURIType" name="SeeAlsoURI">
+    <structure map-as="ns1:SeeAlsoURIType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SemanticVersionIndicatorType" class="spdxxml.SemanticVersionIndicatorType">
+    <value style="text" get-method="isBoolean" set-method="setBoolean"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.SemanticVersionIndicatorType" name="SemanticVersionIndicator">
+    <structure map-as="ns1:SemanticVersionIndicatorType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SemanticVersionInformationType" class="spdxxml.SemanticVersionInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.APINameType" get-method="getAPIName" set-method="setAPIName" usage="optional"/>
+    <structure type="spdxxml.MajorVersionType" get-method="getMajorVersionNumeric" set-method="setMajorVersionNumeric" usage="optional"/>
+    <structure type="spdxxml.MinorVersionType" get-method="getMinorVersionNumeric" set-method="setMinorVersionNumeric" usage="optional"/>
+    <structure type="spdxxml.PatchVersionType" get-method="getPatchVersionText" set-method="setPatchVersionText" usage="optional"/>
+    <structure type="spdxxml.PreReleaseVersionType" get-method="getPreReleaseVersionText" set-method="setPreReleaseVersionText" usage="optional"/>
+    <structure type="spdxxml.BuildMetaType" get-method="getBuildMetaText" set-method="setBuildMetaText" usage="optional"/>
+    <collection item-type="spdxxml.SemanticVersionInformationAugmentationPoint" get-method="getSemanticVersionInformationAugmentationPointList" set-method="setSemanticVersionInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.SemanticVersionInformationType" name="SemanticVersionInformation">
+    <structure map-as="ns1:SemanticVersionInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SemanticVersionTextType" class="spdxxml.SemanticVersionTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.SemanticVersionTextType" name="SemanticVersionText">
+    <structure map-as="ns1:SemanticVersionTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Sha1TextType" class="spdxxml.Sha1TextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Sha256TextType" class="spdxxml.Sha256TextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SimpleLicensingInfoType" class="spdxxml.SimpleLicensingInfoType">
+    <structure map-as="ns1:AnyLicenseInfoType"/>
+    <structure type="spdxxml.LicenseID" get-method="getLicenseID" set-method="setLicenseID" usage="optional"/>
+    <structure type="spdxxml.CommentTextType" get-method="getCommentText" set-method="setCommentText" usage="optional"/>
+    <structure type="spdxxml.SeeAlsoURIType" get-method="getSeeAlsoURI" set-method="setSeeAlsoURI" usage="optional"/>
+    <structure type="spdxxml.NameType" get-method="getName" set-method="setName" usage="optional"/>
+    <collection item-type="spdxxml.SimpleLicensingInfoAugmentationPoint" get-method="getSimpleLicensingInfoAugmentationPointList" set-method="setSimpleLicensingInfoAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.SimpleLicensingInfoType" name="SimpleLicensingInfo">
+    <structure map-as="ns1:SimpleLicensingInfoType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SinglePointerType" class="spdxxml.SinglePointerType">
+    <structure map-as="ns1:PointerType"/>
+    <collection item-type="spdxxml.SinglePointerAugmentationPoint" get-method="getSinglePointerAugmentationPointList" set-method="setSinglePointerAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.SinglePointerType" name="SinglePointer">
+    <structure map-as="ns1:SinglePointerType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SnippetNameType" class="spdxxml.SnippetNameType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.SnippetNameType" name="SnippetName">
+    <structure map-as="ns1:SnippetNameType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SnippetType" class="spdxxml.SnippetType">
+    <structure map-as="ns1:SpdxItemType"/>
+    <structure type="spdxxml.SnippetFromFile" get-method="getSnippetFromFile" set-method="setSnippetFromFile" usage="optional"/>
+    <structure type="spdxxml.Range" get-method="getRange" set-method="setRange" usage="optional"/>
+    <collection item-type="spdxxml.SnippetAugmentationPoint" get-method="getSnippetAugmentationPointList" set-method="setSnippetAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SoftwareEvidenceArchiveType" class="spdxxml.SoftwareEvidenceArchiveType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.SoftwareInformationType" get-method="getSoftwareInformation" set-method="setSoftwareInformation" usage="optional"/>
+    <structure type="spdxxml.FileInformationType" get-method="getFileInformation" set-method="setFileInformation" usage="optional"/>
+    <structure type="spdxxml.AuthoritativeSourceInformationType" get-method="getAuthoritativeSourceInformation" set-method="setAuthoritativeSourceInformation" usage="optional"/>
+    <structure type="spdxxml.EcosystemInformationType" get-method="getEcosystemInformation" set-method="setEcosystemInformation" usage="optional"/>
+    <structure type="spdxxml.DependencyInformationType" get-method="getDependencyInformation" set-method="setDependencyInformation" usage="optional"/>
+    <structure type="spdxxml.LicenseInformationType" get-method="getLicenseInformation" set-method="setLicenseInformation" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityInformationType" get-method="getVulnerabilityInformation" set-method="setVulnerabilityInformation" usage="optional"/>
+    <structure type="spdxxml.GovernanceRiskComplianceType" get-method="getGovernanceRiskCompliance" set-method="setGovernanceRiskCompliance" usage="optional"/>
+    <structure type="spdxxml.DeliveryInformationType" get-method="getDeliveryInformation" set-method="setDeliveryInformation" usage="optional"/>
+    <collection item-type="spdxxml.SoftwareEvidenceArchiveAugmentationPoint" get-method="getSoftwareEvidenceArchiveAugmentationPointList" set-method="setSoftwareEvidenceArchiveAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.SoftwareEvidenceArchiveType" name="SoftwareEvidenceArchive">
+    <structure map-as="ns1:SoftwareEvidenceArchiveType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SoftwareInformationType" class="spdxxml.SoftwareInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.ProductTitleText" get-method="getProductTitleText" set-method="setProductTitleText" usage="optional"/>
+    <structure type="spdxxml.SoftwareNameText" get-method="getSoftwareNameText" set-method="setSoftwareNameText" usage="optional"/>
+    <structure type="spdxxml.SoftwareOrgText" get-method="getSoftwareOrgText" set-method="setSoftwareOrgText" usage="optional"/>
+    <structure type="spdxxml.VersionInformationType" get-method="getVersionInformation" set-method="setVersionInformation" usage="optional"/>
+    <structure type="spdxxml.GroupingText" get-method="getGroupingText" set-method="setGroupingText" usage="optional"/>
+    <structure type="spdxxml.ReleaseNotesText" get-method="getReleaseNotesText" set-method="setReleaseNotesText" usage="optional"/>
+    <collection item-type="spdxxml.SoftwareInformationAugmentationPoint" get-method="getSoftwareInformationAugmentationPointList" set-method="setSoftwareInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.SoftwareInformationType" name="SoftwareInformation">
+    <structure map-as="ns1:SoftwareInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SourceInfoTextType" class="spdxxml.SourceInfoTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.SourceInfoTextType" name="SourceInfoText">
+    <structure map-as="ns1:SourceInfoTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SpdxDocumentType" class="spdxxml.SpdxDocumentType">
+    <structure map-as="ns1:SpdxElementType"/>
+    <structure type="spdxxml.DescribesPackageID" get-method="getDescribesPackageID" set-method="setDescribesPackageID" usage="optional"/>
+    <structure type="spdxxml.DescribesFileID" get-method="getDescribesFileID" set-method="setDescribesFileID" usage="optional"/>
+    <structure type="spdxxml.HasExtractedLicensingInfoID" get-method="getHasExtractedLicensingInfoID" set-method="setHasExtractedLicensingInfoID" usage="optional"/>
+    <structure type="spdxxml.CreationInfoType" get-method="getCreationInfo" set-method="setCreationInfo" usage="optional"/>
+    <structure type="spdxxml.SpecVersionTextType" get-method="getSpecVersionText" set-method="setSpecVersionText" usage="optional"/>
+    <structure type="spdxxml.ExternalDocumentRefType" get-method="getExternalDocumentRef" set-method="setExternalDocumentRef" usage="optional"/>
+    <structure type="spdxxml.DataLicenseID" get-method="getDataLicenseID" set-method="setDataLicenseID" usage="optional"/>
+    <collection item-type="spdxxml.SpdxDocumentAugmentationPoint" get-method="getSpdxDocumentAugmentationPointList" set-method="setSpdxDocumentAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SpdxElementType" class="spdxxml.SpdxElementType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.SpdxID" get-method="getSpdxID" set-method="setSpdxID" usage="optional"/>
+    <structure type="spdxxml.AnnotationType" get-method="getAnnotation" set-method="setAnnotation" usage="optional"/>
+    <structure type="spdxxml.NameType" get-method="getName" set-method="setName" usage="optional"/>
+    <structure type="spdxxml.CommentTextType" get-method="getCommentText" set-method="setCommentText" usage="optional"/>
+    <structure type="spdxxml.Relationship" get-method="getRelationship" set-method="setRelationship" usage="optional"/>
+    <collection item-type="spdxxml.SpdxElementAugmentationPoint" get-method="getSpdxElementAugmentationPointList" set-method="setSpdxElementAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.SpdxElementType" name="SpdxElement">
+    <structure map-as="ns1:SpdxElementType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SpdxIDType" class="spdxxml.SpdxIDType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SpdxItemType" class="spdxxml.SpdxItemType">
+    <structure map-as="ns1:SpdxElementType"/>
+    <structure type="spdxxml.LicenseConcludedCodeType" get-method="getLicenseConcludedCode" set-method="setLicenseConcludedCode" usage="optional"/>
+    <structure type="spdxxml.CopyrightTextType" get-method="getCopyrightText" set-method="setCopyrightText" usage="optional"/>
+    <structure type="spdxxml.LicenseInfoFromFiles" get-method="getLicenseInfoFromFiles" set-method="setLicenseInfoFromFiles" usage="optional"/>
+    <structure type="spdxxml.LicenseCommentsTextType" get-method="getLicenseCommentsText" set-method="setLicenseCommentsText" usage="optional"/>
+    <collection item-type="spdxxml.SpdxItemAugmentationPoint" get-method="getSpdxItemAugmentationPointList" set-method="setSpdxItemAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SpecVersionTextType" class="spdxxml.SpecVersionTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.SpecVersionTextType" name="SpecVersionText">
+    <structure map-as="ns1:SpecVersionTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:StandardLicenseHeaderTextType" class="spdxxml.StandardLicenseHeaderTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.StandardLicenseHeaderTextType" name="StandardLicenseHeaderText">
+    <structure map-as="ns1:StandardLicenseHeaderTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:StandardLicenseTemplateTextType" class="spdxxml.StandardLicenseTemplateTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.StandardLicenseTemplateTextType" name="StandardLicenseTemplateText">
+    <structure map-as="ns1:StandardLicenseTemplateTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:StartEndPointerType" class="spdxxml.StartEndPointerType">
+    <structure map-as="ns1:CompoundPointerType"/>
+    <collection item-type="spdxxml.StartEndPointerAugmentationPoint" get-method="getStartEndPointerAugmentationPointList" set-method="setStartEndPointerAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.StartEndPointerType" name="StartEndPointer">
+    <structure map-as="ns1:StartEndPointerType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SummaryTextType" class="spdxxml.SummaryTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.SummaryTextType" name="SummaryText">
+    <structure map-as="ns1:SummaryTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SupplierTextType" class="spdxxml.SupplierTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.SupplierTextType" name="SupplierText">
+    <structure map-as="ns1:SupplierTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:URITextType" class="spdxxml.URITextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:VerificationCodeExcludedFileTextType" class="spdxxml.VerificationCodeExcludedFileTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.VerificationCodeExcludedFileTextType" name="VerificationCodeExcludedFileText">
+    <structure map-as="ns1:VerificationCodeExcludedFileTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:VersionInfoTextType" class="spdxxml.VersionInfoTextType">
+    <value style="text" get-method="getString" set-method="setString"/>
+    <structure map-as="structures:SimpleObjectAttributeGroup-AttributeGroup" get-method="getSimpleObjectAttributeGroup" set-method="setSimpleObjectAttributeGroup" usage="optional"/>
+  </mapping>
+  <mapping class="spdxxml.VersionInfoTextType" name="VersionInfoText">
+    <structure map-as="ns1:VersionInfoTextType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:VersionInformationType" class="spdxxml.VersionInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.SoftwareVersionText" get-method="getSoftwareVersionText" set-method="setSoftwareVersionText" usage="optional"/>
+    <structure type="spdxxml.SemanticVersionIndicatorType" get-method="getSemanticVersionIndicator" set-method="setSemanticVersionIndicator" usage="optional"/>
+    <structure type="spdxxml.SemanticVersionTextType" get-method="getSemanticVersionText" set-method="setSemanticVersionText" usage="optional"/>
+    <structure type="spdxxml.SemanticVersionInformationType" get-method="getSemanticVersionInformation" set-method="setSemanticVersionInformation" usage="optional"/>
+    <structure type="spdxxml.SemanticVersionDate" get-method="getSemanticVersionDate" set-method="setSemanticVersionDate" usage="optional"/>
+    <structure type="spdxxml.PythonSemanticVersionIndicatorType" get-method="getPythonSemanticVersionIndicator" set-method="setPythonSemanticVersionIndicator" usage="optional"/>
+    <structure type="spdxxml.PythonSemanticVersionType" get-method="getPythonSemanticVersion" set-method="setPythonSemanticVersion" usage="optional"/>
+    <structure type="spdxxml.PythonVersionTextType" get-method="getPythonVersionText" set-method="setPythonVersionText" usage="optional"/>
+    <collection item-type="spdxxml.VersionInformationAugmentationPoint" get-method="getVersionInformationAugmentationPointList" set-method="setVersionInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.VersionInformationType" name="VersionInformation">
+    <structure map-as="ns1:VersionInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:VirusInformationType" class="spdxxml.VirusInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.KnownVirusQuantity" get-method="getKnownVirusQuantity" set-method="setKnownVirusQuantity" usage="optional"/>
+    <structure type="spdxxml.EngineVersionText" get-method="getEngineVersionText" set-method="setEngineVersionText" usage="optional"/>
+    <structure type="spdxxml.VirusEngineText" get-method="getVirusEngineText" set-method="setVirusEngineText" usage="optional"/>
+    <structure type="spdxxml.ScannedDirectoryQuantity" get-method="getScannedDirectoryQuantity" set-method="setScannedDirectoryQuantity" usage="optional"/>
+    <structure type="spdxxml.ScannedFileQuantity" get-method="getScannedFileQuantity" set-method="setScannedFileQuantity" usage="optional"/>
+    <structure type="spdxxml.InfectedFileQuantity" get-method="getInfectedFileQuantity" set-method="setInfectedFileQuantity" usage="optional"/>
+    <structure type="spdxxml.DataScannedText" get-method="getDataScannedText" set-method="setDataScannedText" usage="optional"/>
+    <structure type="spdxxml.DataReadText" get-method="getDataReadText" set-method="setDataReadText" usage="optional"/>
+    <structure type="spdxxml.TimeText" get-method="getTimeText" set-method="setTimeText" usage="optional"/>
+    <structure type="spdxxml.FileNotesText" get-method="getFileNotesText" set-method="setFileNotesText" usage="optional"/>
+    <structure type="spdxxml.EngineDetailsType" get-method="getEngineDetails" set-method="setEngineDetails" usage="optional"/>
+    <collection item-type="spdxxml.VirusInformationAugmentationPoint" get-method="getVirusInformationAugmentationPointList" set-method="setVirusInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.VirusInformationType" name="VirusInformation">
+    <structure map-as="ns1:VirusInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:VulnerabilitiesType" class="spdxxml.VulnerabilitiesType">
+    <structure map-as="structures:ObjectType"/>
+    <collection item-type="spdxxml.VulnerabilityType" get-method="getVulnerabilityList" set-method="setVulnerabilityList" create-type="java.util.ArrayList"/>
+    <collection item-type="spdxxml.VulnerabilitiesAugmentationPoint" get-method="getVulnerabilitiesAugmentationPointList" set-method="setVulnerabilitiesAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilitiesType" name="Vulnerabilities">
+    <structure map-as="ns1:VulnerabilitiesType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:VulnerabilityInformationType" class="spdxxml.VulnerabilityInformationType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.VulnerabilitiesType" get-method="getVulnerabilities" set-method="setVulnerabilities" usage="optional"/>
+    <structure type="spdxxml.VirusInformationType" get-method="getVirusInformation" set-method="setVirusInformation" usage="optional"/>
+    <collection item-type="spdxxml.VulnerabilityInformationAugmentationPoint" get-method="getVulnerabilityInformationAugmentationPointList" set-method="setVulnerabilityInformationAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityInformationType" name="VulnerabilityInformation">
+    <structure map-as="ns1:VulnerabilityInformationType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:VulnerabilityReferenceType" class="spdxxml.VulnerabilityReferenceType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.TypeOfReferenceText" get-method="getTypeOfReferenceText" set-method="setTypeOfReferenceText" usage="optional"/>
+    <structure type="spdxxml.ReferenceSourceText" get-method="getReferenceSourceText" set-method="setReferenceSourceText" usage="optional"/>
+    <structure type="spdxxml.URIText" get-method="getURIText" set-method="setURIText" usage="optional"/>
+    <structure type="spdxxml.ReferenceText" get-method="getReferenceText" set-method="setReferenceText" usage="optional"/>
+    <collection item-type="spdxxml.VulnerabilityReferenceAugmentationPoint" get-method="getVulnerabilityReferenceAugmentationPointList" set-method="setVulnerabilityReferenceAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityReferenceType" name="VulnerabilityReference">
+    <structure map-as="ns1:VulnerabilityReferenceType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:VulnerabilityType" class="spdxxml.VulnerabilityType">
+    <structure map-as="structures:ObjectType"/>
+    <structure type="spdxxml.VulnerabilityIdentifierText" get-method="getVulnerabilityIdentifierText" set-method="setVulnerabilityIdentifierText" usage="optional"/>
+    <structure type="spdxxml.SourceText" get-method="getSourceText" set-method="setSourceText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityTitleText" get-method="getVulnerabilityTitleText" set-method="setVulnerabilityTitleText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilitySummaryText" get-method="getVulnerabilitySummaryText" set-method="setVulnerabilitySummaryText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityScoreValue" get-method="getVulnerabilityScoreValue" set-method="setVulnerabilityScoreValue" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityScoreVersionValue" get-method="getVulnerabilityScoreVersionValue" set-method="setVulnerabilityScoreVersionValue" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityScoreSystemText" get-method="getVulnerabilityScoreSystemText" set-method="setVulnerabilityScoreSystemText" usage="optional"/>
+    <structure type="spdxxml.ScoreDetailsType" get-method="getScoreDetails" set-method="setScoreDetails" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityVectorText" get-method="getVulnerabilityVectorText" set-method="setVulnerabilityVectorText" usage="optional"/>
+    <structure type="spdxxml.AccessComplexityText" get-method="getAccessComplexityText" set-method="setAccessComplexityText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityAuthenticationText" get-method="getVulnerabilityAuthenticationText" set-method="setVulnerabilityAuthenticationText" usage="optional"/>
+    <structure type="spdxxml.ConfidentialityImpactText" get-method="getConfidentialityImpactText" set-method="setConfidentialityImpactText" usage="optional"/>
+    <structure type="spdxxml.IntegrityImpactText" get-method="getIntegrityImpactText" set-method="setIntegrityImpactText" usage="optional"/>
+    <structure type="spdxxml.AvailabilityImpactText" get-method="getAvailabilityImpactText" set-method="setAvailabilityImpactText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilitySourceText" get-method="getVulnerabilitySourceText" set-method="setVulnerabilitySourceText" usage="optional"/>
+    <structure type="spdxxml.AssessmentCheckText" get-method="getAssessmentCheckText" set-method="setAssessmentCheckText" usage="optional"/>
+    <structure type="spdxxml.ScannerText" get-method="getScannerText" set-method="setScannerText" usage="optional"/>
+    <structure type="spdxxml.RecommendationText" get-method="getRecommendationText" set-method="setRecommendationText" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityReferenceType" get-method="getVulnerabilityReference" set-method="setVulnerabilityReference" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityModifiedDate" get-method="getVulnerabilityModifiedDate" set-method="setVulnerabilityModifiedDate" usage="optional"/>
+    <structure type="spdxxml.VulnerabilityPublishedDate" get-method="getVulnerabilityPublishedDate" set-method="setVulnerabilityPublishedDate" usage="optional"/>
+    <collection item-type="spdxxml.VulnerabilityAugmentationPoint" get-method="getVulnerabilityAugmentationPointList" set-method="setVulnerabilityAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityType" name="Vulnerability">
+    <structure map-as="ns1:VulnerabilityType"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:WithExceptionOperatorType" class="spdxxml.WithExceptionOperatorType">
+    <structure map-as="ns1:AnyLicenseInfoType"/>
+    <structure type="spdxxml.Member" get-method="getMember" set-method="setMember" usage="optional"/>
+    <structure type="spdxxml.LicenseExceptionType" get-method="getLicenseException" set-method="setLicenseException" usage="optional"/>
+    <collection item-type="spdxxml.WithExceptionOperatorAugmentationPoint" get-method="getWithExceptionOperatorAugmentationPointList" set-method="setWithExceptionOperatorAugmentationPointList" usage="optional" create-type="java.util.ArrayList"/>
+  </mapping>
+  <mapping class="spdxxml.WithExceptionOperatorType" name="WithExceptionOperator">
+    <structure map-as="ns1:WithExceptionOperatorType"/>
+  </mapping>
+  <mapping class="spdxxml.AccessComplexityText" name="AccessComplexityText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.AccessVectorText" name="AccessVectorText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.AnnotationAugmentationPoint" name="AnnotationAugmentationPoint"/>
+  <mapping class="spdxxml.AnyLicenseInfo" name="AnyLicenseInfo">
+    <structure map-as="ns1:AnyLicenseInfoType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.AnyLicenseInfoAugmentationPoint" name="AnyLicenseInfoAugmentationPoint"/>
+  <mapping class="spdxxml.AssessmentCheckText" name="AssessmentCheckText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.AuthoritativeSourceInformationAugmentationPoint" name="AuthoritativeSourceInformationAugmentationPoint"/>
+  <mapping class="spdxxml.AvailabilityImpactText" name="AvailabilityImpactText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.BaseSeverityText" name="BaseSeverityText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.ByteOffsetPointerAugmentationPoint" name="ByteOffsetPointerAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.ChecksumAugmentationPoint" name="ChecksumAugmentationPoint"/>
+  <mapping class="spdxxml.CommitLogText" name="CommitLogText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.CommitLogsAugmentationPoint" name="CommitLogsAugmentationPoint"/>
+  <mapping class="spdxxml.CommitterQuantity" name="CommitterQuantity">
+    <structure map-as="ns1:DataCountType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.CommonVulnerabilityScoringSystemV2AugmentationPoint" name="CommonVulnerabilityScoringSystemV2AugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.CommonVulnerabilityScoringSystemV3AugmentationPoint" name="CommonVulnerabilityScoringSystemV3AugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.CompanyInformationAugmentationPoint" name="CompanyInformationAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.CompilerAugmentationPoint" name="CompilerAugmentationPoint"/>
+  <mapping class="spdxxml.CompilerVersionText" name="CompilerVersionText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.CompoundPointerAugmentationPoint" name="CompoundPointerAugmentationPoint"/>
+  <mapping class="spdxxml.ConfidentialityImpactText" name="ConfidentialityImpactText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.ConjunctiveLicenseSetAugmentationPoint" name="ConjunctiveLicenseSetAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.ContainerAugmentationPoint" name="ContainerAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.CreationInfoAugmentationPoint" name="CreationInfoAugmentationPoint"/>
+  <mapping class="spdxxml.DataLicenseID" name="DataLicenseID">
+    <structure map-as="ns1:LicenseIDType"/>
+  </mapping>
+  <mapping class="spdxxml.DataQuantity" name="DataQuantity">
+    <structure map-as="ns1:DataCountType"/>
+  </mapping>
+  <mapping class="spdxxml.DataReadText" name="DataReadText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.DataScannedText" name="DataScannedText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.DatabaseVersionText" name="DatabaseVersionText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.DateTime" name="DateTime">
+    <structure map-as="ns1:DateTimeType"/>
+  </mapping>
+  <mapping class="spdxxml.DeliveringOrganizationText" name="DeliveringOrganizationText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.DeliveryInformationAugmentationPoint" name="DeliveryInformationAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.DependenciesAugmentationPoint" name="DependenciesAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.DependencyAugmentationPoint" name="DependencyAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.DependencyInformationAugmentationPoint" name="DependencyInformationAugmentationPoint"/>
+  <mapping class="spdxxml.DependencyVersionText" name="DependencyVersionText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.DescribesFile" name="DescribesFile">
+    <structure map-as="ns1:SpdxDocumentType"/>
+  </mapping>
+  <mapping class="spdxxml.DescribesFileID" name="DescribesFileID">
+    <structure map-as="ns1:SpdxIDType"/>
+  </mapping>
+  <mapping class="spdxxml.DescribesPackage" name="DescribesPackage">
+    <structure map-as="ns1:SpdxDocumentType"/>
+  </mapping>
+  <mapping class="spdxxml.DescribesPackageID" name="DescribesPackageID">
+    <structure map-as="ns1:SpdxIDType"/>
+  </mapping>
+  <mapping class="spdxxml.DestinationText" name="DestinationText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.DisjunctiveLicenseSetAugmentationPoint" name="DisjunctiveLicenseSetAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.EcosystemAugmentationPoint" name="EcosystemAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.EcosystemInformationAugmentationPoint" name="EcosystemInformationAugmentationPoint"/>
+  <mapping class="spdxxml.EndPointer" name="EndPointer">
+    <structure map-as="ns1:PointerType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.EngineDetailsAugmentationPoint" name="EngineDetailsAugmentationPoint"/>
+  <mapping class="spdxxml.EngineVersionText" name="EngineVersionText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.ExternalDocumentRefAugmentationPoint" name="ExternalDocumentRefAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.ExternalRefAugmentationPoint" name="ExternalRefAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.ExtractedLicenseInfoAugmentationPoint" name="ExtractedLicenseInfoAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.FileAugmentationPoint" name="FileAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.FileInformationAugmentationPoint" name="FileInformationAugmentationPoint"/>
+  <mapping class="spdxxml.FileNotesText" name="FileNotesText">
+    <structure map-as="ns1:ParagraphTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.GovernanceRiskComplianceAugmentationPoint" name="GovernanceRiskComplianceAugmentationPoint"/>
+  <mapping class="spdxxml.GroupingText" name="GroupingText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.HasExtractedLicensingInfo" name="HasExtractedLicensingInfo">
+    <structure map-as="ns1:SpdxDocumentType"/>
+  </mapping>
+  <mapping class="spdxxml.HasExtractedLicensingInfoID" name="HasExtractedLicensingInfoID">
+    <structure map-as="ns1:SpdxIDType"/>
+  </mapping>
+  <mapping class="spdxxml.HasFile" name="HasFile">
+    <structure map-as="ns1:PackageType"/>
+  </mapping>
+  <mapping class="spdxxml.HashText" name="HashText">
+    <structure map-as="ns1:Sha256TextType"/>
+  </mapping>
+  <mapping class="spdxxml.InfectedFileQuantity" name="InfectedFileQuantity">
+    <structure map-as="ns1:DataCountType"/>
+  </mapping>
+  <mapping class="spdxxml.IntegrityImpactText" name="IntegrityImpactText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.KnownVirusQuantity" name="KnownVirusQuantity">
+    <structure map-as="ns1:DataCountType"/>
+  </mapping>
+  <mapping class="spdxxml.LanguageText" name="LanguageText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.LanguagesAugmentationPoint" name="LanguagesAugmentationPoint"/>
+  <mapping class="spdxxml.LastRegistryUpdateDate" name="LastRegistryUpdateDate">
+    <structure map-as="ns1:DateTimeType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.LicenseAugmentationPoint" name="LicenseAugmentationPoint"/>
+  <mapping class="spdxxml.LicenseDeclared" name="LicenseDeclared">
+    <structure map-as="ns1:SpdxItemType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.LicenseExceptionAugmentationPoint" name="LicenseExceptionAugmentationPoint"/>
+  <mapping class="spdxxml.LicenseID" name="LicenseID">
+    <structure map-as="ns1:LicenseIDType"/>
+  </mapping>
+  <mapping class="spdxxml.LicenseInfoFromFiles" name="LicenseInfoFromFiles">
+    <structure map-as="ns1:PackageType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.LicenseInformationAugmentationPoint" name="LicenseInformationAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.LineCharPointerAugmentationPoint" name="LineCharPointerAugmentationPoint"/>
+  <mapping class="spdxxml.LineText" name="LineText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.ListedLicenseAugmentationPoint" name="ListedLicenseAugmentationPoint"/>
+  <mapping class="spdxxml.LogEntryText" name="LogEntryText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.Member" name="Member">
+    <structure map-as="ns1:AnyLicenseInfoType"/>
+  </mapping>
+  <mapping class="spdxxml.NameText" name="NameText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.OffsetPointerAugmentationPoint" name="OffsetPointerAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.OrLaterOperatorAugmentationPoint" name="OrLaterOperatorAugmentationPoint"/>
+  <mapping class="spdxxml._Package" name="Package">
+    <structure map-as="ns1:PackageType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.PackageAugmentationPoint" name="PackageAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.PackageVerificationCodeAugmentationPoint" name="PackageVerificationCodeAugmentationPoint"/>
+  <mapping class="spdxxml.ParagraphText" name="ParagraphText">
+    <structure map-as="ns1:ParagraphTextType"/>
+  </mapping>
+  <mapping class="spdxxml.Pointer" name="Pointer">
+    <structure map-as="ns1:PointerType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.PointerAugmentationPoint" name="PointerAugmentationPoint"/>
+  <mapping class="spdxxml.PrivilegesRequiredText" name="PrivilegesRequiredText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.ProductTitleText" name="ProductTitleText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.ProjectAugmentationPoint" name="ProjectAugmentationPoint"/>
+  <mapping class="spdxxml.PythonDevelopmentReleaseSegmentText" name="PythonDevelopmentReleaseSegmentText">
+    <structure map-as="ns1:PythonPreReleaseVersionType"/>
+  </mapping>
+  <mapping class="spdxxml.PythonPreReleaseSegmentText" name="PythonPreReleaseSegmentText">
+    <structure map-as="ns1:PythonPreReleaseVersionType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.PythonSemanticVersionAugmentationPoint" name="PythonSemanticVersionAugmentationPoint"/>
+  <mapping class="spdxxml.Range" name="Range">
+    <structure map-as="ns1:SnippetType"/>
+  </mapping>
+  <mapping class="spdxxml.RecommendationText" name="RecommendationText">
+    <structure map-as="ns1:ParagraphTextType"/>
+  </mapping>
+  <mapping class="spdxxml.Reference" name="Reference">
+    <structure map-as="ns1:PointerType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.ReferenceIDAugmentationPoint" name="ReferenceIDAugmentationPoint"/>
+  <mapping class="spdxxml.ReferenceSourceText" name="ReferenceSourceText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.ReferenceText" name="ReferenceText">
+    <structure map-as="ns1:ParagraphTextType"/>
+  </mapping>
+  <mapping class="spdxxml.RelatedSpdxElement" name="RelatedSpdxElement">
+    <structure map-as="ns1:RelationshipType"/>
+  </mapping>
+  <mapping class="spdxxml.RelatedSpdxElementID" name="RelatedSpdxElementID">
+    <structure map-as="ns1:SpdxIDType"/>
+  </mapping>
+  <mapping class="spdxxml.Relationship" name="Relationship">
+    <structure map-as="ns1:RelationshipType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.RelationshipAugmentationPoint" name="RelationshipAugmentationPoint"/>
+  <mapping class="spdxxml.ReleaseNotesText" name="ReleaseNotesText">
+    <structure map-as="ns1:ParagraphTextType"/>
+  </mapping>
+  <mapping class="spdxxml.ScannedDirectoryQuantity" name="ScannedDirectoryQuantity">
+    <structure map-as="ns1:DataCountType"/>
+  </mapping>
+  <mapping class="spdxxml.ScannedFileQuantity" name="ScannedFileQuantity">
+    <structure map-as="ns1:DataCountType"/>
+  </mapping>
+  <mapping class="spdxxml.ScannerText" name="ScannerText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.ScoreDetailsAugmentationPoint" name="ScoreDetailsAugmentationPoint"/>
+  <mapping class="spdxxml.ScoreSystemText" name="ScoreSystemText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.SecuritySummaryText" name="SecuritySummaryText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.SemanticVersionDate" name="SemanticVersionDate">
+    <structure map-as="ns1:DateTimeType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.SemanticVersionInformationAugmentationPoint" name="SemanticVersionInformationAugmentationPoint"/>
+  <mapping class="spdxxml.Sha256Text" name="Sha256Text">
+    <structure map-as="ns1:Sha256TextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.SimpleLicensingInfoAugmentationPoint" name="SimpleLicensingInfoAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.SinglePointerAugmentationPoint" name="SinglePointerAugmentationPoint"/>
+  <mapping class="spdxxml.Snippet" name="Snippet">
+    <structure map-as="ns1:SnippetType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.SnippetAugmentationPoint" name="SnippetAugmentationPoint"/>
+  <mapping class="spdxxml.SnippetFromFile" name="SnippetFromFile">
+    <structure map-as="ns1:SnippetType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.SoftwareEvidenceArchiveAugmentationPoint" name="SoftwareEvidenceArchiveAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.SoftwareInformationAugmentationPoint" name="SoftwareInformationAugmentationPoint"/>
+  <mapping class="spdxxml.SoftwareNameText" name="SoftwareNameText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.SoftwareOrgText" name="SoftwareOrgText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.SoftwareVersionText" name="SoftwareVersionText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.SourceHashText" name="SourceHashText">
+    <structure map-as="ns1:Sha256TextType"/>
+  </mapping>
+  <mapping class="spdxxml.SourceText" name="SourceText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.SourceURIText" name="SourceURIText">
+    <structure map-as="ns1:URITextType"/>
+  </mapping>
+  <mapping class="spdxxml.SpdxDocument" name="SpdxDocument">
+    <structure map-as="ns1:SpdxDocumentType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.SpdxDocumentAugmentationPoint" name="SpdxDocumentAugmentationPoint"/>
+  <mapping class="spdxxml.SpdxDocumentID" name="SpdxDocumentID">
+    <structure map-as="ns1:SpdxIDType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.SpdxElementAugmentationPoint" name="SpdxElementAugmentationPoint"/>
+  <mapping class="spdxxml.SpdxID" name="SpdxID">
+    <structure map-as="ns1:SpdxIDType"/>
+  </mapping>
+  <mapping class="spdxxml.SpdxItem" name="SpdxItem">
+    <structure map-as="ns1:SpdxItemType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.SpdxItemAugmentationPoint" name="SpdxItemAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.StartEndPointerAugmentationPoint" name="StartEndPointerAugmentationPoint"/>
+  <mapping class="spdxxml.StartPointer" name="StartPointer">
+    <structure map-as="ns1:PointerType"/>
+  </mapping>
+  <mapping class="spdxxml.StatementOfAssuranceText" name="StatementOfAssuranceText">
+    <structure map-as="ns1:ParagraphTextType"/>
+  </mapping>
+  <mapping class="spdxxml.TimeText" name="TimeText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.TypeOfReferenceText" name="TypeOfReferenceText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.URIText" name="URIText">
+    <structure map-as="ns1:URITextType"/>
+  </mapping>
+  <mapping class="spdxxml.UserInteractionText" name="UserInteractionText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.VectorStringText" name="VectorStringText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.VersionInformationAugmentationPoint" name="VersionInformationAugmentationPoint"/>
+  <mapping class="spdxxml.VersionText" name="VersionText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.VirusEngineText" name="VirusEngineText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.VirusInformationAugmentationPoint" name="VirusInformationAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.VulnerabilitiesAugmentationPoint" name="VulnerabilitiesAugmentationPoint"/>
+  <mapping abstract="true" class="spdxxml.VulnerabilityAugmentationPoint" name="VulnerabilityAugmentationPoint"/>
+  <mapping class="spdxxml.VulnerabilityAuthenticationText" name="VulnerabilityAuthenticationText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityBaseScoreValue" name="VulnerabilityBaseScoreValue">
+    <structure map-as="ns1:FloatValueType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityIdentifierText" name="VulnerabilityIdentifierText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.VulnerabilityInformationAugmentationPoint" name="VulnerabilityInformationAugmentationPoint"/>
+  <mapping class="spdxxml.VulnerabilityModifiedDate" name="VulnerabilityModifiedDate">
+    <structure map-as="ns1:DateTimeType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityPublishedDate" name="VulnerabilityPublishedDate">
+    <structure map-as="ns1:DateTimeType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.VulnerabilityReferenceAugmentationPoint" name="VulnerabilityReferenceAugmentationPoint"/>
+  <mapping class="spdxxml.VulnerabilityScopeText" name="VulnerabilityScopeText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityScoreSystemText" name="VulnerabilityScoreSystemText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityScoreValue" name="VulnerabilityScoreValue">
+    <structure map-as="ns1:FloatValueType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityScoreVersionValue" name="VulnerabilityScoreVersionValue">
+    <structure map-as="ns1:FloatValueType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilitySourceText" name="VulnerabilitySourceText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilitySummaryText" name="VulnerabilitySummaryText">
+    <structure map-as="ns1:ParagraphTextType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityTitleText" name="VulnerabilityTitleText">
+    <structure map-as="ns1:ParagraphTextType"/>
+  </mapping>
+  <mapping class="spdxxml.VulnerabilityVectorText" name="VulnerabilityVectorText">
+    <structure map-as="ns1:LineTextType"/>
+  </mapping>
+  <mapping abstract="true" class="spdxxml.WithExceptionOperatorAugmentationPoint" name="WithExceptionOperatorAugmentationPoint"/>
+</binding>

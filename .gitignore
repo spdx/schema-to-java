@@ -1,7 +1,9 @@
+/target/
 .idea
 .classpath
 .project
 .settings
 .ant-targets-build.xml
+
 
 
