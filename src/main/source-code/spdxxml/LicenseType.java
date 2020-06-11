@@ -6,25 +6,6 @@ import java.util.List;
 
 /** 
  * A data type for License type
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="LicenseType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns:SimpleLicensingInfoType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:IsDeprecatedLicenseID" minOccurs="0"/>
- *         &lt;xs:element ref="ns:IsOsiApprovedIndicator" minOccurs="1"/>
- *         &lt;xs:element ref="ns:IsFsfLibreIndicator" minOccurs="0"/>
- *         &lt;xs:element ref="ns:StandardLicenseHeaderText" minOccurs="0"/>
- *         &lt;xs:element ref="ns:LicenseText" minOccurs="1"/>
- *         &lt;xs:element ref="ns:StandardLicenseTemplateText" minOccurs="1"/>
- *         &lt;xs:element ref="ns:LicenseAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class LicenseType extends SimpleLicensingInfoType
 {

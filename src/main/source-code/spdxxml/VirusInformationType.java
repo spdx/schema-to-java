@@ -7,30 +7,6 @@ import java.util.List;
 
 /** 
  * A data type for information collected from virus scans
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="VirusInformationType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns1:ObjectType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:KnownVirusQuantity"/>
- *         &lt;xs:element ref="ns:EngineVersionText"/>
- *         &lt;xs:element ref="ns:VirusEngineText"/>
- *         &lt;xs:element ref="ns:ScannedDirectoryQuantity"/>
- *         &lt;xs:element ref="ns:ScannedFileQuantity"/>
- *         &lt;xs:element ref="ns:InfectedFileQuantity"/>
- *         &lt;xs:element ref="ns:DataScannedText"/>
- *         &lt;xs:element ref="ns:DataReadText"/>
- *         &lt;xs:element ref="ns:TimeText"/>
- *         &lt;xs:element ref="ns:FileNotesText"/>
- *         &lt;xs:element ref="ns:EngineDetails"/>
- *         &lt;xs:element ref="ns:VirusInformationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class VirusInformationType extends ObjectType
 {

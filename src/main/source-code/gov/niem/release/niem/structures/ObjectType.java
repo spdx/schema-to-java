@@ -4,32 +4,6 @@ package gov.niem.release.niem.structures;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:structures="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" abstract="true" name="ObjectType">
- *   &lt;xs:sequence>
- *     &lt;xs:element ref="structures:ObjectAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *   &lt;/xs:sequence>
- *   &lt;xs:attribute ref="structures:id">
- *     &lt;!-- Reference to inner class Id -->
- *   &lt;/xs:attribute>
- *   &lt;xs:attribute ref="structures:ref">
- *     &lt;!-- Reference to inner class Ref -->
- *   &lt;/xs:attribute>
- *   &lt;xs:attribute ref="structures:uri">
- *     &lt;!-- Reference to inner class Uri -->
- *   &lt;/xs:attribute>
- *   &lt;xs:attribute ref="structures:metadata">
- *     &lt;!-- Reference to inner class Metadata -->
- *   &lt;/xs:attribute>
- *   &lt;xs:attribute ref="structures:relationshipMetadata">
- *     &lt;!-- Reference to inner class RelationshipMetadata -->
- *   &lt;/xs:attribute>
- *   &lt;xs:anyAttribute processContents="lax" namespace="urn:us:gov:ic:ism urn:us:gov:ic:ntk"/>
- * &lt;/xs:complexType>
- * </pre>
- */
 public abstract class ObjectType
 {
     private List<ObjectAugmentationPoint> objectAugmentationPointList = new ArrayList<ObjectAugmentationPoint>();
@@ -148,14 +122,6 @@ public abstract class ObjectType
             RelationshipMetadata relationshipMetadata) {
         this.relationshipMetadata = relationshipMetadata;
     }
-    /** 
-     * Schema fragment(s) for this class:
-     * <pre>
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" ref="ns:id"/>
-     * 
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" name="id"/>
-     * </pre>
-     */
     public static class Id
     {
         private String id;
@@ -178,14 +144,6 @@ public abstract class ObjectType
             this.id = id;
         }
     }
-    /** 
-     * Schema fragment(s) for this class:
-     * <pre>
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" ref="ns:ref"/>
-     * 
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" name="ref"/>
-     * </pre>
-     */
     public static class Ref
     {
         private String ref;
@@ -208,14 +166,6 @@ public abstract class ObjectType
             this.ref = ref;
         }
     }
-    /** 
-     * Schema fragment(s) for this class:
-     * <pre>
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" ref="ns:uri"/>
-     * 
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" name="uri"/>
-     * </pre>
-     */
     public static class Uri
     {
         private String uri;
@@ -238,14 +188,6 @@ public abstract class ObjectType
             this.uri = uri;
         }
     }
-    /** 
-     * Schema fragment(s) for this class:
-     * <pre>
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" ref="ns:metadata"/>
-     * 
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" name="metadata"/>
-     * </pre>
-     */
     public static class Metadata
     {
         private String metadata;
@@ -268,14 +210,6 @@ public abstract class ObjectType
             this.metadata = metadata;
         }
     }
-    /** 
-     * Schema fragment(s) for this class:
-     * <pre>
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" ref="ns:relationshipMetadata"/>
-     * 
-     * &lt;xs:attribute xmlns:ns="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" name="relationshipMetadata"/>
-     * </pre>
-     */
     public static class RelationshipMetadata
     {
         private String relationshipMetadata;

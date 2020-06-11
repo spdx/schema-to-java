@@ -3,44 +3,6 @@ package spdxxml;
 
 /** 
  * A data type for RelationshipType properties
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:simpleType xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="RelationshipTypeCodeSimpleType">
- *   &lt;xs:restriction base="xs:string">
- *     &lt;xs:enumeration value="RelationshipTypeAmendment"/>
- *     &lt;xs:enumeration value="RelationshipTypeAncestorOf"/>
- *     &lt;xs:enumeration value="RelationshipTypeBuildToolOf"/>
- *     &lt;xs:enumeration value="RelationshipTypeContainedBy"/>
- *     &lt;xs:enumeration value="RelationshipTypeContains"/>
- *     &lt;xs:enumeration value="RelationshipTypeCopyOf"/>
- *     &lt;xs:enumeration value="RelationshipTypeDataFileOf"/>
- *     &lt;xs:enumeration value="RelationshipTypeDescendantOf"/>
- *     &lt;xs:enumeration value="RelationshipTypeDescribedBy"/>
- *     &lt;xs:enumeration value="RelationshipTypeDescribes"/>
- *     &lt;xs:enumeration value="RelationshipTypeDistributionArtifact"/>
- *     &lt;xs:enumeration value="RelationshipTypeDocumentation"/>
- *     &lt;xs:enumeration value="RelationshipTypeDynamicLink"/>
- *     &lt;xs:enumeration value="RelationshipTypeExpandedFromArchive"/>
- *     &lt;xs:enumeration value="RelationshipTypeFileAdded"/>
- *     &lt;xs:enumeration value="RelationshipTypeFileDeleted"/>
- *     &lt;xs:enumeration value="RelationshipTypeFileModified"/>
- *     &lt;xs:enumeration value="RelationshipTypeGeneratedFrom"/>
- *     &lt;xs:enumeration value="RelationshipTypeGenerates"/>
- *     &lt;xs:enumeration value="RelationshipTypeHasPrerequisite"/>
- *     &lt;xs:enumeration value="RelationshipTypeMetafileOf"/>
- *     &lt;xs:enumeration value="RelationshipTypeOptionalComponentOf"/>
- *     &lt;xs:enumeration value="RelationshipTypeOther"/>
- *     &lt;xs:enumeration value="RelationshipTypePackageOf"/>
- *     &lt;xs:enumeration value="RelationshipTypePatchApplied"/>
- *     &lt;xs:enumeration value="RelationshipTypePatchFor"/>
- *     &lt;xs:enumeration value="RelationshipTypePrerequisiteFor"/>
- *     &lt;xs:enumeration value="RelationshipTypeStaticLink"/>
- *     &lt;xs:enumeration value="RelationshipTypeTestcaseOf"/>
- *     &lt;xs:enumeration value="RelationshipTypeVariantOf"/>
- *   &lt;/xs:restriction>
- * &lt;/xs:simpleType>
- * </pre>
  */
 public enum RelationshipTypeCodeSimpleType {
     /** 

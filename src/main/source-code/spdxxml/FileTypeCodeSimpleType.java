@@ -3,25 +3,6 @@ package spdxxml;
 
 /** 
  * A data type for FileType properties
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:simpleType xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="FileTypeCodeSimpleType">
- *   &lt;xs:restriction base="xs:string">
- *     &lt;xs:enumeration value="FileTypeApplication"/>
- *     &lt;xs:enumeration value="FileTypeArchive"/>
- *     &lt;xs:enumeration value="FileTypeAudio"/>
- *     &lt;xs:enumeration value="FileTypeBinary"/>
- *     &lt;xs:enumeration value="FileTypeDocumentation"/>
- *     &lt;xs:enumeration value="FileTypeImage"/>
- *     &lt;xs:enumeration value="FileTypeOther"/>
- *     &lt;xs:enumeration value="FileTypeSource"/>
- *     &lt;xs:enumeration value="FileTypeSpdx"/>
- *     &lt;xs:enumeration value="FileTypeText"/>
- *     &lt;xs:enumeration value="FileTypeVideo"/>
- *   &lt;/xs:restriction>
- * &lt;/xs:simpleType>
- * </pre>
  */
 public enum FileTypeCodeSimpleType {
     /** 

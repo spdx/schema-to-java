@@ -7,17 +7,6 @@ import java.util.Date;
 /** 
  * A data type for Identify when the comment was made. This is to be specified according to the combined date and time in the UTC format, as specified in the ISO 8601
  standard.
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="AnnotationDateType">
- *   &lt;xs:simpleContent>
- *     &lt;xs:extension base="xs:dateTime">
- *       &lt;xs:attributeGroup ref="ns1:SimpleObjectAttributeGroup"/>
- *     &lt;/xs:extension>
- *   &lt;/xs:simpleContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class AnnotationDateType
 {

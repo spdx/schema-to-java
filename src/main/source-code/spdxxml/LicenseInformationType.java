@@ -7,22 +7,6 @@ import java.util.List;
 
 /** 
  * A data type for software license information for a software artifact or source repository
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="LicenseInformationType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns1:ObjectType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:LicenseCategoryCode"/>
- *         &lt;xs:element ref="ns:LicenseCode" minOccurs="1" maxOccurs="20"/>
- *         &lt;xs:element ref="ns:EndOfLifeIndicator"/>
- *         &lt;xs:element ref="ns:LicenseInformationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class LicenseInformationType extends ObjectType
 {

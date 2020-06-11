@@ -6,26 +6,6 @@ import java.util.List;
 
 /** 
  * A data type for SpdxDocument type
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SpdxDocumentType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns:SpdxElementType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:DescribesPackageID"/>
- *         &lt;xs:element ref="ns:DescribesFileID"/>
- *         &lt;xs:element ref="ns:HasExtractedLicensingInfoID" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:CreationInfo" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:SpecVersionText" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:ExternalDocumentRef" minOccurs="0"/>
- *         &lt;xs:element ref="ns:DataLicenseID"/>
- *         &lt;xs:element ref="ns:SpdxDocumentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class SpdxDocumentType extends SpdxElementType
 {

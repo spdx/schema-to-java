@@ -6,33 +6,6 @@ import java.util.List;
 
 /** 
  * A data type for Package type
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="PackageType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns:SpdxItemType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:ExternalRef" minOccurs="0"/>
- *         &lt;xs:element ref="ns:PackageFileName" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:FilesAnalyzedIndicator" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:DescriptionText" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:HomepageURI" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:OriginatorText" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:DownloadLocationURI" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:SourceInfoText" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:SupplierText" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:PackageVerificationCode" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:LicenseDeclaredCode"/>
- *         &lt;xs:element ref="ns:VersionInfoText" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:SummaryText" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:Checksum" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:PackageAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class PackageType extends SpdxItemType
 {

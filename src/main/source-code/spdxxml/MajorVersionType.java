@@ -9,17 +9,6 @@ import java.math.BigInteger;
  Version 1.0.0 defines the public API. The way in which the version number is incremented after this release is dependent on this public API and how it changes. Major version X (X.y.z | X
  &gt; 0) MUST be incremented if any backwards incompatible changes are introduced to the public API. It MAY include minor and patch level changes. Patch and minor version MUST be reset to 0
  when major version is incremented.(https://semver.org/spec/v2.0.0.html)
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="MajorVersionType">
- *   &lt;xs:simpleContent>
- *     &lt;xs:extension base="xs:integer">
- *       &lt;xs:attributeGroup ref="ns1:SimpleObjectAttributeGroup"/>
- *     &lt;/xs:extension>
- *   &lt;/xs:simpleContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class MajorVersionType
 {

@@ -3,17 +3,6 @@ package spdxxml;
 
 /** 
  * A data type for Algorithm properties
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:simpleType xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="AlgorithmCodeSimpleType">
- *   &lt;xs:restriction base="xs:string">
- *     &lt;xs:enumeration value="ChecksumAlgorithmMd5"/>
- *     &lt;xs:enumeration value="ChecksumAlgorithmSha1"/>
- *     &lt;xs:enumeration value="ChecksumAlgorithmSha256"/>
- *   &lt;/xs:restriction>
- * &lt;/xs:simpleType>
- * </pre>
  */
 public enum AlgorithmCodeSimpleType {
     /** 

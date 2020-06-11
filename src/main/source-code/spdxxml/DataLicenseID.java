@@ -7,11 +7,6 @@ package spdxxml;
  re-use of the information or the creation of another SPDX file for the same project(s). This approach avoids intellectual property and related restrictions over the SPDX file, however
  individuals can still contract one to one to restrict release of specific collections of SPDX files (which map to software bill of materials) and the identification of the supplier of SPDX
  files.
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:element xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" type="ns:LicenseIDType" nillable="true" name="DataLicenseID"/>
- * </pre>
  */
 public class DataLicenseID extends LicenseIDType
 {

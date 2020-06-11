@@ -6,24 +6,6 @@ import java.util.List;
 
 /** 
  * A data type for File type
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="FileType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns:SpdxItemType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:NoticeText" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:FileContributorText" minOccurs="0"/>
- *         &lt;xs:element ref="ns:FileName" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:FileTypeCode"/>
- *         &lt;xs:element ref="ns:Checksum" minOccurs="1"/>
- *         &lt;xs:element ref="ns:FileAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class FileType extends SpdxItemType
 {

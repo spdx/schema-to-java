@@ -3,16 +3,6 @@ package spdxxml;
 
 /** 
  * A data type for AnnotationType properties
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:simpleType xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="AnnotationTypeCodeSimpleType">
- *   &lt;xs:restriction base="xs:string">
- *     &lt;xs:enumeration value="AnnotationTypeOther"/>
- *     &lt;xs:enumeration value="AnnotationTypeReview"/>
- *   &lt;/xs:restriction>
- * &lt;/xs:simpleType>
- * </pre>
  */
 public enum AnnotationTypeCodeSimpleType {
     /** 

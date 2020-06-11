@@ -1,4 +1,3 @@
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
@@ -6,7 +5,8 @@
   <groupId>schema-to-java</groupId>
   <artifactId>schema-to-java</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+
+
 <build>
 	<pluginManagement>
 		<plugins>
@@ -14,64 +14,61 @@
         	<groupId>org.jibx</groupId>
         	<artifactId>jibx-maven-plugin</artifactId>
        		<version>1.2.5</version>
-       			 <configuration>
-     			 <includes>
-       			 <includes>*-binding.xml</includes>
-     			 </includes>
-    			  </configuration>
-    			  
-      			  <executions>
+       			 <executions>
         		  	  <execution>
-             	  	 <id>generate-java-code-from-schema</id>
+             	  	  <id>generate-java-code-from-schema</id>
+                		     <goals>
+                   		  	 <goal>schema-codegen</goal>
+               			     </goals>
+                             <configuration>
+                          	 <schemaLocation>src/main/config</schemaLocation>
+                             <includeSchemas>
+                        	 <includeSchema>example1.xsd</includeSchema>
+                        	 </includeSchemas>
+                    	     <options>
+                        	 <package>com.poc.jibx</package>
+                    	     </options>
+                             </configuration>
+           			  </execution>
+
+           		 	  <execution>
+                		    <id>compile-binding</id>
                 			<goals>
-                    		<goal>schema-codegen</goal>
-                			</goals>
-                <configuration>
-                	    <schemaLocation>src/main/config</schemaLocation>
-                    	<includeSchemas>
-                        	<includeSchema>example1.xsd</includeSchema>
-                    	</includeSchemas>
-                    	<options>
-                        	<package>com.poc.jibx</package>
-                    	</options>
-                </configuration>
-            		</execution>
-            		     <execution>
-                           <id>bind-xml</id>
+                    		<goal>bind</goal>
+             			    </goals>
+                		    <configuration>
+                   			<schemaBindingDirectory>src/main/java</schemaBindingDirectory>
+                   			<load>true</load>
+                   			<validate>true</validate>
+                            <!--<verbose>true</verbose>-->
+               				<verify>true</verify>
+                            </configuration>
+                       </execution>  
+            
+                       <execution>
+                            <id>bind-xml</id>
                             <goals>
                             <goal>bind</goal>
                             </goals>
-                           </execution>
-            		
-            		
-           			 <execution>
-                		<id>compile-binding</id>
-                			<goals>
-                    			<goal>bind</goal>
-             			   </goals>
-                		<configuration>
-                   			 <schemaBindingDirectory>src/main/source-code</schemaBindingDirectory>
-                   			<load>true</load>
-                   			<validate>true</validate>
-                    <!--<verbose>true</verbose>-->
-               				<verify>true</verify>
-                </configuration>
-            </execution>        
-        </executions>
-    </plugin>
-	 <plugin>
- 		<groupId>org.jibx.config</groupId>
- 		<artifactId>maven-plugin-reactor</artifactId>
- 		<version>1.3.4-SNAPSHOT</version>
- 	</plugin>
-</plugins>
-</pluginManagement>
-    </build>      
-    
-     
-     <url>http://jibx.sf.net/jibx-maven-plugin/</url>
-    
-  
+                       </execution>          		                
+                </executions>
+         </plugin>
+         
+         
+         <plugin>
+ 		     <groupId>org.jibx.config</groupId>
+ 		     <artifactId>maven-plugin-reactor</artifactId>
+ 		     <version>1.3.4-SNAPSHOT</version>
+ 	     </plugin>
+ 	     
+      </plugins>
+   </pluginManagement>
+</build>
+
+
+
+    <url>http://jibx.sf.net/jibx-maven-plugin/</url>
+
   <dependencies>
      <dependency>
           <groupId>org.apache.maven</groupId>
@@ -93,7 +90,7 @@
           <artifactId>jibx-bind</artifactId>
           <version>1.3.1</version>
       </dependency>
-      <dependency>
+       <dependency>
           <groupId>org.jibx</groupId>
           <artifactId>jibx-extras</artifactId>
           <version>1.3.1</version>
@@ -102,12 +99,12 @@
             <groupId>org.apache.bcel</groupId>
             <artifactId>bcel</artifactId>
             <version>6.0</version>
-        </dependency>    
-   <dependency>
-    <groupId>org.jibx</groupId>
-    <artifactId>jibx-run</artifactId>
-    <version>1.2.5</version>
-</dependency>
-</dependencies>
+       </dependency>    
+       <dependency>
+             <groupId>org.jibx</groupId>
+              <artifactId>jibx-run</artifactId>
+              <version>1.2.5</version>
+      </dependency>
+   </dependencies>
 
 </project>

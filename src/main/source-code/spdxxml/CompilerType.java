@@ -7,21 +7,6 @@ import java.util.List;
 
 /** 
  * A data type for software compiler information
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="CompilerType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns1:ObjectType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:NameText"/>
- *         &lt;xs:element ref="ns:CompilerVersionText"/>
- *         &lt;xs:element ref="ns:CompilerAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class CompilerType extends ObjectType
 {

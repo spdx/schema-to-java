@@ -8,22 +8,6 @@ import java.util.List;
 /** 
  * A data type for information about what is to be considered the authoritative source for a given artifact or source repository. This includes an URL, a hash of the source,
  and whether or not the source has been signed
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="AuthoritativeSourceInformationType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns1:ObjectType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:SourceHashText"/>
- *         &lt;xs:element ref="ns:SourceURIText"/>
- *         &lt;xs:element ref="ns:AuthoritativeDigitalSignatureIndicator"/>
- *         &lt;xs:element ref="ns:AuthoritativeSourceInformationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class AuthoritativeSourceInformationType extends ObjectType
 {

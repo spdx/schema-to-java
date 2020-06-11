@@ -7,22 +7,6 @@ import java.util.List;
 
 /** 
  * A data type for ExternalDocumentRef type
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="ExternalDocumentRefType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns1:ObjectType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:Checksum" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:ExternalDocumentID" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:SpdxDocumentID" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:ExternalDocumentRefAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class ExternalDocumentRefType extends ObjectType
 {

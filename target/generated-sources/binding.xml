@@ -1,20 +1,4 @@
-<binding name="binding" package="dflt" trim-whitespace="true">
-  <mapping class="dflt.Example1" name="example1">
-    <value style="element" name="orderperson" get-method="getOrderperson" set-method="setOrderperson"/>
-    <structure name="shipto">
-      <value style="element" name="name" get-method="getShiptoName" set-method="setShiptoName"/>
-      <value style="element" name="address" get-method="getShiptoAddress" set-method="setShiptoAddress"/>
-      <value style="element" name="city" get-method="getShiptoCity" set-method="setShiptoCity"/>
-      <value style="element" name="country" get-method="getShiptoCountry" set-method="setShiptoCountry"/>
-    </structure>
-    <collection get-method="getItemList" set-method="setItemList" create-type="java.util.ArrayList">
-      <structure type="dflt.Example1$Item" name="item">
-        <value style="element" name="title" get-method="getTitle" set-method="setTitle"/>
-        <value style="element" name="note" get-method="getNote" set-method="setNote" usage="optional"/>
-        <value style="element" name="quantity" get-method="getQuantity" set-method="setQuantity"/>
-        <value style="element" name="price" get-method="getPrice" set-method="setPrice"/>
-      </structure>
-    </collection>
-    <value style="attribute" name="orderid" get-method="getOrderid" set-method="setOrderid"/>
-  </mapping>
+<binding name="binding" package="" trim-whitespace="true">
+  <include path="wwwJavatpointComBinding.xml"/>
+  <include path="nonamespaceBinding.xml"/>
 </binding>

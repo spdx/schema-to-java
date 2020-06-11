@@ -9,25 +9,6 @@ import java.util.List;
  * A data type for semantic versioning information. A normal version number MUST take the form X.Y.Z where X, Y, and Z are non-negative integers, and MUST NOT contain leading
  zeroes. X is the major version, Y is the minor version, and Z is the patch version. Each element MUST increase numerically. For instance: 1.9.0 -&gt; 1.10.0 -&gt; 1.11.0.
  (https://semver.org/spec/v2.0.0.html)
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SemanticVersionInformationType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns1:ObjectType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:APIName"/>
- *         &lt;xs:element ref="ns:MajorVersionNumeric"/>
- *         &lt;xs:element ref="ns:MinorVersionNumeric"/>
- *         &lt;xs:element ref="ns:PatchVersionText"/>
- *         &lt;xs:element ref="ns:PreReleaseVersionText"/>
- *         &lt;xs:element ref="ns:BuildMetaText"/>
- *         &lt;xs:element ref="ns:SemanticVersionInformationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class SemanticVersionInformationType extends ObjectType
 {

@@ -6,23 +6,6 @@ import java.util.List;
 
 /** 
  * A data type for SpdxItem type
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SpdxItemType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns:SpdxElementType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:LicenseConcludedCode"/>
- *         &lt;xs:element ref="ns:CopyrightText" minOccurs="1" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:LicenseInfoFromFiles" minOccurs="1"/>
- *         &lt;xs:element ref="ns:LicenseCommentsText" maxOccurs="1"/>
- *         &lt;xs:element ref="ns:SpdxItemAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class SpdxItemType extends SpdxElementType
 {

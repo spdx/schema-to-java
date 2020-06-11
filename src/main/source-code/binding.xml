@@ -1,4 +1,9 @@
-<binding xmlns:ns1="urn:spdx-xml:1.0" name="binding" package="" trim-whitespace="true">
+<binding xmlns:ns2="http://spdx.org/rdf/terms" xmlns:ns1="urn:spdx-xml:1.0" name="binding" package="" trim-whitespace="true">
+  <format label="ns2:ReferenceCategory" type="org.spdx.rdf.terms.ReferenceCategory" enum-value-method="xmlValue"/>
+  <format label="ns2:ChecksumAlgorithm" type="org.spdx.rdf.terms.ChecksumAlgorithm" enum-value-method="xmlValue"/>
+  <format label="ns2:RelationshipType" type="org.spdx.rdf.terms.RelationshipType" enum-value-method="xmlValue"/>
+  <format label="ns2:AnnotationType" type="org.spdx.rdf.terms.AnnotationType" enum-value-method="xmlValue"/>
+  <format label="ns2:FileType" type="org.spdx.rdf.terms.FileType" enum-value-method="xmlValue"/>
   <format label="ns1:AlgorithmCodeSimpleType" type="spdxxml.AlgorithmCodeSimpleType" enum-value-method="xmlValue"/>
   <format label="ns1:AnnotationTypeCodeSimpleType" type="spdxxml.AnnotationTypeCodeSimpleType" enum-value-method="xmlValue"/>
   <format label="ns1:CopyrightTextCodeSimpleType" type="spdxxml.CopyrightTextCodeSimpleType" enum-value-method="xmlValue"/>
@@ -12,6 +17,7 @@
   <format label="ns1:ReferenceCategoryCodeSimpleType" type="spdxxml.ReferenceCategoryCodeSimpleType" enum-value-method="xmlValue"/>
   <format label="ns1:RelationshipTypeCodeSimpleType" type="spdxxml.RelationshipTypeCodeSimpleType" enum-value-method="xmlValue"/>
   <format label="ns1:RiskCodeSimpleType" type="spdxxml.RiskCodeSimpleType" enum-value-method="xmlValue"/>
+  <include path="rdf_termsBinding.xml"/>
   <include path="urn_spdxxml_10Binding.xml"/>
   <include path="niem_structures_40Binding.xml"/>
 </binding>

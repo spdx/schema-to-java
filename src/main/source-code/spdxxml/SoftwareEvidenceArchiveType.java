@@ -7,28 +7,6 @@ import java.util.List;
 
 /** 
  * A data type for automated software supply chain Product and version information metadata
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="SoftwareEvidenceArchiveType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns1:ObjectType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:SoftwareInformation"/>
- *         &lt;xs:element ref="ns:FileInformation"/>
- *         &lt;xs:element ref="ns:AuthoritativeSourceInformation"/>
- *         &lt;xs:element ref="ns:EcosystemInformation"/>
- *         &lt;xs:element ref="ns:DependencyInformation"/>
- *         &lt;xs:element ref="ns:LicenseInformation"/>
- *         &lt;xs:element ref="ns:VulnerabilityInformation"/>
- *         &lt;xs:element ref="ns:GovernanceRiskCompliance"/>
- *         &lt;xs:element ref="ns:DeliveryInformation"/>
- *         &lt;xs:element ref="ns:SoftwareEvidenceArchiveAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class SoftwareEvidenceArchiveType extends ObjectType
 {

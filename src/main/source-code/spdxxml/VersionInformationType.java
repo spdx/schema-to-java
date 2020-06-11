@@ -7,27 +7,6 @@ import java.util.List;
 
 /** 
  * A data type for version information
- * 
- * Schema fragment(s) for this class:
- * <pre>
- * &lt;xs:complexType xmlns:ns="urn:spdx-xml:1.0" xmlns:ns1="http://release.niem.gov/niem/structures/4.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="VersionInformationType">
- *   &lt;xs:complexContent>
- *     &lt;xs:extension base="ns1:ObjectType">
- *       &lt;xs:sequence>
- *         &lt;xs:element ref="ns:SoftwareVersionText"/>
- *         &lt;xs:element ref="ns:SemanticVersionIndicator"/>
- *         &lt;xs:element ref="ns:SemanticVersionText"/>
- *         &lt;xs:element ref="ns:SemanticVersionInformation"/>
- *         &lt;xs:element ref="ns:SemanticVersionDate"/>
- *         &lt;xs:element ref="ns:PythonSemanticVersionIndicator"/>
- *         &lt;xs:element ref="ns:PythonSemanticVersion"/>
- *         &lt;xs:element ref="ns:PythonVersionText"/>
- *         &lt;xs:element ref="ns:VersionInformationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
- *       &lt;/xs:sequence>
- *     &lt;/xs:extension>
- *   &lt;/xs:complexContent>
- * &lt;/xs:complexType>
- * </pre>
  */
 public class VersionInformationType extends ObjectType
 {
