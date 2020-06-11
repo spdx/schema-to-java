@@ -1,8 +1,0 @@
-<binding trim-whitespace="true">
-  <namespace uri="http://www.javatpoint.com" default="elements"/>
-  <mapping class="com.javatpoint.Employee" name="employee">
-    <value style="element" name="firstname" get-method="getFirstname" set-method="setFirstname"/>
-    <value style="element" name="lastname" get-method="getLastname" set-method="setLastname"/>
-    <value style="element" name="email" get-method="getEmail" set-method="setEmail"/>
-  </mapping>
-</binding>

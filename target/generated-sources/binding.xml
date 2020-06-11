@@ -1,4 +1,0 @@
-<binding name="binding" package="" trim-whitespace="true">
-  <include path="wwwJavatpointComBinding.xml"/>
-  <include path="nonamespaceBinding.xml"/>
-</binding>
