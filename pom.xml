@@ -14,21 +14,27 @@
         	<groupId>org.jibx</groupId>
         	<artifactId>jibx-maven-plugin</artifactId>
        		<version>1.2.5</version>
+       			<configuration>
+                             <schemaBindingDirectory>src/main/source-code</schemaBindingDirectory>
+                              <load>true</load>
+                             <validate>true</validate>
+                    <!--<verbose>true</verbose>-->
+                             <verify>true</verify>
+                             <schemaLocation>src/main/config</schemaLocation>
+                             <includeSchemas>
+                        	 <includeSchema>spdx-schema.xsd</includeSchema>
+                        	 </includeSchemas>
+                    	     <options>
+                        	 <package>com.poc.jibx</package>
+                    	     </options>
+                             </configuration>
        			 <executions>
         		  	  <execution>
              	  	  <id>generate-java-code-from-schema</id>
                 		     <goals>
                    		  	 <goal>schema-codegen</goal>
                			     </goals>
-                             <configuration>
-                          	 <schemaLocation>src/main/config</schemaLocation>
-                             <includeSchemas>
-                        	 <includeSchema>example1.xsd</includeSchema>
-                        	 </includeSchemas>
-                    	     <options>
-                        	 <package>com.poc.jibx</package>
-                    	     </options>
-                             </configuration>
+                             
            			  </execution>
 
            		 	  <execution>
@@ -37,7 +43,7 @@
                     		<goal>bind</goal>
              			    </goals>
                 		    <configuration>
-                   			<schemaBindingDirectory>src/main/java</schemaBindingDirectory>
+                   			<schemaBindingDirectory>src/main/source-code</schemaBindingDirectory>
                    			<load>true</load>
                    			<validate>true</validate>
                             <!--<verbose>true</verbose>-->
