@@ -1,0 +1,281 @@
+<binding xmlns:ns1="http://spdx.org/rdf/terms" name="binding" package="com.poc.jibx" trim-whitespace="true">
+  <namespace uri="http://spdx.org/rdf/terms" default="elements"/>
+  <format label="ns1:ReferenceCategory" type="com.poc.jibx.ReferenceCategory" enum-value-method="xmlValue"/>
+  <format label="ns1:ChecksumAlgorithm" type="com.poc.jibx.ChecksumAlgorithm" enum-value-method="xmlValue"/>
+  <format label="ns1:RelationshipType" type="com.poc.jibx.RelationshipType" enum-value-method="xmlValue"/>
+  <format label="ns1:AnnotationType" type="com.poc.jibx.AnnotationType" enum-value-method="xmlValue"/>
+  <format label="ns1:FileType" type="com.poc.jibx.FileType" enum-value-method="xmlValue"/>
+  <mapping abstract="true" type-name="ns1:CreationInfo" class="com.poc.jibx.CreationInfo">
+    <structure ordered="false">
+      <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
+      <value style="element" name="created" get-method="getCreated" set-method="setCreated"/>
+      <collection get-method="getCreatorList" set-method="setCreatorList" create-type="java.util.ArrayList">
+        <value style="element" name="creator" type="java.lang.String"/>
+      </collection>
+      <value style="element" name="licenseListVersion" get-method="getLicenseListVersion" set-method="setLicenseListVersion" usage="optional"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SinglePointer" class="com.poc.jibx.SinglePointer">
+    <structure map-as="ns1:Pointer"/>
+    <structure map-as="ns1:File" get-method="getReference" set-method="setReference" name="reference"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ExtractedLicensingInfo" class="com.poc.jibx.ExtractedLicensingInfo">
+    <structure map-as="ns1:SimpleLicensingInfo"/>
+    <value style="element" name="extractedText" get-method="getExtractedText" set-method="setExtractedText"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:License" class="com.poc.jibx.License">
+    <structure map-as="ns1:SimpleLicensingInfo"/>
+    <structure ordered="false">
+      <value style="element" name="standardLicenseHeaderTemplate" get-method="getStandardLicenseHeaderTemplate" set-method="setStandardLicenseHeaderTemplate" usage="optional"/>
+      <value style="element" name="licenseText" get-method="getLicenseText" set-method="setLicenseText"/>
+      <value style="element" name="isOsiApproved" get-method="isIsOsiApproved" set-method="setIsOsiApproved"/>
+      <value style="element" name="isFsfLibre" get-method="getIsFsfLibre" set-method="setIsFsfLibre" usage="optional"/>
+      <value style="element" name="standardLicenseTemplate" get-method="getStandardLicenseTemplate" set-method="setStandardLicenseTemplate" usage="optional"/>
+      <value style="element" name="standardLicenseHeader" get-method="getStandardLicenseHeader" set-method="setStandardLicenseHeader" usage="optional"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:AnyLicenseInfo" class="com.poc.jibx.AnyLicenseInfo"/>
+  <mapping abstract="true" type-name="ns1:ExternalRef" class="com.poc.jibx.ExternalRef">
+    <structure ordered="false">
+      <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
+      <value style="element" name="referenceCategory" get-method="getReferenceCategory" set-method="setReferenceCategory" format="ns1:ReferenceCategory"/>
+      <value style="element" name="referenceLocator" get-method="getReferenceLocator" set-method="setReferenceLocator"/>
+      <structure map-as="ns1:ReferenceType" get-method="getReferenceType" set-method="setReferenceType" name="referenceType"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Annotation" class="com.poc.jibx.Annotation">
+    <structure ordered="false">
+      <value style="element" name="annotationDate" get-method="getAnnotationDate" set-method="setAnnotationDate"/>
+      <value style="element" name="comment" get-method="getComment" set-method="setComment"/>
+      <value style="element" name="annotator" get-method="getAnnotator" set-method="setAnnotator"/>
+      <value style="element" name="annotationType" get-method="getAnnotationType" set-method="setAnnotationType" format="ns1:AnnotationType"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ByteOffsetPointer" class="com.poc.jibx.ByteOffsetPointer">
+    <structure map-as="ns1:OffsetPointer"/>
+    <value style="element" name="offset" get-method="getOffset" set-method="setOffset"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SpdxItem" class="com.poc.jibx.SpdxItem">
+    <structure map-as="ns1:SpdxElement"/>
+    <structure ordered="false">
+      <value style="element" name="licenseComments" get-method="getLicenseComments" set-method="setLicenseComments" usage="optional"/>
+      <collection get-method="getAttributionTextList" set-method="setAttributionTextList" usage="optional" create-type="java.util.ArrayList">
+        <value style="element" name="attributionText" type="java.lang.String"/>
+      </collection>
+      <value style="element" name="copyrightText" get-method="getCopyrightText" set-method="setCopyrightText"/>
+      <collection get-method="getLicenseInfoFromFileList" set-method="setLicenseInfoFromFileList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:SimpleLicensingInfo" name="licenseInfoFromFiles"/>
+      </collection>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:OrLaterOperator" class="com.poc.jibx.OrLaterOperator">
+    <structure map-as="ns1:AnyLicenseInfo"/>
+    <structure map-as="ns1:AnyLicenseInfo" get-method="getMember" set-method="setMember" name="member"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ReferenceType" class="com.poc.jibx.ReferenceType">
+    <structure ordered="false">
+      <value style="element" name="contextualExample" get-method="getContextualExample" set-method="setContextualExample"/>
+      <value style="element" name="externalReferenceSite" get-method="getExternalReferenceSite" set-method="setExternalReferenceSite"/>
+      <value style="element" name="documentation" get-method="getDocumentation" set-method="setDocumentation"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:OffsetPointer" class="com.poc.jibx.OffsetPointer">
+    <structure map-as="ns1:SinglePointer"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ConjunctiveLicenseSet" class="com.poc.jibx.ConjunctiveLicenseSet">
+    <structure map-as="ns1:AnyLicenseInfo"/>
+    <collection get-method="getMemberList" set-method="setMemberList" create-type="java.util.ArrayList">
+      <structure map-as="ns1:AnyLicenseInfo" name="member"/>
+    </collection>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ListedLicense" class="com.poc.jibx.ListedLicense">
+    <structure map-as="ns1:License"/>
+    <value style="element" name="isDeprecatedLicenseId" get-method="getIsDeprecatedLicenseId" set-method="setIsDeprecatedLicenseId" usage="optional"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LineCharPointer" class="com.poc.jibx.LineCharPointer">
+    <structure map-as="ns1:OffsetPointer"/>
+    <value style="element" name="lineNumber" get-method="getLineNumber" set-method="setLineNumber"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Project" class="com.poc.jibx.Project"/>
+  <mapping abstract="true" type-name="ns1:PackageVerificationCode" class="com.poc.jibx.PackageVerificationCode">
+    <structure ordered="false">
+      <value style="element" name="packageVerificationCodeValue" get-method="getPackageVerificationCodeValue" set-method="setPackageVerificationCodeValue"/>
+      <collection get-method="getPackageVerificationCodeExcludedFileList" set-method="setPackageVerificationCodeExcludedFileList" usage="optional" create-type="java.util.ArrayList">
+        <value style="element" name="packageVerificationCodeExcludedFile" type="java.lang.String"/>
+      </collection>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:ExternalDocumentRef" class="com.poc.jibx.ExternalDocumentRef">
+    <structure ordered="false">
+      <value style="element" name="externalDocumentId" get-method="getExternalDocumentId" set-method="setExternalDocumentId"/>
+      <structure map-as="ns1:Checksum" get-method="getChecksum" set-method="setChecksum" name="checksum"/>
+      <structure map-as="ns1:SpdxDocument" get-method="getSpdxDocument" set-method="setSpdxDocument" name="spdxDocument"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Relationship" class="com.poc.jibx.Relationship">
+    <structure ordered="false">
+      <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
+      <value style="element" name="relationshipType" get-method="getRelationshipType" set-method="setRelationshipType" format="ns1:RelationshipType"/>
+      <structure map-as="ns1:SpdxElement" get-method="getRelatedSpdxElement" set-method="setRelatedSpdxElement" name="relatedSpdxElement"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SpdxDocument" class="com.poc.jibx.SpdxDocument">
+    <structure map-as="ns1:SpdxElement"/>
+    <structure ordered="false">
+      <collection get-method="getReviewedList" set-method="setReviewedList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:Review" name="reviewed"/>
+      </collection>
+      <collection get-method="getHasExtractedLicensingInfoList" set-method="setHasExtractedLicensingInfoList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:ExtractedLicensingInfo" name="hasExtractedLicensingInfo"/>
+      </collection>
+      <value style="element" name="specVersion" get-method="getSpecVersion" set-method="setSpecVersion"/>
+      <structure map-as="ns1:AnyLicenseInfo" get-method="getDataLicense" set-method="setDataLicense" name="dataLicense"/>
+      <collection get-method="getDescribesPackageList" set-method="setDescribesPackageList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:Package" name="describesPackage"/>
+      </collection>
+      <collection get-method="getExternalDocumentRefList" set-method="setExternalDocumentRefList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:ExternalDocumentRef" name="externalDocumentRef"/>
+      </collection>
+      <structure map-as="ns1:CreationInfo" get-method="getCreationInfo" set-method="setCreationInfo" name="creationInfo"/>
+    </structure>
+  </mapping>
+  <mapping class="com.poc.jibx.SpdxDocument" name="Document">
+    <structure map-as="ns1:SpdxDocument"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:File" class="com.poc.jibx.File">
+    <structure map-as="ns1:SpdxItem"/>
+    <structure ordered="false">
+      <collection get-method="getArtifactOfList" set-method="setArtifactOfList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:Project" name="artifactOf"/>
+      </collection>
+      <collection get-method="getFileTypeList" set-method="setFileTypeList" usage="optional" create-type="java.util.ArrayList">
+        <value style="element" name="fileType" type="com.poc.jibx.FileType" format="ns1:FileType"/>
+      </collection>
+      <value style="element" name="fileName" get-method="getFileName" set-method="setFileName"/>
+      <collection get-method="getFileContributorList" set-method="setFileContributorList" usage="optional" create-type="java.util.ArrayList">
+        <value style="element" name="fileContributor" type="java.lang.String"/>
+      </collection>
+      <collection get-method="getLicenseInfoInFileList" set-method="setLicenseInfoInFileList" create-type="java.util.ArrayList">
+        <structure map-as="ns1:SimpleLicensingInfo" name="licenseInfoInFile"/>
+      </collection>
+      <collection get-method="getChecksumList" set-method="setChecksumList" create-type="java.util.ArrayList">
+        <structure map-as="ns1:Checksum" name="checksum"/>
+      </collection>
+      <value style="element" name="noticeText" get-method="getNoticeText" set-method="setNoticeText" usage="optional"/>
+      <collection get-method="getFileDependencyList" set-method="setFileDependencyList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:File" name="fileDependency"/>
+      </collection>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:LicenseException" class="com.poc.jibx.LicenseException">
+    <structure ordered="false">
+      <value style="element" name="example" get-method="getExample" set-method="setExample" usage="optional"/>
+      <collection get-method="getSeeAlsoList" set-method="setSeeAlsoList" usage="optional" create-type="java.util.ArrayList">
+        <value style="element" name="seeAlso" type="java.lang.String"/>
+      </collection>
+      <value style="element" name="name" get-method="getName" set-method="setName"/>
+      <value style="element" name="licenseExceptionId" get-method="getLicenseExceptionId" set-method="setLicenseExceptionId"/>
+      <value style="element" name="comment" get-method="getComment" set-method="setComment"/>
+      <value style="element" name="licenseExceptionText" get-method="getLicenseExceptionText" set-method="setLicenseExceptionText"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Container" class="com.poc.jibx.Container"/>
+  <mapping abstract="true" type-name="ns1:Checksum" class="com.poc.jibx.Checksum">
+    <structure ordered="false">
+      <value style="element" name="algorithm" get-method="getAlgorithm" set-method="setAlgorithm" format="ns1:ChecksumAlgorithm"/>
+      <value style="element" name="checksumValue" get-method="getChecksumValue" set-method="setChecksumValue"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SpdxElement" class="com.poc.jibx.SpdxElement">
+    <structure ordered="false">
+      <value style="element" name="name" get-method="getName" set-method="setName"/>
+      <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
+      <collection get-method="getRelationshipList" set-method="setRelationshipList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:Relationship" name="relationship"/>
+      </collection>
+      <collection get-method="getAnnotationList" set-method="setAnnotationList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:Annotation" name="annotation"/>
+      </collection>
+      <value style="element" name="SPDXID" get-method="getSPDXID" set-method="setSPDXID"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Review" class="com.poc.jibx.Review">
+    <structure ordered="false">
+      <value style="element" name="reviewer" get-method="getReviewer" set-method="setReviewer" usage="optional"/>
+      <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
+      <value style="element" name="reviewDate" get-method="getReviewDate" set-method="setReviewDate"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:StartEndPointer" class="com.poc.jibx.StartEndPointer">
+    <structure map-as="ns1:CompoundPointer"/>
+    <structure ordered="false">
+      <structure map-as="ns1:SinglePointer" get-method="getStartPointer" set-method="setStartPointer" name="startPointer"/>
+      <structure map-as="ns1:SinglePointer" get-method="getEndPointer" set-method="setEndPointer" name="endPointer"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Pointer" class="com.poc.jibx.Pointer"/>
+  <mapping abstract="true" type-name="ns1:DisjunctiveLicenseSet" class="com.poc.jibx.DisjunctiveLicenseSet">
+    <structure map-as="ns1:AnyLicenseInfo"/>
+    <collection get-method="getMemberList" set-method="setMemberList" create-type="java.util.ArrayList">
+      <structure map-as="ns1:AnyLicenseInfo" name="member"/>
+    </collection>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:WithExceptionOperator" class="com.poc.jibx.WithExceptionOperator">
+    <structure map-as="ns1:AnyLicenseInfo"/>
+    <structure ordered="false">
+      <structure map-as="ns1:AnyLicenseInfo" get-method="getMember" set-method="setMember" name="member"/>
+      <structure map-as="ns1:LicenseException" get-method="getLicenseException" set-method="setLicenseException" name="licenseException"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:SimpleLicensingInfo" class="com.poc.jibx.SimpleLicensingInfo">
+    <structure map-as="ns1:AnyLicenseInfo"/>
+    <structure ordered="false">
+      <collection get-method="getSeeAlsoList" set-method="setSeeAlsoList" usage="optional" create-type="java.util.ArrayList">
+        <value style="element" name="seeAlso" type="java.lang.String"/>
+      </collection>
+      <value style="element" name="name" get-method="getName" set-method="setName"/>
+      <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
+      <value style="element" name="licenseId" get-method="getLicenseId" set-method="setLicenseId"/>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Snippet" class="com.poc.jibx.Snippet">
+    <structure map-as="ns1:SpdxItem"/>
+    <structure ordered="false">
+      <collection get-method="getRangeList" set-method="setRangeList" create-type="java.util.ArrayList">
+        <structure map-as="ns1:CompoundPointer" name="range"/>
+      </collection>
+      <structure map-as="ns1:File" get-method="getSnippetFromFile" set-method="setSnippetFromFile" name="snippetFromFile"/>
+      <collection get-method="getLicenseInfoInSnippetList" set-method="setLicenseInfoInSnippetList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:SimpleLicensingInfo" name="licenseInfoInSnippet"/>
+      </collection>
+    </structure>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:CompoundPointer" class="com.poc.jibx.CompoundPointer">
+    <structure map-as="ns1:Pointer"/>
+  </mapping>
+  <mapping abstract="true" type-name="ns1:Package" class="com.poc.jibx._Package">
+    <structure map-as="ns1:SpdxItem"/>
+    <structure ordered="false">
+      <value style="element" name="homepage" get-method="getHomepage" set-method="setHomepage" usage="optional"/>
+      <value style="element" name="supplier" get-method="getSupplier" set-method="setSupplier" usage="optional"/>
+      <structure map-as="ns1:PackageVerificationCode" get-method="getPackageVerificationCode" set-method="setPackageVerificationCode" usage="optional" name="packageVerificationCode"/>
+      <collection get-method="getChecksumList" set-method="setChecksumList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:Checksum" name="checksum"/>
+      </collection>
+      <value style="element" name="downloadLocation" get-method="getDownloadLocation" set-method="setDownloadLocation"/>
+      <value style="element" name="filesAnalyzed" get-method="getFilesAnalyzed" set-method="setFilesAnalyzed" usage="optional"/>
+      <collection get-method="getExternalRefList" set-method="setExternalRefList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:ExternalRef" name="externalRef"/>
+      </collection>
+      <collection get-method="getHasFileList" set-method="setHasFileList" usage="optional" create-type="java.util.ArrayList">
+        <structure map-as="ns1:File" name="hasFile"/>
+      </collection>
+      <value style="element" name="summary" get-method="getSummary" set-method="setSummary" usage="optional"/>
+      <value style="element" name="originator" get-method="getOriginator" set-method="setOriginator" usage="optional"/>
+      <value style="element" name="packageFileName" get-method="getPackageFileName" set-method="setPackageFileName" usage="optional"/>
+      <value style="element" name="versionInfo" get-method="getVersionInfo" set-method="setVersionInfo" usage="optional"/>
+      <value style="element" name="sourceInfo" get-method="getSourceInfo" set-method="setSourceInfo" usage="optional"/>
+      <value style="element" name="description" get-method="getDescription" set-method="setDescription" usage="optional"/>
+    </structure>
+  </mapping>
+</binding>
