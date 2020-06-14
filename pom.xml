@@ -23,9 +23,9 @@
                              <schemaLocation>src/main/config</schemaLocation>
                              <includeSchemas>
                         	 <includeSchema>spdx-schema.xsd</includeSchema>
-                        	 </includeSchemas>
+                             </includeSchemas>
                     	     <options>
-                        	 <package>com.poc.jibx</package>
+                        	
                     	     </options>
                              </configuration>
        			 <executions>
