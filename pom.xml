@@ -23,7 +23,7 @@
                              <verify>true</verify>
                              <schemaLocation>src/main/config</schemaLocation>
                             <customizations>
-                                <customization>src/main/custom/customization0.xsd</customization>
+                                <customization>src/main/custom/global-customization.xsd</customization>
                             </customizations>
                              <includeSchemas>
                         	 <includeSchema>spdx-schema.xsd</includeSchema>
