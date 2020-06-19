@@ -1,11 +1,11 @@
-<binding xmlns:ns1="http://spdx.org/rdf/terms" name="binding" package="com.poc.jibx" trim-whitespace="true">
+<binding xmlns:ns1="http://spdx.org/rdf/terms" name="binding" package="org.spdx.library.model" trim-whitespace="true">
   <namespace uri="http://spdx.org/rdf/terms" default="elements"/>
-  <format label="ns1:ReferenceCategory" type="com.poc.jibx.ReferenceCategory" enum-value-method="xmlValue"/>
-  <format label="ns1:ChecksumAlgorithm" type="com.poc.jibx.ChecksumAlgorithm" enum-value-method="xmlValue"/>
-  <format label="ns1:RelationshipType" type="com.poc.jibx.RelationshipType" enum-value-method="xmlValue"/>
-  <format label="ns1:AnnotationType" type="com.poc.jibx.AnnotationType" enum-value-method="xmlValue"/>
-  <format label="ns1:FileType" type="com.poc.jibx.FileType" enum-value-method="xmlValue"/>
-  <mapping abstract="true" type-name="ns1:CreationInfo" class="com.poc.jibx.CreationInfo">
+  <format label="ns1:ReferenceCategory" type="org.spdx.library.model.ReferenceCategory" enum-value-method="xmlValue"/>
+  <format label="ns1:ChecksumAlgorithm" type="org.spdx.library.model.ChecksumAlgorithm" enum-value-method="xmlValue"/>
+  <format label="ns1:RelationshipType" type="org.spdx.library.model.RelationshipType" enum-value-method="xmlValue"/>
+  <format label="ns1:AnnotationType" type="org.spdx.library.model.AnnotationType" enum-value-method="xmlValue"/>
+  <format label="ns1:FileType" type="org.spdx.library.model.FileType" enum-value-method="xmlValue"/>
+  <mapping abstract="true" type-name="ns1:CreationInfo" class="org.spdx.library.model.CreationInfo">
     <structure ordered="false">
       <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
       <value style="element" name="created" get-method="getCreated" set-method="setCreated"/>
@@ -15,15 +15,15 @@
       <value style="element" name="licenseListVersion" get-method="getLicenseListVersion" set-method="setLicenseListVersion" usage="optional"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:SinglePointer" class="com.poc.jibx.SinglePointer">
+  <mapping abstract="true" type-name="ns1:SinglePointer" class="org.spdx.library.model.SinglePointer">
     <structure map-as="ns1:Pointer"/>
     <structure map-as="ns1:File" get-method="getReference" set-method="setReference" name="reference"/>
   </mapping>
-  <mapping abstract="true" type-name="ns1:ExtractedLicensingInfo" class="com.poc.jibx.ExtractedLicensingInfo">
+  <mapping abstract="true" type-name="ns1:ExtractedLicensingInfo" class="org.spdx.library.model.ExtractedLicensingInfo">
     <structure map-as="ns1:SimpleLicensingInfo"/>
     <value style="element" name="extractedText" get-method="getExtractedText" set-method="setExtractedText"/>
   </mapping>
-  <mapping abstract="true" type-name="ns1:License" class="com.poc.jibx.License">
+  <mapping abstract="true" type-name="ns1:License" class="org.spdx.library.model.License">
     <structure map-as="ns1:SimpleLicensingInfo"/>
     <structure ordered="false">
       <value style="element" name="standardLicenseHeaderTemplate" get-method="getStandardLicenseHeaderTemplate" set-method="setStandardLicenseHeaderTemplate" usage="optional"/>
@@ -34,8 +34,8 @@
       <value style="element" name="standardLicenseHeader" get-method="getStandardLicenseHeader" set-method="setStandardLicenseHeader" usage="optional"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:AnyLicenseInfo" class="com.poc.jibx.AnyLicenseInfo"/>
-  <mapping abstract="true" type-name="ns1:ExternalRef" class="com.poc.jibx.ExternalRef">
+  <mapping abstract="true" type-name="ns1:AnyLicenseInfo" class="org.spdx.library.model.AnyLicenseInfo"/>
+  <mapping abstract="true" type-name="ns1:ExternalRef" class="org.spdx.library.model.ExternalRef">
     <structure ordered="false">
       <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
       <value style="element" name="referenceCategory" get-method="getReferenceCategory" set-method="setReferenceCategory" format="ns1:ReferenceCategory"/>
@@ -43,7 +43,7 @@
       <structure map-as="ns1:ReferenceType" get-method="getReferenceType" set-method="setReferenceType" name="referenceType"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:Annotation" class="com.poc.jibx.Annotation">
+  <mapping abstract="true" type-name="ns1:Annotation" class="org.spdx.library.model.Annotation">
     <structure ordered="false">
       <value style="element" name="annotationDate" get-method="getAnnotationDate" set-method="setAnnotationDate"/>
       <value style="element" name="comment" get-method="getComment" set-method="setComment"/>
@@ -51,11 +51,11 @@
       <value style="element" name="annotationType" get-method="getAnnotationType" set-method="setAnnotationType" format="ns1:AnnotationType"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:ByteOffsetPointer" class="com.poc.jibx.ByteOffsetPointer">
-    <structure map-as="ns1:OffsetPointer"/>
+  <mapping abstract="true" type-name="ns1:ByteOffsetPointer" class="org.spdx.library.model.ByteOffsetPointer">
+    <structure map-as="ns1:SinglePointer"/>
     <value style="element" name="offset" get-method="getOffset" set-method="setOffset"/>
   </mapping>
-  <mapping abstract="true" type-name="ns1:SpdxItem" class="com.poc.jibx.SpdxItem">
+  <mapping abstract="true" type-name="ns1:SpdxItem" class="org.spdx.library.model.SpdxItem">
     <structure map-as="ns1:SpdxElement"/>
     <structure ordered="false">
       <value style="element" name="licenseComments" get-method="getLicenseComments" set-method="setLicenseComments" usage="optional"/>
@@ -68,36 +68,33 @@
       </collection>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:OrLaterOperator" class="com.poc.jibx.OrLaterOperator">
+  <mapping abstract="true" type-name="ns1:OrLaterOperator" class="org.spdx.library.model.OrLaterOperator">
     <structure map-as="ns1:AnyLicenseInfo"/>
     <structure map-as="ns1:AnyLicenseInfo" get-method="getMember" set-method="setMember" name="member"/>
   </mapping>
-  <mapping abstract="true" type-name="ns1:ReferenceType" class="com.poc.jibx.ReferenceType">
+  <mapping abstract="true" type-name="ns1:ReferenceType" class="org.spdx.library.model.ReferenceType">
     <structure ordered="false">
       <value style="element" name="contextualExample" get-method="getContextualExample" set-method="setContextualExample"/>
       <value style="element" name="externalReferenceSite" get-method="getExternalReferenceSite" set-method="setExternalReferenceSite"/>
       <value style="element" name="documentation" get-method="getDocumentation" set-method="setDocumentation"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:OffsetPointer" class="com.poc.jibx.OffsetPointer">
-    <structure map-as="ns1:SinglePointer"/>
-  </mapping>
-  <mapping abstract="true" type-name="ns1:ConjunctiveLicenseSet" class="com.poc.jibx.ConjunctiveLicenseSet">
+  <mapping abstract="true" type-name="ns1:ConjunctiveLicenseSet" class="org.spdx.library.model.ConjunctiveLicenseSet">
     <structure map-as="ns1:AnyLicenseInfo"/>
     <collection get-method="getMemberList" set-method="setMemberList" create-type="java.util.ArrayList">
       <structure map-as="ns1:AnyLicenseInfo" name="member"/>
     </collection>
   </mapping>
-  <mapping abstract="true" type-name="ns1:ListedLicense" class="com.poc.jibx.ListedLicense">
+  <mapping abstract="true" type-name="ns1:ListedLicense" class="org.spdx.library.model.ListedLicense">
     <structure map-as="ns1:License"/>
     <value style="element" name="isDeprecatedLicenseId" get-method="getIsDeprecatedLicenseId" set-method="setIsDeprecatedLicenseId" usage="optional"/>
   </mapping>
-  <mapping abstract="true" type-name="ns1:LineCharPointer" class="com.poc.jibx.LineCharPointer">
-    <structure map-as="ns1:OffsetPointer"/>
+  <mapping abstract="true" type-name="ns1:LineCharPointer" class="org.spdx.library.model.LineCharPointer">
+    <structure map-as="ns1:SinglePointer"/>
     <value style="element" name="lineNumber" get-method="getLineNumber" set-method="setLineNumber"/>
   </mapping>
-  <mapping abstract="true" type-name="ns1:Project" class="com.poc.jibx.Project"/>
-  <mapping abstract="true" type-name="ns1:PackageVerificationCode" class="com.poc.jibx.PackageVerificationCode">
+  <mapping abstract="true" type-name="ns1:Project" class="org.spdx.library.model.Project"/>
+  <mapping abstract="true" type-name="ns1:PackageVerificationCode" class="org.spdx.library.model.PackageVerificationCode">
     <structure ordered="false">
       <value style="element" name="packageVerificationCodeValue" get-method="getPackageVerificationCodeValue" set-method="setPackageVerificationCodeValue"/>
       <collection get-method="getPackageVerificationCodeExcludedFileList" set-method="setPackageVerificationCodeExcludedFileList" usage="optional" create-type="java.util.ArrayList">
@@ -105,21 +102,21 @@
       </collection>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:ExternalDocumentRef" class="com.poc.jibx.ExternalDocumentRef">
+  <mapping abstract="true" type-name="ns1:ExternalDocumentRef" class="org.spdx.library.model.ExternalDocumentRef">
     <structure ordered="false">
       <value style="element" name="externalDocumentId" get-method="getExternalDocumentId" set-method="setExternalDocumentId"/>
       <structure map-as="ns1:Checksum" get-method="getChecksum" set-method="setChecksum" name="checksum"/>
       <structure map-as="ns1:SpdxDocument" get-method="getSpdxDocument" set-method="setSpdxDocument" name="spdxDocument"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:Relationship" class="com.poc.jibx.Relationship">
+  <mapping abstract="true" type-name="ns1:Relationship" class="org.spdx.library.model.Relationship">
     <structure ordered="false">
       <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
       <value style="element" name="relationshipType" get-method="getRelationshipType" set-method="setRelationshipType" format="ns1:RelationshipType"/>
       <structure map-as="ns1:SpdxElement" get-method="getRelatedSpdxElement" set-method="setRelatedSpdxElement" name="relatedSpdxElement"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:SpdxDocument" class="com.poc.jibx.SpdxDocument">
+  <mapping abstract="true" type-name="ns1:SpdxDocument" class="org.spdx.library.model.SpdxDocument">
     <structure map-as="ns1:SpdxElement"/>
     <structure ordered="false">
       <collection get-method="getReviewedList" set-method="setReviewedList" usage="optional" create-type="java.util.ArrayList">
@@ -139,17 +136,17 @@
       <structure map-as="ns1:CreationInfo" get-method="getCreationInfo" set-method="setCreationInfo" name="creationInfo"/>
     </structure>
   </mapping>
-  <mapping class="com.poc.jibx.SpdxDocument" name="Document">
+  <mapping class="org.spdx.library.model.SpdxDocument" name="Document">
     <structure map-as="ns1:SpdxDocument"/>
   </mapping>
-  <mapping abstract="true" type-name="ns1:File" class="com.poc.jibx.File">
+  <mapping abstract="true" type-name="ns1:File" class="org.spdx.library.model.File">
     <structure map-as="ns1:SpdxItem"/>
     <structure ordered="false">
       <collection get-method="getArtifactOfList" set-method="setArtifactOfList" usage="optional" create-type="java.util.ArrayList">
         <structure map-as="ns1:Project" name="artifactOf"/>
       </collection>
       <collection get-method="getFileTypeList" set-method="setFileTypeList" usage="optional" create-type="java.util.ArrayList">
-        <value style="element" name="fileType" type="com.poc.jibx.FileType" format="ns1:FileType"/>
+        <value style="element" name="fileType" type="org.spdx.library.model.FileType" format="ns1:FileType"/>
       </collection>
       <value style="element" name="fileName" get-method="getFileName" set-method="setFileName"/>
       <collection get-method="getFileContributorList" set-method="setFileContributorList" usage="optional" create-type="java.util.ArrayList">
@@ -167,7 +164,7 @@
       </collection>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:LicenseException" class="com.poc.jibx.LicenseException">
+  <mapping abstract="true" type-name="ns1:LicenseException" class="org.spdx.library.model.LicenseException">
     <structure ordered="false">
       <value style="element" name="example" get-method="getExample" set-method="setExample" usage="optional"/>
       <collection get-method="getSeeAlsoList" set-method="setSeeAlsoList" usage="optional" create-type="java.util.ArrayList">
@@ -179,14 +176,14 @@
       <value style="element" name="licenseExceptionText" get-method="getLicenseExceptionText" set-method="setLicenseExceptionText"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:Container" class="com.poc.jibx.Container"/>
-  <mapping abstract="true" type-name="ns1:Checksum" class="com.poc.jibx.Checksum">
+  <mapping abstract="true" type-name="ns1:Container" class="org.spdx.library.model.Container"/>
+  <mapping abstract="true" type-name="ns1:Checksum" class="org.spdx.library.model.Checksum">
     <structure ordered="false">
       <value style="element" name="algorithm" get-method="getAlgorithm" set-method="setAlgorithm" format="ns1:ChecksumAlgorithm"/>
       <value style="element" name="checksumValue" get-method="getChecksumValue" set-method="setChecksumValue"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:SpdxElement" class="com.poc.jibx.SpdxElement">
+  <mapping abstract="true" type-name="ns1:SpdxElement" class="org.spdx.library.model.SpdxElement">
     <structure ordered="false">
       <value style="element" name="name" get-method="getName" set-method="setName"/>
       <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
@@ -199,35 +196,35 @@
       <value style="element" name="SPDXID" get-method="getSPDXID" set-method="setSPDXID"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:Review" class="com.poc.jibx.Review">
+  <mapping abstract="true" type-name="ns1:Review" class="org.spdx.library.model.Review">
     <structure ordered="false">
       <value style="element" name="reviewer" get-method="getReviewer" set-method="setReviewer" usage="optional"/>
       <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>
       <value style="element" name="reviewDate" get-method="getReviewDate" set-method="setReviewDate"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:StartEndPointer" class="com.poc.jibx.StartEndPointer">
-    <structure map-as="ns1:CompoundPointer"/>
+  <mapping abstract="true" type-name="ns1:StartEndPointer" class="org.spdx.library.model.StartEndPointer">
+    <structure map-as="ns1:Pointer"/>
     <structure ordered="false">
       <structure map-as="ns1:SinglePointer" get-method="getStartPointer" set-method="setStartPointer" name="startPointer"/>
       <structure map-as="ns1:SinglePointer" get-method="getEndPointer" set-method="setEndPointer" name="endPointer"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:Pointer" class="com.poc.jibx.Pointer"/>
-  <mapping abstract="true" type-name="ns1:DisjunctiveLicenseSet" class="com.poc.jibx.DisjunctiveLicenseSet">
+  <mapping abstract="true" type-name="ns1:Pointer" class="org.spdx.library.model.Pointer"/>
+  <mapping abstract="true" type-name="ns1:DisjunctiveLicenseSet" class="org.spdx.library.model.DisjunctiveLicenseSet">
     <structure map-as="ns1:AnyLicenseInfo"/>
     <collection get-method="getMemberList" set-method="setMemberList" create-type="java.util.ArrayList">
       <structure map-as="ns1:AnyLicenseInfo" name="member"/>
     </collection>
   </mapping>
-  <mapping abstract="true" type-name="ns1:WithExceptionOperator" class="com.poc.jibx.WithExceptionOperator">
+  <mapping abstract="true" type-name="ns1:WithExceptionOperator" class="org.spdx.library.model.WithExceptionOperator">
     <structure map-as="ns1:AnyLicenseInfo"/>
     <structure ordered="false">
       <structure map-as="ns1:AnyLicenseInfo" get-method="getMember" set-method="setMember" name="member"/>
       <structure map-as="ns1:LicenseException" get-method="getLicenseException" set-method="setLicenseException" name="licenseException"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:SimpleLicensingInfo" class="com.poc.jibx.SimpleLicensingInfo">
+  <mapping abstract="true" type-name="ns1:SimpleLicensingInfo" class="org.spdx.library.model.SimpleLicensingInfo">
     <structure map-as="ns1:AnyLicenseInfo"/>
     <structure ordered="false">
       <collection get-method="getSeeAlsoList" set-method="setSeeAlsoList" usage="optional" create-type="java.util.ArrayList">
@@ -238,11 +235,11 @@
       <value style="element" name="licenseId" get-method="getLicenseId" set-method="setLicenseId"/>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:Snippet" class="com.poc.jibx.Snippet">
+  <mapping abstract="true" type-name="ns1:Snippet" class="org.spdx.library.model.Snippet">
     <structure map-as="ns1:SpdxItem"/>
     <structure ordered="false">
       <collection get-method="getRangeList" set-method="setRangeList" create-type="java.util.ArrayList">
-        <structure map-as="ns1:CompoundPointer" name="range"/>
+        <structure map-as="ns1:Pointer" name="range"/>
       </collection>
       <structure map-as="ns1:File" get-method="getSnippetFromFile" set-method="setSnippetFromFile" name="snippetFromFile"/>
       <collection get-method="getLicenseInfoInSnippetList" set-method="setLicenseInfoInSnippetList" usage="optional" create-type="java.util.ArrayList">
@@ -250,10 +247,7 @@
       </collection>
     </structure>
   </mapping>
-  <mapping abstract="true" type-name="ns1:CompoundPointer" class="com.poc.jibx.CompoundPointer">
-    <structure map-as="ns1:Pointer"/>
-  </mapping>
-  <mapping abstract="true" type-name="ns1:Package" class="com.poc.jibx._Package">
+  <mapping abstract="true" type-name="ns1:Package" class="org.spdx.library.model._Package">
     <structure map-as="ns1:SpdxItem"/>
     <structure ordered="false">
       <value style="element" name="homepage" get-method="getHomepage" set-method="setHomepage" usage="optional"/>

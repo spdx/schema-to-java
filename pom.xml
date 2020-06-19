@@ -15,17 +15,21 @@
         	<artifactId>jibx-maven-plugin</artifactId>
        		<version>1.2.5</version>
        			<configuration>
+
                              <schemaBindingDirectory>src/main/source-code</schemaBindingDirectory>
                               <load>true</load>
                              <validate>true</validate>
                     <!--<verbose>true</verbose>-->
                              <verify>true</verify>
                              <schemaLocation>src/main/config</schemaLocation>
+                            <customizations>
+                                <customization>src/main/custom/global-customization.xsd</customization>
+                            </customizations>
                              <includeSchemas>
                         	 <includeSchema>spdx-schema.xsd</includeSchema>
-                        	 </includeSchemas>
+                             </includeSchemas>
                     	     <options>
-                        	 <package>com.poc.jibx</package>
+                        	<package>org.spdx.library.model</package>
                     	     </options>
                              </configuration>
        			 <executions>
