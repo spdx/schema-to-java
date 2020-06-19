@@ -1,14 +1,14 @@
 # schema-to-java
-Generates Java classes from the SPDX Schema
+<u>Generates Java classes from the SPDX Schema</u>
 
 on linux
 to open terminal:-
 
-**alt+ ctrl+ t**
+<I>**alt+ ctrl+ t**</I>
 
 commands to perform global customized conversion:
 
-**$ mvn jibx:schema-codegen**
+<I>**$ mvn jibx:schema-codegen**</I>
 
 
 
