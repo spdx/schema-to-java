@@ -48,4 +48,36 @@ public class PackageVerificationCode
     public void setPackageVerificationCodeExcludedFileList(List<String> list) {
         packageVerificationCodeExcludedFileList = list;
     }
+
+    /** 
+     * Get the number of 'packageVerificationCodeExcludedFile' element items.
+     * @return count
+     */
+    public int sizePackageVerificationCodeExcludedFileList() {
+        return packageVerificationCodeExcludedFileList.size();
+    }
+
+    /** 
+     * Add a 'packageVerificationCodeExcludedFile' element item.
+     * @param item
+     */
+    public void addPackageVerificationCodeExcludedFile(String item) {
+        packageVerificationCodeExcludedFileList.add(item);
+    }
+
+    /** 
+     * Get 'packageVerificationCodeExcludedFile' element item by position.
+     * @return item
+     * @param index
+     */
+    public String getPackageVerificationCodeExcludedFile(int index) {
+        return packageVerificationCodeExcludedFileList.get(index);
+    }
+
+    /** 
+     * Remove all 'packageVerificationCodeExcludedFile' element items.
+     */
+    public void clearPackageVerificationCodeExcludedFileList() {
+        packageVerificationCodeExcludedFileList.clear();
+    }
 }

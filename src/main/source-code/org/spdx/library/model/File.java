@@ -37,6 +37,38 @@ public class File extends SpdxItem
     }
 
     /** 
+     * Get the number of 'artifactOf' element items.
+     * @return count
+     */
+    public int sizeArtifactOfList() {
+        return artifactOfList.size();
+    }
+
+    /** 
+     * Add a 'artifactOf' element item.
+     * @param item
+     */
+    public void addArtifactOf(Project item) {
+        artifactOfList.add(item);
+    }
+
+    /** 
+     * Get 'artifactOf' element item by position.
+     * @return item
+     * @param index
+     */
+    public Project getArtifactOf(int index) {
+        return artifactOfList.get(index);
+    }
+
+    /** 
+     * Remove all 'artifactOf' element items.
+     */
+    public void clearArtifactOfList() {
+        artifactOfList.clear();
+    }
+
+    /** 
      * Get the list of 'fileType' element items. The type of the file.
      * 
      * @return list
@@ -52,6 +84,38 @@ public class File extends SpdxItem
      */
     public void setFileTypeList(List<FileType> list) {
         fileTypeList = list;
+    }
+
+    /** 
+     * Get the number of 'fileType' element items.
+     * @return count
+     */
+    public int sizeFileTypeList() {
+        return fileTypeList.size();
+    }
+
+    /** 
+     * Add a 'fileType' element item.
+     * @param item
+     */
+    public void addFileType(FileType item) {
+        fileTypeList.add(item);
+    }
+
+    /** 
+     * Get 'fileType' element item by position.
+     * @return item
+     * @param index
+     */
+    public FileType getFileType(int index) {
+        return fileTypeList.get(index);
+    }
+
+    /** 
+     * Remove all 'fileType' element items.
+     */
+    public void clearFileTypeList() {
+        fileTypeList.clear();
     }
 
     /** 
@@ -91,6 +155,38 @@ public class File extends SpdxItem
     }
 
     /** 
+     * Get the number of 'fileContributor' element items.
+     * @return count
+     */
+    public int sizeFileContributorList() {
+        return fileContributorList.size();
+    }
+
+    /** 
+     * Add a 'fileContributor' element item.
+     * @param item
+     */
+    public void addFileContributor(String item) {
+        fileContributorList.add(item);
+    }
+
+    /** 
+     * Get 'fileContributor' element item by position.
+     * @return item
+     * @param index
+     */
+    public String getFileContributor(int index) {
+        return fileContributorList.get(index);
+    }
+
+    /** 
+     * Remove all 'fileContributor' element items.
+     */
+    public void clearFileContributorList() {
+        fileContributorList.clear();
+    }
+
+    /** 
      * Get the list of 'licenseInfoInFile' element items. Licensing information that was discovered directly in the subject file. This is also considered a declared license for the file.
      * 
      * @return list
@@ -109,6 +205,38 @@ public class File extends SpdxItem
     }
 
     /** 
+     * Get the number of 'licenseInfoInFile' element items.
+     * @return count
+     */
+    public int sizeLicenseInfoInFileList() {
+        return licenseInfoInFileList.size();
+    }
+
+    /** 
+     * Add a 'licenseInfoInFile' element item.
+     * @param item
+     */
+    public void addLicenseInfoInFile(SimpleLicensingInfo item) {
+        licenseInfoInFileList.add(item);
+    }
+
+    /** 
+     * Get 'licenseInfoInFile' element item by position.
+     * @return item
+     * @param index
+     */
+    public SimpleLicensingInfo getLicenseInfoInFile(int index) {
+        return licenseInfoInFileList.get(index);
+    }
+
+    /** 
+     * Remove all 'licenseInfoInFile' element items.
+     */
+    public void clearLicenseInfoInFileList() {
+        licenseInfoInFileList.clear();
+    }
+
+    /** 
      * Get the list of 'checksum' element items. The checksum property provides a mechanism that can be used to verify that the contents of a File or Package have not changed.
      * 
      * @return list
@@ -124,6 +252,38 @@ public class File extends SpdxItem
      */
     public void setChecksumList(List<Checksum> list) {
         checksumList = list;
+    }
+
+    /** 
+     * Get the number of 'checksum' element items.
+     * @return count
+     */
+    public int sizeChecksumList() {
+        return checksumList.size();
+    }
+
+    /** 
+     * Add a 'checksum' element item.
+     * @param item
+     */
+    public void addChecksum(Checksum item) {
+        checksumList.add(item);
+    }
+
+    /** 
+     * Get 'checksum' element item by position.
+     * @return item
+     * @param index
+     */
+    public Checksum getChecksum(int index) {
+        return checksumList.get(index);
+    }
+
+    /** 
+     * Remove all 'checksum' element items.
+     */
+    public void clearChecksumList() {
+        checksumList.clear();
     }
 
     /** 
@@ -160,5 +320,37 @@ public class File extends SpdxItem
      */
     public void setFileDependencyList(List<File> list) {
         fileDependencyList = list;
+    }
+
+    /** 
+     * Get the number of 'fileDependency' element items.
+     * @return count
+     */
+    public int sizeFileDependencyList() {
+        return fileDependencyList.size();
+    }
+
+    /** 
+     * Add a 'fileDependency' element item.
+     * @param item
+     */
+    public void addFileDependency(File item) {
+        fileDependencyList.add(item);
+    }
+
+    /** 
+     * Get 'fileDependency' element item by position.
+     * @return item
+     * @param index
+     */
+    public File getFileDependency(int index) {
+        return fileDependencyList.get(index);
+    }
+
+    /** 
+     * Remove all 'fileDependency' element items.
+     */
+    public void clearFileDependencyList() {
+        fileDependencyList.clear();
     }
 }

@@ -29,8 +29,8 @@
                         	 <includeSchema>spdx-schema.xsd</includeSchema>
                              </includeSchemas>
                     	     <options>
-                        	<package>org.spdx.library.model</package>
-                    	     </options>
+                        	 <package>org.spdx.library.model</package>
+                             </options>
                              </configuration>
        			 <executions>
         		  	  <execution>

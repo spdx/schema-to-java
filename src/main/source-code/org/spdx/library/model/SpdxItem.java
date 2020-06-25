@@ -51,6 +51,38 @@ public class SpdxItem extends SpdxElement
     }
 
     /** 
+     * Get the number of 'attributionText' element items.
+     * @return count
+     */
+    public int sizeAttributionTextList() {
+        return attributionTextList.size();
+    }
+
+    /** 
+     * Add a 'attributionText' element item.
+     * @param item
+     */
+    public void addAttributionText(String item) {
+        attributionTextList.add(item);
+    }
+
+    /** 
+     * Get 'attributionText' element item by position.
+     * @return item
+     * @param index
+     */
+    public String getAttributionText(int index) {
+        return attributionTextList.get(index);
+    }
+
+    /** 
+     * Remove all 'attributionText' element items.
+     */
+    public void clearAttributionTextList() {
+        attributionTextList.clear();
+    }
+
+    /** 
      * Get the 'copyrightText' element value. The text of copyright declarations recited in the Package or File.
      * 
      * @return value
@@ -84,5 +116,37 @@ public class SpdxItem extends SpdxElement
      */
     public void setLicenseInfoFromFileList(List<SimpleLicensingInfo> list) {
         licenseInfoFromFileList = list;
+    }
+
+    /** 
+     * Get the number of 'licenseInfoFromFiles' element items.
+     * @return count
+     */
+    public int sizeLicenseInfoFromFileList() {
+        return licenseInfoFromFileList.size();
+    }
+
+    /** 
+     * Add a 'licenseInfoFromFiles' element item.
+     * @param item
+     */
+    public void addLicenseInfoFromFile(SimpleLicensingInfo item) {
+        licenseInfoFromFileList.add(item);
+    }
+
+    /** 
+     * Get 'licenseInfoFromFiles' element item by position.
+     * @return item
+     * @param index
+     */
+    public SimpleLicensingInfo getLicenseInfoFromFile(int index) {
+        return licenseInfoFromFileList.get(index);
+    }
+
+    /** 
+     * Remove all 'licenseInfoFromFiles' element items.
+     */
+    public void clearLicenseInfoFromFileList() {
+        licenseInfoFromFileList.clear();
     }
 }
