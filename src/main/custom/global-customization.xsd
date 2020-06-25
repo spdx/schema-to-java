@@ -1,2 +1,3 @@
-<schema prefer-inline="true" show-schema="false" import-docs="true" use-inner="true" 
-        names="spdx-schema.xsd"/>
+<schema prefer-inline="true" show-schema="false" import-docs="true" use-inner="true" base-class="src/main/source-code/ModelObject.java">
+       <class-decorator class="src/main/java/ModelObject.java"/>
+</schema>

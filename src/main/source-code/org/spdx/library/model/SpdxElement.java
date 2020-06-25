@@ -70,6 +70,38 @@ public class SpdxElement
     }
 
     /** 
+     * Get the number of 'relationship' element items.
+     * @return count
+     */
+    public int sizeRelationshipList() {
+        return relationshipList.size();
+    }
+
+    /** 
+     * Add a 'relationship' element item.
+     * @param item
+     */
+    public void addRelationship(Relationship item) {
+        relationshipList.add(item);
+    }
+
+    /** 
+     * Get 'relationship' element item by position.
+     * @return item
+     * @param index
+     */
+    public Relationship getRelationship(int index) {
+        return relationshipList.get(index);
+    }
+
+    /** 
+     * Remove all 'relationship' element items.
+     */
+    public void clearRelationshipList() {
+        relationshipList.clear();
+    }
+
+    /** 
      * Get the list of 'annotation' element items. Provide additional information about an SpdxElement.
      * 
      * @return list
@@ -85,6 +117,38 @@ public class SpdxElement
      */
     public void setAnnotationList(List<Annotation> list) {
         annotationList = list;
+    }
+
+    /** 
+     * Get the number of 'annotation' element items.
+     * @return count
+     */
+    public int sizeAnnotationList() {
+        return annotationList.size();
+    }
+
+    /** 
+     * Add a 'annotation' element item.
+     * @param item
+     */
+    public void addAnnotation(Annotation item) {
+        annotationList.add(item);
+    }
+
+    /** 
+     * Get 'annotation' element item by position.
+     * @return item
+     * @param index
+     */
+    public Annotation getAnnotation(int index) {
+        return annotationList.get(index);
+    }
+
+    /** 
+     * Remove all 'annotation' element items.
+     */
+    public void clearAnnotationList() {
+        annotationList.clear();
     }
 
     /** 

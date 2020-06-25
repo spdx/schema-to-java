@@ -53,6 +53,38 @@ public class LicenseException
     }
 
     /** 
+     * Get the number of 'seeAlso' element items.
+     * @return count
+     */
+    public int sizeSeeAlsoList() {
+        return seeAlsoList.size();
+    }
+
+    /** 
+     * Add a 'seeAlso' element item.
+     * @param item
+     */
+    public void addSeeAlso(String item) {
+        seeAlsoList.add(item);
+    }
+
+    /** 
+     * Get 'seeAlso' element item by position.
+     * @return item
+     * @param index
+     */
+    public String getSeeAlso(int index) {
+        return seeAlsoList.get(index);
+    }
+
+    /** 
+     * Remove all 'seeAlso' element items.
+     */
+    public void clearSeeAlsoList() {
+        seeAlsoList.clear();
+    }
+
+    /** 
      * Get the 'name' element value. Identify name of this SpdxElement.
      * 
      * @return value

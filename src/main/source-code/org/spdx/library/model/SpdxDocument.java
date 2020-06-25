@@ -36,6 +36,38 @@ public class SpdxDocument extends SpdxElement
     }
 
     /** 
+     * Get the number of 'reviewed' element items.
+     * @return count
+     */
+    public int sizeReviewedList() {
+        return reviewedList.size();
+    }
+
+    /** 
+     * Add a 'reviewed' element item.
+     * @param item
+     */
+    public void addReviewed(Review item) {
+        reviewedList.add(item);
+    }
+
+    /** 
+     * Get 'reviewed' element item by position.
+     * @return item
+     * @param index
+     */
+    public Review getReviewed(int index) {
+        return reviewedList.get(index);
+    }
+
+    /** 
+     * Remove all 'reviewed' element items.
+     */
+    public void clearReviewedList() {
+        reviewedList.clear();
+    }
+
+    /** 
      * Get the list of 'hasExtractedLicensingInfo' element items. Indicates that a particular ExtractedLicensingInfo was defined in the subject SpdxDocument.
      * 
      * @return list
@@ -52,6 +84,38 @@ public class SpdxDocument extends SpdxElement
     public void setHasExtractedLicensingInfoList(
             List<ExtractedLicensingInfo> list) {
         hasExtractedLicensingInfoList = list;
+    }
+
+    /** 
+     * Get the number of 'hasExtractedLicensingInfo' element items.
+     * @return count
+     */
+    public int sizeHasExtractedLicensingInfoList() {
+        return hasExtractedLicensingInfoList.size();
+    }
+
+    /** 
+     * Add a 'hasExtractedLicensingInfo' element item.
+     * @param item
+     */
+    public void addHasExtractedLicensingInfo(ExtractedLicensingInfo item) {
+        hasExtractedLicensingInfoList.add(item);
+    }
+
+    /** 
+     * Get 'hasExtractedLicensingInfo' element item by position.
+     * @return item
+     * @param index
+     */
+    public ExtractedLicensingInfo getHasExtractedLicensingInfo(int index) {
+        return hasExtractedLicensingInfoList.get(index);
+    }
+
+    /** 
+     * Remove all 'hasExtractedLicensingInfo' element items.
+     */
+    public void clearHasExtractedLicensingInfoList() {
+        hasExtractedLicensingInfoList.clear();
     }
 
     /** 
@@ -109,6 +173,38 @@ public class SpdxDocument extends SpdxElement
     }
 
     /** 
+     * Get the number of 'describesPackage' element items.
+     * @return count
+     */
+    public int sizeDescribesPackageList() {
+        return describesPackageList.size();
+    }
+
+    /** 
+     * Add a 'describesPackage' element item.
+     * @param item
+     */
+    public void addDescribesPackage(_Package item) {
+        describesPackageList.add(item);
+    }
+
+    /** 
+     * Get 'describesPackage' element item by position.
+     * @return item
+     * @param index
+     */
+    public _Package getDescribesPackage(int index) {
+        return describesPackageList.get(index);
+    }
+
+    /** 
+     * Remove all 'describesPackage' element items.
+     */
+    public void clearDescribesPackageList() {
+        describesPackageList.clear();
+    }
+
+    /** 
      * Get the list of 'externalDocumentRef' element items. Identify any external SPDX documents referenced within this SPDX document.
      * 
      * @return list
@@ -124,6 +220,38 @@ public class SpdxDocument extends SpdxElement
      */
     public void setExternalDocumentRefList(List<ExternalDocumentRef> list) {
         externalDocumentRefList = list;
+    }
+
+    /** 
+     * Get the number of 'externalDocumentRef' element items.
+     * @return count
+     */
+    public int sizeExternalDocumentRefList() {
+        return externalDocumentRefList.size();
+    }
+
+    /** 
+     * Add a 'externalDocumentRef' element item.
+     * @param item
+     */
+    public void addExternalDocumentRef(ExternalDocumentRef item) {
+        externalDocumentRefList.add(item);
+    }
+
+    /** 
+     * Get 'externalDocumentRef' element item by position.
+     * @return item
+     * @param index
+     */
+    public ExternalDocumentRef getExternalDocumentRef(int index) {
+        return externalDocumentRefList.get(index);
+    }
+
+    /** 
+     * Remove all 'externalDocumentRef' element items.
+     */
+    public void clearExternalDocumentRefList() {
+        externalDocumentRefList.clear();
     }
 
     /** 
