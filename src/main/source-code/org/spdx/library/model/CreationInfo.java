@@ -70,38 +70,6 @@ public class CreationInfo
     }
 
     /** 
-     * Get the number of 'creator' element items.
-     * @return count
-     */
-    public int sizeCreatorList() {
-        return creatorList.size();
-    }
-
-    /** 
-     * Add a 'creator' element item.
-     * @param item
-     */
-    public void addCreator(String item) {
-        creatorList.add(item);
-    }
-
-    /** 
-     * Get 'creator' element item by position.
-     * @return item
-     * @param index
-     */
-    public String getCreator(int index) {
-        return creatorList.get(index);
-    }
-
-    /** 
-     * Remove all 'creator' element items.
-     */
-    public void clearCreatorList() {
-        creatorList.clear();
-    }
-
-    /** 
      * Get the 'licenseListVersion' element value. An optional field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created.
      * 
      * @return value
