@@ -32,38 +32,6 @@ public class Snippet extends SpdxItem
     }
 
     /** 
-     * Get the number of 'range' element items.
-     * @return count
-     */
-    public int sizeRangeList() {
-        return rangeList.size();
-    }
-
-    /** 
-     * Add a 'range' element item.
-     * @param item
-     */
-    public void addRange(Pointer item) {
-        rangeList.add(item);
-    }
-
-    /** 
-     * Get 'range' element item by position.
-     * @return item
-     * @param index
-     */
-    public Pointer getRange(int index) {
-        return rangeList.get(index);
-    }
-
-    /** 
-     * Remove all 'range' element items.
-     */
-    public void clearRangeList() {
-        rangeList.clear();
-    }
-
-    /** 
      * Get the 'snippetFromFile' element value. File containing the SPDX element (e.g. the file contaning a snippet).
      * 
      * @return value
@@ -97,37 +65,5 @@ public class Snippet extends SpdxItem
      */
     public void setLicenseInfoInSnippetList(List<SimpleLicensingInfo> list) {
         licenseInfoInSnippetList = list;
-    }
-
-    /** 
-     * Get the number of 'licenseInfoInSnippet' element items.
-     * @return count
-     */
-    public int sizeLicenseInfoInSnippetList() {
-        return licenseInfoInSnippetList.size();
-    }
-
-    /** 
-     * Add a 'licenseInfoInSnippet' element item.
-     * @param item
-     */
-    public void addLicenseInfoInSnippet(SimpleLicensingInfo item) {
-        licenseInfoInSnippetList.add(item);
-    }
-
-    /** 
-     * Get 'licenseInfoInSnippet' element item by position.
-     * @return item
-     * @param index
-     */
-    public SimpleLicensingInfo getLicenseInfoInSnippet(int index) {
-        return licenseInfoInSnippetList.get(index);
-    }
-
-    /** 
-     * Remove all 'licenseInfoInSnippet' element items.
-     */
-    public void clearLicenseInfoInSnippetList() {
-        licenseInfoInSnippetList.clear();
     }
 }

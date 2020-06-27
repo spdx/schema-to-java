@@ -28,36 +28,4 @@ public class ConjunctiveLicenseSet extends AnyLicenseInfo
     public void setMemberList(List<AnyLicenseInfo> list) {
         memberList = list;
     }
-
-    /** 
-     * Get the number of 'member' element items.
-     * @return count
-     */
-    public int sizeMemberList() {
-        return memberList.size();
-    }
-
-    /** 
-     * Add a 'member' element item.
-     * @param item
-     */
-    public void addMember(AnyLicenseInfo item) {
-        memberList.add(item);
-    }
-
-    /** 
-     * Get 'member' element item by position.
-     * @return item
-     * @param index
-     */
-    public AnyLicenseInfo getMember(int index) {
-        return memberList.get(index);
-    }
-
-    /** 
-     * Remove all 'member' element items.
-     */
-    public void clearMemberList() {
-        memberList.clear();
-    }
 }

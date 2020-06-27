@@ -98,38 +98,6 @@ public class _Package extends SpdxItem
     }
 
     /** 
-     * Get the number of 'checksum' element items.
-     * @return count
-     */
-    public int sizeChecksumList() {
-        return checksumList.size();
-    }
-
-    /** 
-     * Add a 'checksum' element item.
-     * @param item
-     */
-    public void addChecksum(Checksum item) {
-        checksumList.add(item);
-    }
-
-    /** 
-     * Get 'checksum' element item by position.
-     * @return item
-     * @param index
-     */
-    public Checksum getChecksum(int index) {
-        return checksumList.get(index);
-    }
-
-    /** 
-     * Remove all 'checksum' element items.
-     */
-    public void clearChecksumList() {
-        checksumList.clear();
-    }
-
-    /** 
      * Get the 'downloadLocation' element value. The URI at which this package is available for download. Private (i.e., not publicly reachable) URIs are acceptable as values of this property. The values http://spdx.org/rdf/terms#none and http://spdx.org/rdf/terms#noassertion may be used to specify that the package is not downloadable or that no attempt was made to determine its download location, respectively.
      * 
      * @return value
@@ -184,38 +152,6 @@ public class _Package extends SpdxItem
     }
 
     /** 
-     * Get the number of 'externalRef' element items.
-     * @return count
-     */
-    public int sizeExternalRefList() {
-        return externalRefList.size();
-    }
-
-    /** 
-     * Add a 'externalRef' element item.
-     * @param item
-     */
-    public void addExternalRef(ExternalRef item) {
-        externalRefList.add(item);
-    }
-
-    /** 
-     * Get 'externalRef' element item by position.
-     * @return item
-     * @param index
-     */
-    public ExternalRef getExternalRef(int index) {
-        return externalRefList.get(index);
-    }
-
-    /** 
-     * Remove all 'externalRef' element items.
-     */
-    public void clearExternalRefList() {
-        externalRefList.clear();
-    }
-
-    /** 
      * Get the list of 'hasFile' element items. Indicates that a particular file belongs to a package.
      * 
      * @return list
@@ -231,38 +167,6 @@ public class _Package extends SpdxItem
      */
     public void setHasFileList(List<File> list) {
         hasFileList = list;
-    }
-
-    /** 
-     * Get the number of 'hasFile' element items.
-     * @return count
-     */
-    public int sizeHasFileList() {
-        return hasFileList.size();
-    }
-
-    /** 
-     * Add a 'hasFile' element item.
-     * @param item
-     */
-    public void addHasFile(File item) {
-        hasFileList.add(item);
-    }
-
-    /** 
-     * Get 'hasFile' element item by position.
-     * @return item
-     * @param index
-     */
-    public File getHasFile(int index) {
-        return hasFileList.get(index);
-    }
-
-    /** 
-     * Remove all 'hasFile' element items.
-     */
-    public void clearHasFileList() {
-        hasFileList.clear();
     }
 
     /** 

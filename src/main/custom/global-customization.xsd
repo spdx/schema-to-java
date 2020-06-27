@@ -1,3 +1,5 @@
-<schema prefer-inline="true" show-schema="false" import-docs="true" use-inner="true" base-class="src/main/source-code/ModelObject.java">
-       <class-decorator class="src/main/java/ModelObject.java"/>
+<schema prefer-inline="true" show-schema="false" import-docs="true" use-inner="true" >
+   <class-decorator class="org.spdx.jibx.SPDXClassDecorator">
+    <!--  base-class="org.spdx.jibx.schema.codegen.extend.SPDXClassDecorator"-->
+      </class-decorator>
 </schema>
