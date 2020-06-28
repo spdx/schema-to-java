@@ -9,7 +9,7 @@ import org.jibx.schema.codegen.extend.ClassDecorator;
 public class SPDXClassDecorator implements ClassDecorator {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 
 	}
 
@@ -25,8 +25,3 @@ public class SPDXClassDecorator implements ClassDecorator {
 
 	}
 }
-
-
-
-
-
