@@ -74,7 +74,25 @@
  		     <artifactId>maven-plugin-reactor</artifactId>
  		     <version>1.3.4-SNAPSHOT</version>
  	     </plugin>
- 	     
+
+
+
+            <plugin>
+                <!-- Build an executable JAR -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.spdx.jibx.SPDXClassDecorator</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+
+
       </plugins>
    </pluginManagement>
 </build>
@@ -119,6 +137,7 @@
               <artifactId>jibx-run</artifactId>
               <version>1.2.5</version>
       </dependency>
+
    </dependencies>
 
 </project>
