@@ -72,17 +72,30 @@
         
         <plugin>
                 <!-- Build an executable JAR -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>org.spdx.jibx.SPDXClassDecorator</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-jar-plugin</artifactId>
+         <version>3.1.0</version>
+         <configuration>
+         <archive>
+         <manifest>
+         <mainClass>org.spdx.jibx.SPDXClassDecorator</mainClass>
+          </manifest>
+          </archive>
+         </configuration>
+         </plugin>
+    
+         <plugin>
+          <groupId>org.spdx.jibx</groupId>
+          <artifactId>spdxclassdecorator</artifactId>
+          <version>1.0-SNAPSHOT</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
         
       </plugins>
     </pluginManagement>
