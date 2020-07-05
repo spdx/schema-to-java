@@ -14,6 +14,7 @@ public class SPDXClassDecorator implements ClassDecorator {
 	}
 
 	public void start(IClassHolder holder) {
+		
 
 	}
 

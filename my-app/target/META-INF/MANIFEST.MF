@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Created-By: Apache Maven 3.6.0
-Built-By: anisha
-Build-Jdk: 11.0.7
-Main-Class: org.spdx.jibx.SPDXClassDecorator
-
