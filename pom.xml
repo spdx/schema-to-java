@@ -38,22 +38,22 @@
                              </configuration>
                              <dependencies>
                               <dependency>
-          <groupId>org.spdx.jibx</groupId>
-          <artifactId>spdxclassdecorator</artifactId>       
-          <version>1.0-SNAPSHOT</version>
-          <scope>compile</scope>
-          <type>jar</type>
-      </dependency>
-      </dependencies>
+                                         <groupId>org.spdx.jibx</groupId>
+                                         <artifactId>spdxclassdecorator</artifactId>       
+                                         <version>1.0-SNAPSHOT</version>
+                                         <scope>compile</scope>
+                                         <type>jar</type>
+                               </dependency>
+                               </dependencies>
                             
-       			 <executions>
-        		  	  <execution>
-             	  	  <id>generate-java-code-from-schema</id>
+       			              <executions>
+        		  	         <execution>
+             	          	  <id>generate-java-code-from-schema</id>
                 		     <goals>
                    		  	 <goal>schema-codegen</goal>
                			     </goals>
                              
-           			  </execution>
+                 			  </execution>
 
            		 	  <execution>
                 		    <id>compile-binding</id>

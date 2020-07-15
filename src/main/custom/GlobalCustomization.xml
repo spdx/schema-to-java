@@ -1,4 +1,5 @@
-<schema prefer-inline="true" show-schema="false" import-docs="true" use-inner="true" >
+<schema prefer-inline="true" show-schema="false" import-docs="true" use-inner="true">
        <class-decorator class="org.spdx.jibx.SPDXClassDecorator"/>
+       
           
          </schema>
