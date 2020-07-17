@@ -125,7 +125,8 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
      */
     
     public void start(IClassHolder holder) {
-        if (matchName(holder.getName())) {
+    	if( holder.getSuperClassName()==null &&  matchName(holder.getName())) {
+    		
             holder.setSuperClassName(m_baseClass);
         }
     }

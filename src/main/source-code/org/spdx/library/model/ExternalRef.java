@@ -4,7 +4,7 @@ package org.spdx.library.model;
 /** 
  * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package.
  */
-public class ExternalRef
+public class ExternalRef extends ModelObject
 {
     private String comment;
     private ReferenceCategory referenceCategory;

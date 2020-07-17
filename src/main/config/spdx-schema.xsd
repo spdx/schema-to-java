@@ -30,7 +30,7 @@ Known issues:</xs:documentation>
             </xs:element>
         </xs:all>
     </xs:complexType>
-    <xs:complexType name="SinglePointer">
+        <xs:complexType name="SinglePointer">
         <xs:complexContent>
             <xs:extension base="Pointer">
                 <xs:all>

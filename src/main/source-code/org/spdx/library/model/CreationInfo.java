@@ -8,7 +8,7 @@ import java.util.List;
 /** 
  * One instance is required for each SPDX file produced. It provides the necessary information for forward and backward compatibility for processing tools.
  */
-public class CreationInfo extends Package
+public class CreationInfo extends ModelObject
 {
     private String comment;
     private Date created;

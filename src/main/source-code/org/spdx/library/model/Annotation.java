@@ -6,7 +6,7 @@ import java.util.Date;
 /** 
  * An Annotation is a comment on an SpdxItem by an agent.
  */
-public class Annotation
+public class Annotation extends ModelObject
 {
     private Date annotationDate;
     private String comment;

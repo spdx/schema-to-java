@@ -7,7 +7,7 @@ import java.util.List;
 /** 
  * An SpdxElement is any thing described in SPDX, either a document or an SpdxItem. SpdxElements can be related to other SpdxElements.
  */
-public class SpdxElement
+public class SpdxElement extends ModelObject
 {
     private String name;
     private String comment;

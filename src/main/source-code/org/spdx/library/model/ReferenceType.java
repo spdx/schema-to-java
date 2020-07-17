@@ -4,7 +4,7 @@ package org.spdx.library.model;
 /** 
  * Types used to external reference identifiers.
  */
-public class ReferenceType
+public class ReferenceType extends ModelObject
 {
     private String contextualExample;
     private String externalReferenceSite;
