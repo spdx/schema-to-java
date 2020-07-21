@@ -4,7 +4,7 @@ package org.spdx.library.model;
 /** 
  * Information about an external SPDX document reference including the checksum. This allows for verification of the external references.
  */
-public class ExternalDocumentRef
+public class ExternalDocumentRef extends ModelObject
 {
     private String externalDocumentId;
     private Checksum checksum;

@@ -7,7 +7,7 @@ import java.util.List;
 /** 
  * A manifest based verification code (the algorithm is defined in section 4.7 of the full specification) of the SPDX Item. This allows consumers of this data and/or database to determine if an SPDX item they have in hand is identical to the SPDX item from which the data was produced. This algorithm works even if the SPDX document is included in the SPDX item.
  */
-public class PackageVerificationCode
+public class PackageVerificationCode extends ModelObject
 {
     private byte[] packageVerificationCodeValue;
     private List<String> packageVerificationCodeExcludedFileList = new ArrayList<String>();

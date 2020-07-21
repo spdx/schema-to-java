@@ -7,7 +7,7 @@ import java.util.List;
 /** 
  * An exception to a license.
  */
-public class LicenseException
+public class LicenseException extends ModelObject
 {
     private String example;
     private List<String> seeAlsoList = new ArrayList<String>();

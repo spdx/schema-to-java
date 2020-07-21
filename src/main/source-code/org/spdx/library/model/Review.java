@@ -3,7 +3,7 @@ package org.spdx.library.model;
 
 import java.util.Date;
 
-public class Review
+public class Review extends ModelObject
 {
     private String reviewer;
     private String comment;

@@ -4,7 +4,7 @@ package org.spdx.library.model;
 /** 
  * A Relationship represents a relationship between two SpdxElements.
  */
-public class Relationship
+public class Relationship extends ModelObject
 {
     private String comment;
     private RelationshipType relationshipType;
