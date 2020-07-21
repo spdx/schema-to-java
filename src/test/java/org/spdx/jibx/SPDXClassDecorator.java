@@ -91,13 +91,10 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
      */
     
     public void start(IClassHolder holder) {
-    	if(!(holder instanceof EnumerationClassHolder))
-		{
-    			if( holder.getSuperClassName()==null &&  matchName(holder.getName()) )  {
+    	if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {
     		
-    		            holder.setSuperClassName(m_baseClass);
-                 }
-    	}
+            holder.setSuperClassName(m_baseClass);
+    }
     }
    	/**
      * Method called after adding each data value to class. Unused for this decorator.
