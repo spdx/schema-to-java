@@ -30,7 +30,7 @@ Known issues:</xs:documentation>
             </xs:element>
         </xs:all>
     </xs:complexType>
-        <xs:complexType name="SinglePointer">
+    <xs:complexType name="SinglePointer">
         <xs:complexContent>
             <xs:extension base="Pointer">
                 <xs:all>
@@ -76,10 +76,7 @@ Known issues:</xs:documentation>
                         <xs:annotation>
                             <xs:documentation>Indicates if the OSI has approved the license.</xs:documentation>
                         </xs:annotation>
-                    </xs:element>github.com
-16:20
-Java XML and JSON Binding: JAXB and Inheritance - Using the xsi:type Attribute
-                    
+                    </xs:element>
                     <xs:element minOccurs="0" name="isFsfLibre" type="xs:boolean"/>
                     <xs:element minOccurs="0" name="standardLicenseTemplate" type="xs:string">
                         <xs:annotation>
