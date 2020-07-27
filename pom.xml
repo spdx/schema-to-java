@@ -47,35 +47,13 @@
                                </dependencies>
                             
        			              <executions>
-        		  	         <execution>
+        		  	          <execution>
              	          	  <id>generate-java-code-from-schema</id>
-                		     <goals>
-                   		  	 <goal>schema-codegen</goal>
-               			     </goals>
-                             
+                		      <goals>
+                   		  	  <goal>schema-codegen</goal>
+               			      </goals>                             
                  			  </execution>
-
-           		 	  <execution>
-                		    <id>compile-binding</id>
-                			<goals>
-                    		<goal>bind</goal>
-             			    </goals>
-                		    <configuration>
-                   			<schemaBindingDirectory>src/main/source-code</schemaBindingDirectory>
-                   			<load>true</load>
-                   			<validate>true</validate>
-                            <!--<verbose>true</verbose>-->
-               				<verify>true</verify>
-                            </configuration>
-                       </execution>  
-            
-                       <execution>
-                            <id>bind-xml</id>
-                            <goals>
-                            <goal>bind</goal>
-                            </goals>
-                       </execution>          		                
-                </executions>
+                              </executions>
          </plugin>
                   
          <plugin>
@@ -129,12 +107,6 @@
               <artifactId>jibx-run</artifactId>
               <version>1.2.5</version>
       </dependency>
-      <dependency>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>org.eclipse.jdt.core</artifactId>
-          <version>3.11.0.v20150520-2033</version>
-      </dependency>
-
    </dependencies>
 
 </project>
