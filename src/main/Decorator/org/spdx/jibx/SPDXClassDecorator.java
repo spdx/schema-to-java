@@ -14,18 +14,18 @@ import org.jibx.schema.codegen.extend.NameMatchDecoratorBase;
 public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassDecorator {
 
 
-
     /** Base class to be set for matched classes. */
     private String m_baseClass;
-
+    
     /** Name of method to be called after an instance of class is unmarshalled (<code>null</code> if none). */
     private String m_postSetName;
-
+    
     /** Name of method to be called before an instance of class is unmarshalled (<code>null</code> if none). */
     private String m_preSetName;
-
+    
     /** Name of method to be called before an instance of class is marshalled (<code>null</code> if none). */
     private String m_preGetName;
+    
 
     /**
      * Set base class to be set for matched classes.
@@ -61,6 +61,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
      */
     public void setPreGet(String name) {
         m_preGetName = name;
+
     }
 
     /**
@@ -70,6 +71,16 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
      * @param holder
      */
 
+      
+    
+    /**
+     * Method called after completing code generation for the target class. This sets the object attributes, if needed.
+     *
+     * @param binding 
+     * @param holder
+     */
+    
+
     public void finish(ElementBase binding, IClassHolder holder) {
         if (matchName(holder.getName()) && (m_postSetName != null || m_preSetName != null || m_preGetName != null)) {
             if (binding instanceof ContainerElementBase) {
@@ -77,12 +88,17 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
                 contain.setPostsetName(m_postSetName);
                 contain.setPresetName(m_preSetName);
                 contain.setPregetName(m_preGetName);
+
             }
+
+            } 
+
             else {
                 throw new IllegalStateException("Class " + holder.getFullName() + " is not a data class");
             }
         }
-    }
+    
+
 
     /**
      * Method called before starting code generation for the target class. This just sets the superclass.
@@ -90,15 +106,15 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
      * @param holder
      */
 
+
     public void start(IClassHolder holder) {
         if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {
 
             holder.setSuperClassName(m_baseClass);
         }
     }
-    /**
+    /** 
      * Method called after adding each data value to class. Unused for this decorator.
-     *
      * @param basename base name used for data value
      * @param collect repeated value flag
      * @param type value type (item value type, in the case of a repeated value)
@@ -109,13 +125,17 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
      * @param holder
      */
 
+
+  
+
+  
     public void valueAdded(String basename, boolean collect, String type, FieldDeclaration field,
-                           MethodDeclaration getmeth, MethodDeclaration setmeth, String descript, IClassHolder holder) {}
+            MethodDeclaration getmeth, MethodDeclaration setmeth, String descript, IClassHolder holder) {}
 
 
-
-    public static void main(String args[]) {
-        //System.out.println("hi");
+   
+     public static void main(String args[]) {
+	//System.out.println("hi");
     }
-
+  
 }
