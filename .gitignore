@@ -4,5 +4,6 @@
 .project
 .settings
 .ant-targets-build.xml
-
+schema-to-java.eml
+schema-to-java.userlibraries
 

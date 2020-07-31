@@ -5,15 +5,19 @@
   <groupId>schema-to-java</groupId>
   <artifactId>schema-to-java</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
+<packaging>jar</packaging>
+<properties>
+   <maven.compiler.source>1.8</maven.compiler.source>
+   <maven.compiler.target>1.8</maven.compiler.target>
+ </properties>
 
 <build>
 	<pluginManagement>
 		<plugins>
  			<plugin>
         	<groupId>org.jibx</groupId>
-        	<artifactId>jibx-maven-plugin</artifactId>
-       		<version>1.2.5</version>
+        	<artifactId>maven-jibx-plugin</artifactId>
+       		<version>1.3.1</version>
        			<configuration>
 
                              <schemaBindingDirectory>src/main/source-code</schemaBindingDirectory>
@@ -23,7 +27,7 @@
                              <verify>true</verify>
                              <schemaLocation>src/main/config</schemaLocation>
                             <customizations>
-                                <customization>src/main/custom/global-customization.xsd</customization>
+                                <customization>src/main/custom/GlobalCustomization.xml</customization>
                             </customizations>
                              <includeSchemas>
                         	 <includeSchema>spdx-schema.xsd</includeSchema>
@@ -32,45 +36,33 @@
                         	 <package>org.spdx.library.model</package>
                              </options>
                              </configuration>
-       			 <executions>
-        		  	  <execution>
-             	  	  <id>generate-java-code-from-schema</id>
-                		     <goals>
-                   		  	 <goal>schema-codegen</goal>
-               			     </goals>
-                             
-           			  </execution>
-
-           		 	  <execution>
-                		    <id>compile-binding</id>
-                			<goals>
-                    		<goal>bind</goal>
-             			    </goals>
-                		    <configuration>
-                   			<schemaBindingDirectory>src/main/source-code</schemaBindingDirectory>
-                   			<load>true</load>
-                   			<validate>true</validate>
-                            <!--<verbose>true</verbose>-->
-               				<verify>true</verify>
-                            </configuration>
-                       </execution>  
-            
-                       <execution>
-                            <id>bind-xml</id>
-                            <goals>
-                            <goal>bind</goal>
-                            </goals>
-                       </execution>          		                
-                </executions>
+                             <dependencies>
+                              <dependency>
+                                         <groupId>org.spdx.jibx</groupId>
+                                         <artifactId>spdxclassdecorator</artifactId>       
+                                         <version>1.0-SNAPSHOT</version>
+                                         <scope>compile</scope>
+                                         <type>jar</type>
+                               </dependency>
+                               </dependencies>
+                            
+       			              <executions>
+        		  	          <execution>
+             	          	  <id>generate-java-code-from-schema</id>
+                		      <goals>
+                   		  	  <goal>schema-codegen</goal>
+               			      </goals>                             
+                 			  </execution>
+                              </executions>
          </plugin>
-         
-         
+                  
          <plugin>
  		     <groupId>org.jibx.config</groupId>
  		     <artifactId>maven-plugin-reactor</artifactId>
  		     <version>1.3.4-SNAPSHOT</version>
  	     </plugin>
- 	     
+
+
       </plugins>
    </pluginManagement>
 </build>
@@ -104,12 +96,12 @@
           <groupId>org.jibx</groupId>
           <artifactId>jibx-extras</artifactId>
           <version>1.3.1</version>
-      </dependency>      
+      </dependency>
        <dependency>
             <groupId>org.apache.bcel</groupId>
             <artifactId>bcel</artifactId>
             <version>6.0</version>
-       </dependency>    
+       </dependency>
        <dependency>
              <groupId>org.jibx</groupId>
               <artifactId>jibx-run</artifactId>
