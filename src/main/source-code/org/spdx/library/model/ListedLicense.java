@@ -9,19 +9,19 @@ public class ListedLicense extends License
     private Boolean isDeprecatedLicenseId;
 
     /** 
-    * Get the 'isDeprecatedLicenseId' element value.
-    * 
-    * @return value
-    */
+     * Get the 'isDeprecatedLicenseId' element value.
+     * 
+     * @return value
+     */
     public Boolean getIsDeprecatedLicenseId() {
         return isDeprecatedLicenseId;
     }
 
     /** 
-    * Set the 'isDeprecatedLicenseId' element value.
-    * 
-    * @param isDeprecatedLicenseId
-    */
+     * Set the 'isDeprecatedLicenseId' element value.
+     * 
+     * @param isDeprecatedLicenseId
+     */
     public void setIsDeprecatedLicenseId(Boolean isDeprecatedLicenseId) {
         this.isDeprecatedLicenseId = isDeprecatedLicenseId;
     }

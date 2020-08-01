@@ -12,19 +12,19 @@ public class DisjunctiveLicenseSet extends AnyLicenseInfo
     private List<AnyLicenseInfo> memberList = new ArrayList<AnyLicenseInfo>();
 
     /** 
-    * Get the list of 'member' element items. A license, or other licensing information, that is a member of the subject license set.
-    * 
-    * @return list
-    */
+     * Get the list of 'member' element items. A license, or other licensing information, that is a member of the subject license set.
+     * 
+     * @return list
+     */
     public List<AnyLicenseInfo> getMemberList() {
         return memberList;
     }
 
     /** 
-    * Set the list of 'member' element items. A license, or other licensing information, that is a member of the subject license set.
-    * 
-    * @param list
-    */
+     * Set the list of 'member' element items. A license, or other licensing information, that is a member of the subject license set.
+     * 
+     * @param list
+     */
     public void setMemberList(List<AnyLicenseInfo> list) {
         memberList = list;
     }

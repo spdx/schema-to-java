@@ -6,5 +6,4 @@ package org.spdx.library.model;
  */
 public abstract class AnyLicenseInfo extends ModelObject
 {
-    void AnyLicenseInfo();
 }
