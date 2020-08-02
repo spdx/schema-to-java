@@ -72,14 +72,6 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
      */
 
       
-    
-    /**
-     * Method called after completing code generation for the target class. This sets the object attributes, if needed.
-     *
-     * @param binding 
-     * @param holder
-     */
-    
 
     public void finish(ElementBase binding, IClassHolder holder) {
         if (matchName(holder.getName()) && (m_postSetName != null || m_preSetName != null || m_preGetName != null)) {
