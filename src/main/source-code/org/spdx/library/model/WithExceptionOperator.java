@@ -9,6 +9,9 @@ public class WithExceptionOperator extends AnyLicenseInfo
     private AnyLicenseInfo member;
     private LicenseException licenseException;
 
+    WithExceptionOperator() {
+    }
+
     /** 
      * Get the 'member' element value. A license, or other licensing information, that is a member of the subject license set.
      * 

@@ -5,6 +5,9 @@ public class SinglePointer extends Pointer
 {
     private File reference;
 
+    SinglePointer() {
+    }
+
     /** 
      * Get the 'reference' element value.
      * 

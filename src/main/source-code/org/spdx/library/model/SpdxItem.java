@@ -14,6 +14,9 @@ public class SpdxItem extends SpdxElement
     private String copyrightText;
     private List<SimpleLicensingInfo> licenseInfoFromFileList = new ArrayList<SimpleLicensingInfo>();
 
+    SpdxItem() {
+    }
+
     /** 
      * Get the 'licenseComments' element value. The licenseComments property allows the preparer of the SPDX document to describe why the licensing in spdx:licenseConcluded was chosen.
      * 

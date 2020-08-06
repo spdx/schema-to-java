@@ -11,6 +11,9 @@ public class ConjunctiveLicenseSet extends AnyLicenseInfo
 {
     private List<AnyLicenseInfo> memberList = new ArrayList<AnyLicenseInfo>();
 
+    ConjunctiveLicenseSet() {
+    }
+
     /** 
      * Get the list of 'member' element items. A license, or other licensing information, that is a member of the subject license set.
      * 

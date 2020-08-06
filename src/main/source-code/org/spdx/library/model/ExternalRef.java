@@ -11,6 +11,9 @@ public class ExternalRef extends ModelObject
     private String referenceLocator;
     private ReferenceType referenceType;
 
+    ExternalRef() {
+    }
+
     /** 
      * Get the 'comment' element value.
      * 

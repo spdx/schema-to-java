@@ -18,6 +18,9 @@ public class File extends SpdxItem
     private String noticeText;
     private List<File> fileDependencyList = new ArrayList<File>();
 
+    File() {
+    }
+
     /** 
      * Get the list of 'artifactOf' element items. Indicates the project in which the SpdxElement originated. Tools must preserve doap:homepage and doap:name properties and the URI (if one is known) of doap:Project resources that are values of this property. All other properties of doap:Projects are not directly supported by SPDX and may be dropped when translating to or from some SPDX formats.
      * 

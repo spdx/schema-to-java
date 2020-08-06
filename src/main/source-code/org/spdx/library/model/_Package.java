@@ -24,6 +24,9 @@ public class _Package extends SpdxItem
     private String sourceInfo;
     private String description;
 
+    _Package() {
+    }
+
     /** 
      * Get the 'homepage' element value.
      * 

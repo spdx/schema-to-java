@@ -12,6 +12,9 @@ public class PackageVerificationCode extends ModelObject
     private byte[] packageVerificationCodeValue;
     private List<String> packageVerificationCodeExcludedFileList = new ArrayList<String>();
 
+    PackageVerificationCode() {
+    }
+
     /** 
      * Get the 'packageVerificationCodeValue' element value. The actual package verification code as a hex encoded value.
      * 

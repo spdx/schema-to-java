@@ -17,6 +17,9 @@ public class SpdxDocument extends SpdxElement
     private List<ExternalDocumentRef> externalDocumentRefList = new ArrayList<ExternalDocumentRef>();
     private CreationInfo creationInfo;
 
+    SpdxDocument() {
+    }
+
     /** 
      * Get the list of 'reviewed' element items. Reviewed
      * 

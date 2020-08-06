@@ -13,6 +13,9 @@ public class License extends SimpleLicensingInfo
     private String standardLicenseTemplate;
     private String standardLicenseHeader;
 
+    License() {
+    }
+
     /** 
      * Get the 'standardLicenseHeaderTemplate' element value. License template which describes sections of the license header which can be varied. See License Template section of the specification for format information.
      * 

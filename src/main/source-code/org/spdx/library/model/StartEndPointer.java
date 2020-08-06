@@ -6,6 +6,9 @@ public class StartEndPointer extends Pointer
     private SinglePointer startPointer;
     private SinglePointer endPointer;
 
+    StartEndPointer() {
+    }
+
     /** 
      * Get the 'startPointer' element value.
      * 

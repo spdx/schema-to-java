@@ -5,6 +5,9 @@ public class LineCharPointer extends SinglePointer
 {
     private String lineNumber;
 
+    LineCharPointer() {
+    }
+
     /** 
      * Get the 'lineNumber' element value.
      * 

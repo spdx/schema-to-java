@@ -10,6 +10,9 @@ public class ExternalDocumentRef extends ModelObject
     private Checksum checksum;
     private SpdxDocument spdxDocument;
 
+    ExternalDocumentRef() {
+    }
+
     /** 
      * Get the 'externalDocumentId' element value. externalDocumentId is a string containing letters, numbers, ., - and/or + which uniquely identifies an external document within this document.
      * 

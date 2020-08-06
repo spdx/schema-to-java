@@ -8,6 +8,9 @@ public class ExtractedLicensingInfo extends SimpleLicensingInfo
 {
     private String extractedText;
 
+    ExtractedLicensingInfo() {
+    }
+
     /** 
      * Get the 'extractedText' element value. Verbatim license or licensing notice text that was discovered.
      * 

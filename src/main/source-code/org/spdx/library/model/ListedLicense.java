@@ -8,6 +8,9 @@ public class ListedLicense extends License
 {
     private Boolean isDeprecatedLicenseId;
 
+    ListedLicense() {
+    }
+
     /** 
      * Get the 'isDeprecatedLicenseId' element value.
      * 

@@ -15,6 +15,9 @@ public class SpdxElement extends ModelObject
     private List<Annotation> annotationList = new ArrayList<Annotation>();
     private String SPDXID;
 
+    SpdxElement() {
+    }
+
     /** 
      * Get the 'name' element value. Identify name of this SpdxElement.
      * 

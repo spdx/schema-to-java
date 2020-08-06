@@ -1,10 +1,14 @@
 package org.spdx.jibx;
 
+import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
-
+import org.eclipse.jdt.core.dom.SimpleName;
 import org.jibx.binding.model.ContainerElementBase;
 import org.jibx.binding.model.ElementBase;
+import org.jibx.schema.codegen.ClassHolder;
+import org.jibx.schema.codegen.ClassHolderHelper;
 import org.jibx.schema.codegen.EnumerationClassHolder;
 import org.jibx.schema.codegen.IClassHolder;
 import org.jibx.schema.codegen.extend.ClassDecorator;
@@ -104,6 +108,27 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 
             holder.setSuperClassName(m_baseClass);
         }
+        
+        if(!(holder instanceof EnumerationClassHolder)) {      // for constructors
+								
+				AST ast = ClassHolderHelper.getAST((ClassHolder)holder);
+				
+				Block block = ast.newBlock() ;
+				 				
+				MethodDeclaration constr = ast.newMethodDeclaration();
+				
+			    String name = holder.getName();
+				 					 
+			    SimpleName sname = ast.newSimpleName(name);
+			     	        	
+				constr.setName(sname);  
+	 	         					
+				constr.setConstructor(true); 
+				
+				constr.setBody(block);				 
+				
+			    holder.addMethod(constr); 
+	    	}	
     }
     /** 
      * Method called after adding each data value to class. Unused for this decorator.

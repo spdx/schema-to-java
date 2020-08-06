@@ -10,6 +10,9 @@ public class Relationship extends ModelObject
     private RelationshipType relationshipType;
     private SpdxElement relatedSpdxElement;
 
+    Relationship() {
+    }
+
     /** 
      * Get the 'comment' element value.
      * 

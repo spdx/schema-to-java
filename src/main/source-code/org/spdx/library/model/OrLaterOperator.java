@@ -8,6 +8,9 @@ public class OrLaterOperator extends AnyLicenseInfo
 {
     private AnyLicenseInfo member;
 
+    OrLaterOperator() {
+    }
+
     /** 
      * Get the 'member' element value. A license, or other licensing information, that is a member of the subject license set.
      * 

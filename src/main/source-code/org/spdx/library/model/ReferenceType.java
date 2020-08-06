@@ -10,6 +10,9 @@ public class ReferenceType extends ModelObject
     private String externalReferenceSite;
     private String documentation;
 
+    ReferenceType() {
+    }
+
     /** 
      * Get the 'contextualExample' element value. Example for use of the external repository identifier
      * 

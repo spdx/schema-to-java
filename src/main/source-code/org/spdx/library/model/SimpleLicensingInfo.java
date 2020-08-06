@@ -14,6 +14,9 @@ public class SimpleLicensingInfo extends AnyLicenseInfo
     private String comment;
     private String licenseId;
 
+    SimpleLicensingInfo() {
+    }
+
     /** 
      * Get the list of 'seeAlso' element items.
      * 

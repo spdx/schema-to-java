@@ -9,6 +9,9 @@ public class Checksum extends ModelObject
     private ChecksumAlgorithm algorithm;
     private byte[] checksumValue;
 
+    Checksum() {
+    }
+
     /** 
      * Get the 'algorithm' element value. Identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time.
      * 

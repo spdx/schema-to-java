@@ -5,6 +5,9 @@ public class ByteOffsetPointer extends SinglePointer
 {
     private String offset;
 
+    ByteOffsetPointer() {
+    }
+
     /** 
      * Get the 'offset' element value.
      * 
