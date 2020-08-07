@@ -13,7 +13,7 @@ public class License extends SimpleLicensingInfo
     private String standardLicenseTemplate;
     private String standardLicenseHeader;
 
-    License() {
+    License(String Id) {
     }
 
     /** 

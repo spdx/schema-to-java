@@ -13,7 +13,7 @@ public class Snippet extends SpdxItem
     private File snippetFromFile;
     private List<SimpleLicensingInfo> licenseInfoInSnippetList = new ArrayList<SimpleLicensingInfo>();
 
-    Snippet() {
+    Snippet(String Id) {
     }
 
     /** 

@@ -18,7 +18,7 @@ public class File extends SpdxItem
     private String noticeText;
     private List<File> fileDependencyList = new ArrayList<File>();
 
-    File() {
+    File(String Id) {
     }
 
     /** 

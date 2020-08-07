@@ -17,7 +17,7 @@ public class SpdxDocument extends SpdxElement
     private List<ExternalDocumentRef> externalDocumentRefList = new ArrayList<ExternalDocumentRef>();
     private CreationInfo creationInfo;
 
-    SpdxDocument() {
+    SpdxDocument(String Id) {
     }
 
     /** 

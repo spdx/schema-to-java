@@ -12,7 +12,7 @@ public class PackageVerificationCode extends ModelObject
     private byte[] packageVerificationCodeValue;
     private List<String> packageVerificationCodeExcludedFileList = new ArrayList<String>();
 
-    PackageVerificationCode() {
+    PackageVerificationCode(String Id) {
     }
 
     /** 

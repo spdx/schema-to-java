@@ -5,7 +5,7 @@ public class ByteOffsetPointer extends SinglePointer
 {
     private String offset;
 
-    ByteOffsetPointer() {
+    ByteOffsetPointer(String Id) {
     }
 
     /** 

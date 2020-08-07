@@ -5,7 +5,7 @@ public class LineCharPointer extends SinglePointer
 {
     private String lineNumber;
 
-    LineCharPointer() {
+    LineCharPointer(String Id) {
     }
 
     /** 

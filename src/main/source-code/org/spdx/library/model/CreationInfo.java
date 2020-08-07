@@ -15,7 +15,7 @@ public class CreationInfo extends ModelObject
     private List<String> creatorList = new ArrayList<String>();
     private String licenseListVersion;
 
-    CreationInfo() {
+    CreationInfo(String Id) {
     }
 
     /** 

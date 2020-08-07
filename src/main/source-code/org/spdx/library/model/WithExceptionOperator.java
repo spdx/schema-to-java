@@ -9,7 +9,7 @@ public class WithExceptionOperator extends AnyLicenseInfo
     private AnyLicenseInfo member;
     private LicenseException licenseException;
 
-    WithExceptionOperator() {
+    WithExceptionOperator(String Id) {
     }
 
     /** 

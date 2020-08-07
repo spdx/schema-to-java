@@ -11,7 +11,7 @@ public class ExternalRef extends ModelObject
     private String referenceLocator;
     private ReferenceType referenceType;
 
-    ExternalRef() {
+    ExternalRef(String Id) {
     }
 
     /** 

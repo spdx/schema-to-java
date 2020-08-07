@@ -11,7 +11,7 @@ public class DisjunctiveLicenseSet extends AnyLicenseInfo
 {
     private List<AnyLicenseInfo> memberList = new ArrayList<AnyLicenseInfo>();
 
-    DisjunctiveLicenseSet() {
+    DisjunctiveLicenseSet(String Id) {
     }
 
     /** 

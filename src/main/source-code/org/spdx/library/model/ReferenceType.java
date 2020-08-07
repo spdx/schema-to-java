@@ -10,7 +10,7 @@ public class ReferenceType extends ModelObject
     private String externalReferenceSite;
     private String documentation;
 
-    ReferenceType() {
+    ReferenceType(String Id) {
     }
 
     /** 

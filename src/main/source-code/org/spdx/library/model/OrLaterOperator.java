@@ -8,7 +8,7 @@ public class OrLaterOperator extends AnyLicenseInfo
 {
     private AnyLicenseInfo member;
 
-    OrLaterOperator() {
+    OrLaterOperator(String Id) {
     }
 
     /** 

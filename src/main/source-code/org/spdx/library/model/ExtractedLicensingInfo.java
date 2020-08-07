@@ -8,7 +8,7 @@ public class ExtractedLicensingInfo extends SimpleLicensingInfo
 {
     private String extractedText;
 
-    ExtractedLicensingInfo() {
+    ExtractedLicensingInfo(String Id) {
     }
 
     /** 

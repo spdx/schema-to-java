@@ -13,7 +13,7 @@ public class Annotation extends ModelObject
     private String annotator;
     private AnnotationType annotationType;
 
-    Annotation() {
+    Annotation(String Id) {
     }
 
     /** 

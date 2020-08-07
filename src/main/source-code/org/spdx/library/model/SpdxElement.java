@@ -15,7 +15,7 @@ public class SpdxElement extends ModelObject
     private List<Annotation> annotationList = new ArrayList<Annotation>();
     private String SPDXID;
 
-    SpdxElement() {
+    SpdxElement(String Id) {
     }
 
     /** 
