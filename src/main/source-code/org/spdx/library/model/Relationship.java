@@ -11,6 +11,7 @@ public class Relationship extends ModelObject
     private SpdxElement relatedSpdxElement;
 
     Relationship(String Id) {
+        super();
     }
 
     /** 

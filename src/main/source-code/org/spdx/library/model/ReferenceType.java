@@ -11,6 +11,7 @@ public class ReferenceType extends ModelObject
     private String documentation;
 
     ReferenceType(String Id) {
+        super();
     }
 
     /** 

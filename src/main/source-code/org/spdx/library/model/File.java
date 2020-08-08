@@ -19,6 +19,7 @@ public class File extends SpdxItem
     private List<File> fileDependencyList = new ArrayList<File>();
 
     File(String Id) {
+        super();
     }
 
     /** 

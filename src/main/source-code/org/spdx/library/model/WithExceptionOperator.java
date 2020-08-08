@@ -10,6 +10,7 @@ public class WithExceptionOperator extends AnyLicenseInfo
     private LicenseException licenseException;
 
     WithExceptionOperator(String Id) {
+        super();
     }
 
     /** 

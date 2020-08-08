@@ -10,6 +10,7 @@ public class Checksum extends ModelObject
     private byte[] checksumValue;
 
     Checksum(String Id) {
+        super();
     }
 
     /** 

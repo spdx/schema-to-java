@@ -9,6 +9,7 @@ public class ListedLicense extends License
     private Boolean isDeprecatedLicenseId;
 
     ListedLicense(String Id) {
+        super();
     }
 
     /** 

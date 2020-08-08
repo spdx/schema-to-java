@@ -11,6 +11,7 @@ public class ExternalDocumentRef extends ModelObject
     private SpdxDocument spdxDocument;
 
     ExternalDocumentRef(String Id) {
+        super();
     }
 
     /** 

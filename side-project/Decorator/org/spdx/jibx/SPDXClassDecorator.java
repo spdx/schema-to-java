@@ -4,9 +4,11 @@ import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.ConstructorInvocation;
+import org.eclipse.jdt.core.dom.Expression;
 import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.Name;
+import org.eclipse.jdt.core.dom.ReturnStatement;
 import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 import org.eclipse.jdt.core.dom.Type;
@@ -102,12 +104,57 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 			
 			    param.setType(ast.newSimpleType(param_type));
 			    
-			    constr.parameters().add(param);
-			   
-				constr.setBody(block);	 			    
+                constr.parameters().add(param);
+ 			    
+ 			    constr.setBody(block);
+ 				
+ 				block.statements().add(ast.newSuperConstructorInvocation());		    
 				
 			    holder.addMethod(constr); 
-	    	}	    		    	
+	    	}
+        
+        
+        
+        
+        
+      /*   if(!(holder instanceof EnumerationClassHolder)) {   // For GetType()
+ 		   
+ 		    AST ast = ClassHolderHelper.getAST((ClassHolder)holder);
+ 		    
+ 		        MethodDeclaration method = ast.newMethodDeclaration();
+ 		     
+ 				Type returnType = ast.newSimpleType(ast.newName("String"));
+ 				
+ 				Block block = ast.newBlock() ;    
+ 	
+ 			    ReturnStatement ret = ast.newReturnStatement();
+ 			    			    
+ 			    Expression exp =  ast.newSimpleName(holder.getName());
+            
+ 		       	ret.setExpression(exp);
+      
+ 			    block.statements().add(ret);
+ 			 	        		            			
+ 	            method.setName(ast.newSimpleName("getType"));	
+ 	            	                         
+ 	            method.setBody(block);
+ 	            
+ 	            method.setReturnType2(returnType);              //error-prone line
+ 	             
+ 	            holder.addMethod(method); 
+ 	    	}	
+ 	    	
+ 	    	
+ 	    	
+ 	    	-----------------------------------------
+ 	    	output:
+ 	    	   String getType() {
+                     return Classname;              //show error at Classname, "Classname cannot be resolved to a variable"
+               }
+
+ 	    	-------------------------------------------
+ 	    	 	    	
+ 	    	*/
     }
     
   

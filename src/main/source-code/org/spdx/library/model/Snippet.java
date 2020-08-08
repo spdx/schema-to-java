@@ -14,6 +14,7 @@ public class Snippet extends SpdxItem
     private List<SimpleLicensingInfo> licenseInfoInSnippetList = new ArrayList<SimpleLicensingInfo>();
 
     Snippet(String Id) {
+        super();
     }
 
     /** 

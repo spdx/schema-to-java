@@ -16,6 +16,7 @@ public class CreationInfo extends ModelObject
     private String licenseListVersion;
 
     CreationInfo(String Id) {
+        super();
     }
 
     /** 

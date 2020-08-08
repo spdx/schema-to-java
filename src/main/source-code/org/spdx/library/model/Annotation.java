@@ -14,6 +14,7 @@ public class Annotation extends ModelObject
     private AnnotationType annotationType;
 
     Annotation(String Id) {
+        super();
     }
 
     /** 

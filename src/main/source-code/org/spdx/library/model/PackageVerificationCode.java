@@ -13,6 +13,7 @@ public class PackageVerificationCode extends ModelObject
     private List<String> packageVerificationCodeExcludedFileList = new ArrayList<String>();
 
     PackageVerificationCode(String Id) {
+        super();
     }
 
     /** 

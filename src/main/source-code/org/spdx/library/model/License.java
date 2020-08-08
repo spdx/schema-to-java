@@ -14,6 +14,7 @@ public class License extends SimpleLicensingInfo
     private String standardLicenseHeader;
 
     License(String Id) {
+        super();
     }
 
     /** 

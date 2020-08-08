@@ -15,6 +15,7 @@ public class SpdxItem extends SpdxElement
     private List<SimpleLicensingInfo> licenseInfoFromFileList = new ArrayList<SimpleLicensingInfo>();
 
     SpdxItem(String Id) {
+        super();
     }
 
     /** 

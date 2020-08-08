@@ -12,6 +12,7 @@ public class ExternalRef extends ModelObject
     private ReferenceType referenceType;
 
     ExternalRef(String Id) {
+        super();
     }
 
     /** 

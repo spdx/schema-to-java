@@ -16,6 +16,7 @@ public class SpdxElement extends ModelObject
     private String SPDXID;
 
     SpdxElement(String Id) {
+        super();
     }
 
     /** 

@@ -10,6 +10,7 @@ public class Review extends ModelObject
     private Date reviewDate;
 
     Review(String Id) {
+        super();
     }
 
     /** 
