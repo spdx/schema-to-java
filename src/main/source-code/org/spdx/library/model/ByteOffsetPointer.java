@@ -6,7 +6,7 @@ public class ByteOffsetPointer extends SinglePointer
     private String offset;
 
     ByteOffsetPointer(String Id) {
-        super();
+        super(Id);
     }
 
     /** 

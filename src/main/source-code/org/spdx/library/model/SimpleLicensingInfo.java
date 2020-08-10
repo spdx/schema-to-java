@@ -15,7 +15,7 @@ public class SimpleLicensingInfo extends AnyLicenseInfo
     private String licenseId;
 
     SimpleLicensingInfo(String Id) {
-        super();
+        super(Id);
     }
 
     /** 

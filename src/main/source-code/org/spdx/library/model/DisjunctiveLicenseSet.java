@@ -12,7 +12,7 @@ public class DisjunctiveLicenseSet extends AnyLicenseInfo
     private List<AnyLicenseInfo> memberList = new ArrayList<AnyLicenseInfo>();
 
     DisjunctiveLicenseSet(String Id) {
-        super();
+        super(Id);
     }
 
     /** 

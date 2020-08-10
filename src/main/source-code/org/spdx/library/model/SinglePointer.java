@@ -6,7 +6,7 @@ public class SinglePointer extends Pointer
     private File reference;
 
     SinglePointer(String Id) {
-        super();
+        super(Id);
     }
 
     /** 

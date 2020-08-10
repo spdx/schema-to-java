@@ -18,7 +18,7 @@ public class SpdxDocument extends SpdxElement
     private CreationInfo creationInfo;
 
     SpdxDocument(String Id) {
-        super();
+        super(Id);
     }
 
     /** 

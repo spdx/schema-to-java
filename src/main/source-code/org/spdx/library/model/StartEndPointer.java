@@ -7,7 +7,7 @@ public class StartEndPointer extends Pointer
     private SinglePointer endPointer;
 
     StartEndPointer(String Id) {
-        super();
+        super(Id);
     }
 
     /** 

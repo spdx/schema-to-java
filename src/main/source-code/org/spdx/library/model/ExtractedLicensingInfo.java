@@ -9,7 +9,7 @@ public class ExtractedLicensingInfo extends SimpleLicensingInfo
     private String extractedText;
 
     ExtractedLicensingInfo(String Id) {
-        super();
+        super(Id);
     }
 
     /** 

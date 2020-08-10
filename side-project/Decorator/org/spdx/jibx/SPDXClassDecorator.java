@@ -74,10 +74,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
     
 
     public void start(IClassHolder holder) {
-        if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {
-            holder.setSuperClassName(m_baseClass);
-        }
-        
+       
         if(!(holder instanceof EnumerationClassHolder)) {      // for constructors 				
 				
 				AST ast = ClassHolderHelper.getAST((ClassHolder)holder);
@@ -108,10 +105,22 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
  			    
  			    constr.setBody(block);
  				
- 				block.statements().add(ast.newSuperConstructorInvocation());		    
-				
-			    holder.addMethod(constr); 
-	    	}
+ 			    if( !(holder.getSuperClassName()==null) &&  matchName(holder.getName()))
+			    {		   	 			     	
+			        sci.arguments().add(ast.newSimpleName(param_name)); 	
+			       	block.statements().add(sci);
+			    }
+			    else
+			     	block.statements().add(ast.newSuperConstructorInvocation());
+			    	
+			    holder.addMethod(constr);   			    
+	    	 }
+			
+			
+			if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {    		
+		        holder.setSuperClassName(m_baseClass);
+			}		
+	 }      //start() closed here
         
         
         

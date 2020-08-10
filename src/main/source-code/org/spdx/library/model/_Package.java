@@ -25,7 +25,7 @@ public class _Package extends SpdxItem
     private String description;
 
     _Package(String Id) {
-        super();
+        super(Id);
     }
 
     /** 

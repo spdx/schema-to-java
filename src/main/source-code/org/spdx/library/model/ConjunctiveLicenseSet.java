@@ -12,7 +12,7 @@ public class ConjunctiveLicenseSet extends AnyLicenseInfo
     private List<AnyLicenseInfo> memberList = new ArrayList<AnyLicenseInfo>();
 
     ConjunctiveLicenseSet(String Id) {
-        super();
+        super(Id);
     }
 
     /** 
