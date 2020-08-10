@@ -14,8 +14,8 @@ public class SpdxItem extends SpdxElement
     private String copyrightText;
     private List<SimpleLicensingInfo> licenseInfoFromFileList = new ArrayList<SimpleLicensingInfo>();
 
-    SpdxItem(String Id) {
-        super(Id);
+    SpdxItem(IModelStore modelStore, String documentUri, String id) {
+        super(modelStore, documentUri, id);
     }
 
     /** 

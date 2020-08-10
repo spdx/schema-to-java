@@ -10,7 +10,7 @@ public class ExternalDocumentRef extends ModelObject
     private Checksum checksum;
     private SpdxDocument spdxDocument;
 
-    ExternalDocumentRef(String Id) {
+    ExternalDocumentRef(IModelStore modelStore, String documentUri, String id) {
         super();
     }
 

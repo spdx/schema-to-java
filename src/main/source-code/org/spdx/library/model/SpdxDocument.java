@@ -17,8 +17,8 @@ public class SpdxDocument extends SpdxElement
     private List<ExternalDocumentRef> externalDocumentRefList = new ArrayList<ExternalDocumentRef>();
     private CreationInfo creationInfo;
 
-    SpdxDocument(String Id) {
-        super(Id);
+    SpdxDocument(IModelStore modelStore, String documentUri, String id) {
+        super(modelStore, documentUri, id);
     }
 
     /** 

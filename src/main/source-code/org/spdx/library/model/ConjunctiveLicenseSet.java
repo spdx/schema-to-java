@@ -11,8 +11,8 @@ public class ConjunctiveLicenseSet extends AnyLicenseInfo
 {
     private List<AnyLicenseInfo> memberList = new ArrayList<AnyLicenseInfo>();
 
-    ConjunctiveLicenseSet(String Id) {
-        super(Id);
+    ConjunctiveLicenseSet(IModelStore modelStore, String documentUri, String id) {
+        super(modelStore, documentUri, id);
     }
 
     /** 

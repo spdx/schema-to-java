@@ -5,8 +5,8 @@ public class ByteOffsetPointer extends SinglePointer
 {
     private String offset;
 
-    ByteOffsetPointer(String Id) {
-        super(Id);
+    ByteOffsetPointer(IModelStore modelStore, String documentUri, String id) {
+        super(modelStore, documentUri, id);
     }
 
     /** 

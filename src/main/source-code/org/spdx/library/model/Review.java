@@ -9,7 +9,7 @@ public class Review extends ModelObject
     private String comment;
     private Date reviewDate;
 
-    Review(String Id) {
+    Review(IModelStore modelStore, String documentUri, String id) {
         super();
     }
 

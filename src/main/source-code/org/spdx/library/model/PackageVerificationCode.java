@@ -12,7 +12,8 @@ public class PackageVerificationCode extends ModelObject
     private byte[] packageVerificationCodeValue;
     private List<String> packageVerificationCodeExcludedFileList = new ArrayList<String>();
 
-    PackageVerificationCode(String Id) {
+    PackageVerificationCode(IModelStore modelStore, String documentUri,
+            String id) {
         super();
     }
 

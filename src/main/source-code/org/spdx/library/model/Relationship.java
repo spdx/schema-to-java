@@ -10,7 +10,7 @@ public class Relationship extends ModelObject
     private RelationshipType relationshipType;
     private SpdxElement relatedSpdxElement;
 
-    Relationship(String Id) {
+    Relationship(IModelStore modelStore, String documentUri, String id) {
         super();
     }
 

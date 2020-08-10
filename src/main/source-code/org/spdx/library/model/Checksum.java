@@ -9,7 +9,7 @@ public class Checksum extends ModelObject
     private ChecksumAlgorithm algorithm;
     private byte[] checksumValue;
 
-    Checksum(String Id) {
+    Checksum(IModelStore modelStore, String documentUri, String id) {
         super();
     }
 

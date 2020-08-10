@@ -5,8 +5,8 @@ public class SinglePointer extends Pointer
 {
     private File reference;
 
-    SinglePointer(String Id) {
-        super(Id);
+    SinglePointer(IModelStore modelStore, String documentUri, String id) {
+        super(modelStore, documentUri, id);
     }
 
     /** 

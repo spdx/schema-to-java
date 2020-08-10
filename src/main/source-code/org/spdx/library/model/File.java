@@ -18,8 +18,8 @@ public class File extends SpdxItem
     private String noticeText;
     private List<File> fileDependencyList = new ArrayList<File>();
 
-    File(String Id) {
-        super(Id);
+    File(IModelStore modelStore, String documentUri, String id) {
+        super(modelStore, documentUri, id);
     }
 
     /** 

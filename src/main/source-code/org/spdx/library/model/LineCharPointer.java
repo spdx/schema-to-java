@@ -5,8 +5,8 @@ public class LineCharPointer extends SinglePointer
 {
     private String lineNumber;
 
-    LineCharPointer(String Id) {
-        super(Id);
+    LineCharPointer(IModelStore modelStore, String documentUri, String id) {
+        super(modelStore, documentUri, id);
     }
 
     /** 

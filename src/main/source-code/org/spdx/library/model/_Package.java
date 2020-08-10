@@ -24,8 +24,8 @@ public class _Package extends SpdxItem
     private String sourceInfo;
     private String description;
 
-    _Package(String Id) {
-        super(Id);
+    _Package(IModelStore modelStore, String documentUri, String id) {
+        super(modelStore, documentUri, id);
     }
 
     /** 

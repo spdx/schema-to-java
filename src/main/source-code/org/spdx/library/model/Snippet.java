@@ -13,8 +13,8 @@ public class Snippet extends SpdxItem
     private File snippetFromFile;
     private List<SimpleLicensingInfo> licenseInfoInSnippetList = new ArrayList<SimpleLicensingInfo>();
 
-    Snippet(String Id) {
-        super(Id);
+    Snippet(IModelStore modelStore, String documentUri, String id) {
+        super(modelStore, documentUri, id);
     }
 
     /** 
