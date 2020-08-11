@@ -10,6 +10,10 @@ public class ReferenceType extends ModelObject
     private String externalReferenceSite;
     private String documentation;
 
+    ReferenceType(String Id) {
+        super();
+    }
+
     ReferenceType(IModelStore modelStore, String documentUri, String id) {
         super();
     }

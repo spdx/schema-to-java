@@ -16,6 +16,10 @@ public class LicenseException extends ModelObject
     private String comment;
     private String licenseExceptionText;
 
+    LicenseException(String Id) {
+        super();
+    }
+
     LicenseException(IModelStore modelStore, String documentUri, String id) {
         super();
     }

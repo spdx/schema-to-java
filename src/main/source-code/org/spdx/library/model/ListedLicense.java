@@ -8,6 +8,10 @@ public class ListedLicense extends License
 {
     private Boolean isDeprecatedLicenseId;
 
+    ListedLicense(String Id) {
+        super(Id);
+    }
+
     ListedLicense(IModelStore modelStore, String documentUri, String id) {
         super(modelStore, documentUri, id);
     }

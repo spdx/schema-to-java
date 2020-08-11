@@ -13,6 +13,10 @@ public class Annotation extends ModelObject
     private String annotator;
     private AnnotationType annotationType;
 
+    Annotation(String Id) {
+        super();
+    }
+
     Annotation(IModelStore modelStore, String documentUri, String id) {
         super();
     }

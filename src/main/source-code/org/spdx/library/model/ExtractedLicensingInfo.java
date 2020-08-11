@@ -8,6 +8,10 @@ public class ExtractedLicensingInfo extends SimpleLicensingInfo
 {
     private String extractedText;
 
+    ExtractedLicensingInfo(String Id) {
+        super(Id);
+    }
+
     ExtractedLicensingInfo(IModelStore modelStore, String documentUri, String id) {
         super(modelStore, documentUri, id);
     }

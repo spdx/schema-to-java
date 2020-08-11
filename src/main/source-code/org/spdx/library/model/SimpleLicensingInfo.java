@@ -14,6 +14,10 @@ public class SimpleLicensingInfo extends AnyLicenseInfo
     private String comment;
     private String licenseId;
 
+    SimpleLicensingInfo(String Id) {
+        super(Id);
+    }
+
     SimpleLicensingInfo(IModelStore modelStore, String documentUri, String id) {
         super(modelStore, documentUri, id);
     }

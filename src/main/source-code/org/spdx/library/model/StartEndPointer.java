@@ -6,6 +6,10 @@ public class StartEndPointer extends Pointer
     private SinglePointer startPointer;
     private SinglePointer endPointer;
 
+    StartEndPointer(String Id) {
+        super(Id);
+    }
+
     StartEndPointer(IModelStore modelStore, String documentUri, String id) {
         super(modelStore, documentUri, id);
     }

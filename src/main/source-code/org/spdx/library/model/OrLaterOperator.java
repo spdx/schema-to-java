@@ -8,6 +8,10 @@ public class OrLaterOperator extends AnyLicenseInfo
 {
     private AnyLicenseInfo member;
 
+    OrLaterOperator(String Id) {
+        super(Id);
+    }
+
     OrLaterOperator(IModelStore modelStore, String documentUri, String id) {
         super(modelStore, documentUri, id);
     }

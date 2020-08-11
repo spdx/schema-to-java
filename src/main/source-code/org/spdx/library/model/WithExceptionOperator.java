@@ -9,6 +9,10 @@ public class WithExceptionOperator extends AnyLicenseInfo
     private AnyLicenseInfo member;
     private LicenseException licenseException;
 
+    WithExceptionOperator(String Id) {
+        super(Id);
+    }
+
     WithExceptionOperator(IModelStore modelStore, String documentUri, String id) {
         super(modelStore, documentUri, id);
     }

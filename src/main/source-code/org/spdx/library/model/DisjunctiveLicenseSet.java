@@ -11,6 +11,10 @@ public class DisjunctiveLicenseSet extends AnyLicenseInfo
 {
     private List<AnyLicenseInfo> memberList = new ArrayList<AnyLicenseInfo>();
 
+    DisjunctiveLicenseSet(String Id) {
+        super(Id);
+    }
+
     DisjunctiveLicenseSet(IModelStore modelStore, String documentUri, String id) {
         super(modelStore, documentUri, id);
     }

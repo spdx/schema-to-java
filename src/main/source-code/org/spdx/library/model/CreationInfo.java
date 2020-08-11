@@ -15,6 +15,10 @@ public class CreationInfo extends ModelObject
     private List<String> creatorList = new ArrayList<String>();
     private String licenseListVersion;
 
+    CreationInfo(String Id) {
+        super();
+    }
+
     CreationInfo(IModelStore modelStore, String documentUri, String id) {
         super();
     }

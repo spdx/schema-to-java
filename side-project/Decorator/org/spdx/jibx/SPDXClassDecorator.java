@@ -131,8 +131,8 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 			SingleVariableDeclaration param1 = ast.newSingleVariableDeclaration();
 			SingleVariableDeclaration param2 = ast.newSingleVariableDeclaration();
 			SingleVariableDeclaration param3 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param4 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param5 = ast.newSingleVariableDeclaration();
+		//	SingleVariableDeclaration param4 = ast.newSingleVariableDeclaration();
+		//	SingleVariableDeclaration param5 = ast.newSingleVariableDeclaration();
 			
 			SuperConstructorInvocation sci = ast.newSuperConstructorInvocation();
 			 				
@@ -143,14 +143,14 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 			String param_name1 = "modelStore";
 			String param_name2 = "documentUri";
 			String param_name3 = "id";
-	    	String param_name4 = "copyManager";
-			String param_name5 = "create";
+	   // 	String param_name4 = "copyManager";
+		//	String param_name5 = "create";
 		
 			Name param_type1 = ast.newName("IModelStore");
 			Name param_type2 = ast.newName("String");
 			Name param_type3 = ast.newName("String");
-			Name param_type4 = ast.newName("@Nullable ModelCopyManager");
-			Name param_type5 = ast.newName("boolean");
+		//	Name param_type4 = ast.newName("@Nullable ModelCopyManager");
+		//	Name param_type5 = ast.newName("boolean");
 	  		 				 																	
 			String name2 = holder.getName();          // Constructor name
 			 					 
@@ -163,20 +163,20 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 			 param1.setName(ast.newSimpleName(param_name1));
 			 param2.setName(ast.newSimpleName(param_name2));
 			 param3.setName(ast.newSimpleName(param_name3));
-			 param4.setName(ast.newSimpleName(param_name4));
-			 param5.setName(ast.newSimpleName(param_name5));
+	//		 param4.setName(ast.newSimpleName(param_name4));
+		//	 param5.setName(ast.newSimpleName(param_name5));
 		
 			 param1.setType(ast.newSimpleType(param_type1));
 		     param2.setType(ast.newSimpleType(param_type2));
 		     param3.setType(ast.newSimpleType(param_type3));
-	         param4.setType(ast.newSimpleType(param_type4));
-	         param5.setType(ast.newSimpleType(param_type5));
+	     //    param4.setType(ast.newSimpleType(param_type4));
+	      //   param5.setType(ast.newSimpleType(param_type5));
 		    
 	         constr2.parameters().add(param1);
 	         constr2.parameters().add(param2);
 	         constr2.parameters().add(param3);
-	         constr2.parameters().add(param4);
-	         constr2.parameters().add(param5);
+	      //   constr2.parameters().add(param4);
+	      //   constr2.parameters().add(param5);
 			    
 			    
 		     constr2.setBody(block);
@@ -186,8 +186,8 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 		        sci.arguments().add(ast.newSimpleName(param_name1)); 	
 		        sci.arguments().add(ast.newSimpleName(param_name2)); 
 		        sci.arguments().add(ast.newSimpleName(param_name3)); 
-		        sci.arguments().add(ast.newSimpleName(param_name4)); 
-		        sci.arguments().add(ast.newSimpleName(param_name5)); 
+		  //      sci.arguments().add(ast.newSimpleName(param_name4)); 
+		   //     sci.arguments().add(ast.newSimpleName(param_name5)); 
 		       	block.statements().add(sci);
 		    }
 		    else

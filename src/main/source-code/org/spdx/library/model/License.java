@@ -13,6 +13,10 @@ public class License extends SimpleLicensingInfo
     private String standardLicenseTemplate;
     private String standardLicenseHeader;
 
+    License(String Id) {
+        super(Id);
+    }
+
     License(IModelStore modelStore, String documentUri, String id) {
         super(modelStore, documentUri, id);
     }

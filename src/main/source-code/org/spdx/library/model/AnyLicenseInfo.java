@@ -6,6 +6,10 @@ package org.spdx.library.model;
  */
 public abstract class AnyLicenseInfo extends ModelObject
 {
+    AnyLicenseInfo(String Id) {
+        super();
+    }
+
     AnyLicenseInfo(IModelStore modelStore, String documentUri, String id) {
         super();
     }
