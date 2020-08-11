@@ -17,11 +17,12 @@ public class LicenseException extends ModelObject
     private String licenseExceptionText;
 
     LicenseException(String Id) {
-        super();
+        super(Id);
     }
 
-    LicenseException(IModelStore modelStore, String documentUri, String id) {
-        super();
+    LicenseException(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

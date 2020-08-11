@@ -12,11 +12,12 @@ public class ExternalRef extends ModelObject
     private ReferenceType referenceType;
 
     ExternalRef(String Id) {
-        super();
+        super(Id);
     }
 
-    ExternalRef(IModelStore modelStore, String documentUri, String id) {
-        super();
+    ExternalRef(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

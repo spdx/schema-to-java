@@ -11,11 +11,12 @@ public class ExternalDocumentRef extends ModelObject
     private SpdxDocument spdxDocument;
 
     ExternalDocumentRef(String Id) {
-        super();
+        super(Id);
     }
 
-    ExternalDocumentRef(IModelStore modelStore, String documentUri, String id) {
-        super();
+    ExternalDocumentRef(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

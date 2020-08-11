@@ -13,12 +13,12 @@ public class PackageVerificationCode extends ModelObject
     private List<String> packageVerificationCodeExcludedFileList = new ArrayList<String>();
 
     PackageVerificationCode(String Id) {
-        super();
+        super(Id);
     }
 
     PackageVerificationCode(IModelStore modelStore, String documentUri,
-            String id) {
-        super();
+            String id, ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

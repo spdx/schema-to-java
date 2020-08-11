@@ -17,8 +17,9 @@ public class Snippet extends SpdxItem
         super(Id);
     }
 
-    Snippet(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    Snippet(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

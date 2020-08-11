@@ -16,11 +16,12 @@ public class SpdxElement extends ModelObject
     private String SPDXID;
 
     SpdxElement(String Id) {
-        super();
+        super(Id);
     }
 
-    SpdxElement(IModelStore modelStore, String documentUri, String id) {
-        super();
+    SpdxElement(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

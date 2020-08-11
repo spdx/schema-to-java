@@ -12,8 +12,9 @@ public class ExtractedLicensingInfo extends SimpleLicensingInfo
         super(Id);
     }
 
-    ExtractedLicensingInfo(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    ExtractedLicensingInfo(IModelStore modelStore, String documentUri,
+            String id, ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

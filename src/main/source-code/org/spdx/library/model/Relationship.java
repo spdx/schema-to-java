@@ -11,11 +11,12 @@ public class Relationship extends ModelObject
     private SpdxElement relatedSpdxElement;
 
     Relationship(String Id) {
-        super();
+        super(Id);
     }
 
-    Relationship(IModelStore modelStore, String documentUri, String id) {
-        super();
+    Relationship(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

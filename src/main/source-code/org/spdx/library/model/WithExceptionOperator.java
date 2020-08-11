@@ -13,8 +13,9 @@ public class WithExceptionOperator extends AnyLicenseInfo
         super(Id);
     }
 
-    WithExceptionOperator(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    WithExceptionOperator(IModelStore modelStore, String documentUri,
+            String id, ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

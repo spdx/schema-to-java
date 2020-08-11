@@ -17,8 +17,9 @@ public class License extends SimpleLicensingInfo
         super(Id);
     }
 
-    License(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    License(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

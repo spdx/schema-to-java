@@ -10,11 +10,12 @@ public class Review extends ModelObject
     private Date reviewDate;
 
     Review(String Id) {
-        super();
+        super(Id);
     }
 
-    Review(IModelStore modelStore, String documentUri, String id) {
-        super();
+    Review(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

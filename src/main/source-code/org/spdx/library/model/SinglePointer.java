@@ -9,8 +9,9 @@ public class SinglePointer extends Pointer
         super(Id);
     }
 
-    SinglePointer(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    SinglePointer(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

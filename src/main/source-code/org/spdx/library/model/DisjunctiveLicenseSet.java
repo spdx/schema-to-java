@@ -15,8 +15,9 @@ public class DisjunctiveLicenseSet extends AnyLicenseInfo
         super(Id);
     }
 
-    DisjunctiveLicenseSet(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    DisjunctiveLicenseSet(IModelStore modelStore, String documentUri,
+            String id, ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

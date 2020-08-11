@@ -16,11 +16,12 @@ public class CreationInfo extends ModelObject
     private String licenseListVersion;
 
     CreationInfo(String Id) {
-        super();
+        super(Id);
     }
 
-    CreationInfo(IModelStore modelStore, String documentUri, String id) {
-        super();
+    CreationInfo(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

@@ -9,8 +9,9 @@ public class ByteOffsetPointer extends SinglePointer
         super(Id);
     }
 
-    ByteOffsetPointer(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    ByteOffsetPointer(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

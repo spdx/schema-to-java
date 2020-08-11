@@ -11,11 +11,12 @@ public class ReferenceType extends ModelObject
     private String documentation;
 
     ReferenceType(String Id) {
-        super();
+        super(Id);
     }
 
-    ReferenceType(IModelStore modelStore, String documentUri, String id) {
-        super();
+    ReferenceType(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

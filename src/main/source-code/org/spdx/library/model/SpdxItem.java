@@ -18,8 +18,9 @@ public class SpdxItem extends SpdxElement
         super(Id);
     }
 
-    SpdxItem(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    SpdxItem(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

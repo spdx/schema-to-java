@@ -28,8 +28,9 @@ public class _Package extends SpdxItem
         super(Id);
     }
 
-    _Package(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    _Package(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

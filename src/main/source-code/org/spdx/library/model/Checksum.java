@@ -10,11 +10,12 @@ public class Checksum extends ModelObject
     private byte[] checksumValue;
 
     Checksum(String Id) {
-        super();
+        super(Id);
     }
 
-    Checksum(IModelStore modelStore, String documentUri, String id) {
-        super();
+    Checksum(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

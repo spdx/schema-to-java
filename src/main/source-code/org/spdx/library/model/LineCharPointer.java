@@ -9,8 +9,9 @@ public class LineCharPointer extends SinglePointer
         super(Id);
     }
 
-    LineCharPointer(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    LineCharPointer(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

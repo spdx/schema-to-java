@@ -14,11 +14,12 @@ public class Annotation extends ModelObject
     private AnnotationType annotationType;
 
     Annotation(String Id) {
-        super();
+        super(Id);
     }
 
-    Annotation(IModelStore modelStore, String documentUri, String id) {
-        super();
+    Annotation(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 

@@ -15,8 +15,9 @@ public class ConjunctiveLicenseSet extends AnyLicenseInfo
         super(Id);
     }
 
-    ConjunctiveLicenseSet(IModelStore modelStore, String documentUri, String id) {
-        super(modelStore, documentUri, id);
+    ConjunctiveLicenseSet(IModelStore modelStore, String documentUri,
+            String id, ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
     }
 
     /** 
