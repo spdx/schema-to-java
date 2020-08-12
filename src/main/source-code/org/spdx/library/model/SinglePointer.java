@@ -15,19 +15,19 @@ public class SinglePointer extends Pointer
     }
 
     /** 
-     * Get the 'reference' element value.
-     * 
-     * @return value
-     */
+    * Get the 'reference' element value.
+    * 
+    * @return value
+    */
     public File getReference() {
         return reference;
     }
 
     /** 
-     * Set the 'reference' element value.
-     * 
-     * @param reference
-     */
+    * Set the 'reference' element value.
+    * 
+    * @param reference
+    */
     public void setReference(File reference) {
         this.reference = reference;
     }

@@ -19,37 +19,37 @@ public class WithExceptionOperator extends AnyLicenseInfo
     }
 
     /** 
-     * Get the 'member' element value. A license, or other licensing information, that is a member of the subject license set.
-     * 
-     * @return value
-     */
+    * Get the 'member' element value. A license, or other licensing information, that is a member of the subject license set.
+    * 
+    * @return value
+    */
     public AnyLicenseInfo getMember() {
         return member;
     }
 
     /** 
-     * Set the 'member' element value. A license, or other licensing information, that is a member of the subject license set.
-     * 
-     * @param member
-     */
+    * Set the 'member' element value. A license, or other licensing information, that is a member of the subject license set.
+    * 
+    * @param member
+    */
     public void setMember(AnyLicenseInfo member) {
         this.member = member;
     }
 
     /** 
-     * Get the 'licenseException' element value. An exception to a license.
-     * 
-     * @return value
-     */
+    * Get the 'licenseException' element value. An exception to a license.
+    * 
+    * @return value
+    */
     public LicenseException getLicenseException() {
         return licenseException;
     }
 
     /** 
-     * Set the 'licenseException' element value. An exception to a license.
-     * 
-     * @param licenseException
-     */
+    * Set the 'licenseException' element value. An exception to a license.
+    * 
+    * @param licenseException
+    */
     public void setLicenseException(LicenseException licenseException) {
         this.licenseException = licenseException;
     }
