@@ -76,60 +76,61 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
     public void start(IClassHolder holder) {
     	 // for constructors 
     	
-		 if(!(holder instanceof EnumerationClassHolder)) {     		
-			AST ast = ClassHolderHelper.getAST((ClassHolder)holder);
-			
-			SingleVariableDeclaration param = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param1 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param2 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param3 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param4 = ast.newSingleVariableDeclaration();
-	    	SingleVariableDeclaration param5 = ast.newSingleVariableDeclaration();
-			
-			SuperConstructorInvocation sci1 = ast.newSuperConstructorInvocation();
-			SuperConstructorInvocation sci2 = ast.newSuperConstructorInvocation();
+		 if(!(holder instanceof EnumerationClassHolder)) {
+			 AST ast = ClassHolderHelper.getAST((ClassHolder)holder);
 			 
-			MethodDeclaration constr = ast.newMethodDeclaration();
-			MethodDeclaration constr2 = ast.newMethodDeclaration();
+			 SingleVariableDeclaration param = ast.newSingleVariableDeclaration();
+			 SingleVariableDeclaration param1 = ast.newSingleVariableDeclaration();
+			 SingleVariableDeclaration param2 = ast.newSingleVariableDeclaration();
+			 SingleVariableDeclaration param3 = ast.newSingleVariableDeclaration();
+			 SingleVariableDeclaration param4 = ast.newSingleVariableDeclaration();
+	    	 SingleVariableDeclaration param5 = ast.newSingleVariableDeclaration();
+			
+			 SuperConstructorInvocation sci1 = ast.newSuperConstructorInvocation();
+			 SuperConstructorInvocation sci2 = ast.newSuperConstructorInvocation();
+			 
+			 MethodDeclaration constr = ast.newMethodDeclaration();
+		   	 MethodDeclaration constr2 = ast.newMethodDeclaration();
 							
-			Block block1 = ast.newBlock() ;
-			Block block2 = ast.newBlock() ;
+			 Block block1 = ast.newBlock() ;
+			 Block block2 = ast.newBlock() ;
 			
-			String param_name = "Id"; 
-			String param_name1 = "modelStore";
-			String param_name2 = "documentUri";
-			String param_name3 = "id";
-	    	String param_name4 = "copyManager";
-			String param_name5 = "create";
+			 String param_name = "Id"; 
+			 String param_name1 = "modelStore";
+			 String param_name2 = "documentUri";
+			 String param_name3 = "id";
+	    	 String param_name4 = "copyManager";
+			 String param_name5 = "create";
 			
-			Name param_type = ast.newName("String"); 
-			Name param_type1 = ast.newName("IModelStore");
-			Name param_type2 = ast.newName("String");
-			Name param_type3 = ast.newName("String");
-			Name param_type4 = ast.newName("ModelCopyManager");        
-			Name param_type5 = ast.newName("Boolean");                
+			 Name param_type = ast.newName("String"); 
+			 Name param_type1 = ast.newName("IModelStore");
+			 Name param_type2 = ast.newName("String");
+			 Name param_type3 = ast.newName("String");
+			 Name param_type4 = ast.newName("ModelCopyManager");        
+			 Name param_type5 = ast.newName("Boolean");                
 			
 	
-			String name = holder.getName();  				 																	
-			String name2 = holder.getName();          // Constructor name
-			
-			SimpleName sname = ast.newSimpleName(name);
-		    SimpleName sname2 = ast.newSimpleName(name2);
+			 String name = holder.getName();  				 																	
+			 String name2 = holder.getName();          // Constructor name
+			 
+			 			
+		   	 SimpleName sname = ast.newSimpleName(name);
+		     SimpleName sname2 = ast.newSimpleName(name2);
 		     
-		    constr.setName(sname); 
-		    constr2.setName(sname2);  
+		     constr.setName(sname); 
+		     constr2.setName(sname2);  
  	        
-		    constr.setConstructor(true); 
-		    constr2.setConstructor(true); 
+		     constr.setConstructor(true); 
+		     constr2.setConstructor(true); 
 			
 		     param.setName(ast.newSimpleName(param_name));				    
-			 param1.setName(ast.newSimpleName(param_name1));
+		     param1.setName(ast.newSimpleName(param_name1));
 		     param2.setName(ast.newSimpleName(param_name2));
      	     param3.setName(ast.newSimpleName(param_name3));
 		     param4.setName(ast.newSimpleName(param_name4));
 		     param5.setName(ast.newSimpleName(param_name5));
 		    
-	   	    param.setType(ast.newSimpleType(param_type));
+	   	     param.setType(ast.newSimpleType(param_type));
 		     param1.setType(ast.newSimpleType(param_type1));
 		     param2.setType(ast.newSimpleType(param_type2));
 		     param3.setType(ast.newSimpleType(param_type3));
