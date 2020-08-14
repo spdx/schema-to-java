@@ -19,6 +19,10 @@ public class Relationship extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "Relationship";
+    }
+
     /** 
      * Get the 'comment' element value.
      * 

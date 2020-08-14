@@ -17,6 +17,10 @@ public class ListedLicense extends License
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "ListedLicense";
+    }
+
     /** 
      * Get the 'isDeprecatedLicenseId' element value.
      * 

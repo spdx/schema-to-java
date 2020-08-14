@@ -23,6 +23,10 @@ public class SpdxItem extends SpdxElement
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "SpdxItem";
+    }
+
     /** 
      * Get the 'licenseComments' element value. The licenseComments property allows the preparer of the SPDX document to describe why the licensing in spdx:licenseConcluded was chosen.
      * 

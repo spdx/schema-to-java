@@ -14,6 +14,10 @@ public class ByteOffsetPointer extends SinglePointer
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "ByteOffsetPointer";
+    }
+
     /** 
      * Get the 'offset' element value.
      * 

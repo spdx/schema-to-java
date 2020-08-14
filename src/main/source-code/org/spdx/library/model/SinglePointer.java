@@ -14,6 +14,10 @@ public class SinglePointer extends Pointer
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "SinglePointer";
+    }
+
     /** 
      * Get the 'reference' element value.
      * 

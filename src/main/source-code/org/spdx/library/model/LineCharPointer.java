@@ -14,6 +14,10 @@ public class LineCharPointer extends SinglePointer
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "LineCharPointer";
+    }
+
     /** 
      * Get the 'lineNumber' element value.
      * 

@@ -18,6 +18,10 @@ public class Review extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "Review";
+    }
+
     /** 
      * Get the 'reviewer' element value. The name and, optionally, contact information of the person who performed the review. Values of this property must conform to the agent and tool syntax.
      * 

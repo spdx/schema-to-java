@@ -22,6 +22,10 @@ public class Annotation extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "Annotation";
+    }
+
     /** 
      * Get the 'annotationDate' element value. Identify when the comment was made. This is to be specified according to the combined date and time in the UTC format, as specified in the ISO 8601 standard.
      * 

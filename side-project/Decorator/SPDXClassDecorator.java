@@ -5,6 +5,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
+import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.jdt.core.dom.Type;
@@ -163,6 +164,24 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 		if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {    		
 	        holder.setSuperClassName(m_baseClass);
 		}	
+		// For getType() 		
+	    	
+		  if(!(holder instanceof EnumerationClassHolder)) {     
+		        Modifier modifier = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	        
+		        MethodDeclaration method = ast.newMethodDeclaration(); 		     
+				Type returnType = ast.newSimpleType(ast.newName("String")); 				
+				Block block = ast.newBlock() ;     	
+			    ReturnStatement ret = ast.newReturnStatement(); 			    			    
+			    StringLiteral sl =  ast.newStringLiteral();    
+			    sl.setLiteralValue(holder.getName());
+		       	ret.setExpression(sl);      
+			    block.statements().add(ret);	 			
+			    method.setName(ast.newSimpleName("getType"));
+			    method.modifiers().add(modifier);  	 	            	                         
+	            method.setBody(block); 	            
+	            method.setReturnType2(returnType);                           
+	            holder.addMethod(method);   	        
+	    	}	
  	    	
     } // start() closed here
     

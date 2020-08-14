@@ -23,6 +23,10 @@ public class SimpleLicensingInfo extends AnyLicenseInfo
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "SimpleLicensingInfo";
+    }
+
     /** 
      * Get the list of 'seeAlso' element items.
      * 

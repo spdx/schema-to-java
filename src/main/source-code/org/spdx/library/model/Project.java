@@ -11,4 +11,8 @@ public abstract class Project extends ModelObject
             ModelCopyManager copyManager, Boolean create) {
         super(modelStore, documentUri, id, copyManager, create);
     }
+
+    public String getType() {
+        return "Project";
+    }
 }

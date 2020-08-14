@@ -11,4 +11,8 @@ public abstract class Container extends ModelObject
             ModelCopyManager copyManager, Boolean create) {
         super(modelStore, documentUri, id, copyManager, create);
     }
+
+    public String getType() {
+        return "Container";
+    }
 }

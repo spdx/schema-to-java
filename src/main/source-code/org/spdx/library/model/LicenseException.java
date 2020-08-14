@@ -25,6 +25,10 @@ public class LicenseException extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "LicenseException";
+    }
+
     /** 
      * Get the 'example' element value. Text for examples in describing an SPDX element.
      * 

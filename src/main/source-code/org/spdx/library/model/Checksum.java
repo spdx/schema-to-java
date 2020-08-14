@@ -18,6 +18,10 @@ public class Checksum extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "Checksum";
+    }
+
     /** 
      * Get the 'algorithm' element value. Identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time.
      * 
