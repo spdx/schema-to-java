@@ -5,6 +5,7 @@ import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.Block;
 import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
+import org.eclipse.jdt.core.dom.Expression;
 import org.eclipse.jdt.core.dom.Modifier;
 import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.SimpleName;
@@ -75,8 +76,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
     
 
     public void start(IClassHolder holder) {
-    	 // for constructors 
-    	
+    	   	
 		if(!(holder instanceof EnumerationClassHolder)) {
 			AST ast = ClassHolderHelper.getAST((ClassHolder)holder);
 			 
@@ -164,7 +164,6 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 		if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {    		
 	        holder.setSuperClassName(m_baseClass);
 		}	
-		// For getType() 		
 	    	
 		  if(!(holder instanceof EnumerationClassHolder)) {     
 		        Modifier modifier = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	        
@@ -182,8 +181,9 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 	            method.setReturnType2(returnType);                           
 	            holder.addMethod(method);   	        
 	    	}	
- 	    	
-    } // start() closed here
+ 	  } 
+    
+    
     
   
     public void valueAdded(String basename, boolean collect, String type, FieldDeclaration field,
@@ -191,6 +191,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 
 
    
+    
      public static void main(String args[]) {
 	//System.out.println("hi");
     }
