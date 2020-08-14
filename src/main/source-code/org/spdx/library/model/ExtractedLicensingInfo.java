@@ -8,6 +8,15 @@ public class ExtractedLicensingInfo extends SimpleLicensingInfo
 {
     private String extractedText;
 
+    ExtractedLicensingInfo(String Id) {
+        super(Id);
+    }
+
+    ExtractedLicensingInfo(IModelStore modelStore, String documentUri,
+            String id, ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'extractedText' element value. Verbatim license or licensing notice text that was discovered.
     * 

@@ -10,6 +10,15 @@ public class Relationship extends ModelObject
     private RelationshipType relationshipType;
     private SpdxElement relatedSpdxElement;
 
+    Relationship(String Id) {
+        super(Id);
+    }
+
+    Relationship(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'comment' element value.
     * 

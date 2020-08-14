@@ -13,6 +13,15 @@ public class Snippet extends SpdxItem
     private File snippetFromFile;
     private List<SimpleLicensingInfo> licenseInfoInSnippetList = new ArrayList<SimpleLicensingInfo>();
 
+    Snippet(String Id) {
+        super(Id);
+    }
+
+    Snippet(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the list of 'range' element items. This field defines the byte range in the original host file (in X.2) that the snippet information applies to
     * 

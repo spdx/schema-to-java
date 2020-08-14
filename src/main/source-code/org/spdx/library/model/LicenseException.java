@@ -16,6 +16,15 @@ public class LicenseException extends ModelObject
     private String comment;
     private String licenseExceptionText;
 
+    LicenseException(String Id) {
+        super(Id);
+    }
+
+    LicenseException(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'example' element value. Text for examples in describing an SPDX element.
     * 

@@ -10,6 +10,15 @@ public class ExternalDocumentRef extends ModelObject
     private Checksum checksum;
     private SpdxDocument spdxDocument;
 
+    ExternalDocumentRef(String Id) {
+        super(Id);
+    }
+
+    ExternalDocumentRef(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'externalDocumentId' element value. externalDocumentId is a string containing letters, numbers, ., - and/or + which uniquely identifies an external document within this document.
     * 

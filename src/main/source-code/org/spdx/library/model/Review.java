@@ -9,6 +9,15 @@ public class Review extends ModelObject
     private String comment;
     private Date reviewDate;
 
+    Review(String Id) {
+        super(Id);
+    }
+
+    Review(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'reviewer' element value. The name and, optionally, contact information of the person who performed the review. Values of this property must conform to the agent and tool syntax.
     * 

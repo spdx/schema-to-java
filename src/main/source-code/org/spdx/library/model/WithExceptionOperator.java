@@ -9,6 +9,15 @@ public class WithExceptionOperator extends AnyLicenseInfo
     private AnyLicenseInfo member;
     private LicenseException licenseException;
 
+    WithExceptionOperator(String Id) {
+        super(Id);
+    }
+
+    WithExceptionOperator(IModelStore modelStore, String documentUri,
+            String id, ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'member' element value. A license, or other licensing information, that is a member of the subject license set.
     * 

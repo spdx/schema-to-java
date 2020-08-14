@@ -14,6 +14,15 @@ public class SimpleLicensingInfo extends AnyLicenseInfo
     private String comment;
     private String licenseId;
 
+    SimpleLicensingInfo(String Id) {
+        super(Id);
+    }
+
+    SimpleLicensingInfo(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the list of 'seeAlso' element items.
     * 

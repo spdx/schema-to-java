@@ -5,6 +5,15 @@ public class SinglePointer extends Pointer
 {
     private File reference;
 
+    SinglePointer(String Id) {
+        super(Id);
+    }
+
+    SinglePointer(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'reference' element value.
     * 

@@ -15,6 +15,15 @@ public class CreationInfo extends ModelObject
     private List<String> creatorList = new ArrayList<String>();
     private String licenseListVersion;
 
+    CreationInfo(String Id) {
+        super(Id);
+    }
+
+    CreationInfo(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'comment' element value.
     * 

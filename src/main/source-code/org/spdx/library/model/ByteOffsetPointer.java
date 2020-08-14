@@ -5,6 +5,15 @@ public class ByteOffsetPointer extends SinglePointer
 {
     private String offset;
 
+    ByteOffsetPointer(String Id) {
+        super(Id);
+    }
+
+    ByteOffsetPointer(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'offset' element value.
     * 

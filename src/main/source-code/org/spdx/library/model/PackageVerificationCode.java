@@ -12,6 +12,15 @@ public class PackageVerificationCode extends ModelObject
     private byte[] packageVerificationCodeValue;
     private List<String> packageVerificationCodeExcludedFileList = new ArrayList<String>();
 
+    PackageVerificationCode(String Id) {
+        super(Id);
+    }
+
+    PackageVerificationCode(IModelStore modelStore, String documentUri,
+            String id, ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'packageVerificationCodeValue' element value. The actual package verification code as a hex encoded value.
     * 

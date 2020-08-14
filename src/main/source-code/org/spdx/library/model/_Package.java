@@ -24,6 +24,15 @@ public class _Package extends SpdxItem
     private String sourceInfo;
     private String description;
 
+    _Package(String Id) {
+        super(Id);
+    }
+
+    _Package(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'homepage' element value.
     * 

@@ -15,6 +15,15 @@ public class SpdxElement extends ModelObject
     private List<Annotation> annotationList = new ArrayList<Annotation>();
     private String SPDXID;
 
+    SpdxElement(String Id) {
+        super(Id);
+    }
+
+    SpdxElement(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'name' element value. Identify name of this SpdxElement.
     * 

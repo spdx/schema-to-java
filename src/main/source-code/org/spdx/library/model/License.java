@@ -13,6 +13,15 @@ public class License extends SimpleLicensingInfo
     private String standardLicenseTemplate;
     private String standardLicenseHeader;
 
+    License(String Id) {
+        super(Id);
+    }
+
+    License(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'standardLicenseHeaderTemplate' element value. License template which describes sections of the license header which can be varied. See License Template section of the specification for format information.
     * 

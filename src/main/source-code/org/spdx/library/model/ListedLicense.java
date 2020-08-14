@@ -8,6 +8,15 @@ public class ListedLicense extends License
 {
     private Boolean isDeprecatedLicenseId;
 
+    ListedLicense(String Id) {
+        super(Id);
+    }
+
+    ListedLicense(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'isDeprecatedLicenseId' element value.
     * 

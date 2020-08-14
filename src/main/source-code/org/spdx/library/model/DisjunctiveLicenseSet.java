@@ -11,6 +11,15 @@ public class DisjunctiveLicenseSet extends AnyLicenseInfo
 {
     private List<AnyLicenseInfo> memberList = new ArrayList<AnyLicenseInfo>();
 
+    DisjunctiveLicenseSet(String Id) {
+        super(Id);
+    }
+
+    DisjunctiveLicenseSet(IModelStore modelStore, String documentUri,
+            String id, ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the list of 'member' element items. A license, or other licensing information, that is a member of the subject license set.
     * 

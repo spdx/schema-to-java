@@ -10,6 +10,15 @@ public class ReferenceType extends ModelObject
     private String externalReferenceSite;
     private String documentation;
 
+    ReferenceType(String Id) {
+        super(Id);
+    }
+
+    ReferenceType(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'contextualExample' element value. Example for use of the external repository identifier
     * 

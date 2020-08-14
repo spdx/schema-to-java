@@ -11,6 +11,15 @@ public class ExternalRef extends ModelObject
     private String referenceLocator;
     private ReferenceType referenceType;
 
+    ExternalRef(String Id) {
+        super(Id);
+    }
+
+    ExternalRef(IModelStore modelStore, String documentUri, String id,
+            ModelCopyManager copyManager, Boolean create) {
+        super(modelStore, documentUri, id, copyManager, create);
+    }
+
     /** 
     * Get the 'comment' element value.
     * 
