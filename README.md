@@ -95,19 +95,32 @@ The classes are to be extended by ```ModelObject.java``` provided the generated 
 
 
  **<h3>B. Addition of constructors </h3>**
- Here, we added two parameterized constructors to all non-enum classes. 
+ Here, we add two parameterized constructors to all the non-enum classes. 
  To do this:
  
- 1. The start() of SPDXClassDecorator was added some lines of code to add constructor. For referrence view the code in ```side-project/Decorator/ogr/spdx/jibx```. 
+ 1. Add the lines of code to the start() of SPDXClassDecorator to add constructor. For referrence view the code in ```side-project/Decorator/ogr/spdx/jibx```. 
  
- 2. The ```ModelObject.java``` class in ```src/main/source-code/org/spdx/library/model``` was modified. The new ModelObject.java class is completely taken from ```https://github.com/spdx/Spdx-Java-Library/blob/master/src/main/java/org/spdx/library/model/ModelObject.java```
+ 2. The ```ModelObject.java``` class in ```src/main/source-code/org/spdx/library/model``` is to be modified. The new ModelObject.java class will be completely taken from ```https://github.com/spdx/Spdx-Java-Library/blob/master/src/main/java/org/spdx/library/model/ModelObject.java```
   
- 3. Compile the SPDXClassDecorator.java and run by <I>**```$ mvn install```**</I>.
+ 3. Creat a class ```ClassHolderHelper``` to access methods of AST. This will help in calling and reusing the AST methods to complete our above task.  For referrence view the code in ```side-project/ClassHolderHelper```.
+  
+ 4. Compile the SPDXClassDecorator.java and run by <I>**```$ mvn install```**</I>.
  
- 4. Switch to main-project and run(schema-to-java) by <I>**```$ mvn jibx:schema-codegen```**</I>
+ 5. Switch to main-project and run(schema-to-java) by <I>**```$ mvn jibx:schema-codegen```**</I>
  
+ 
+ 
+ **<h3>C. Addition of getType() method</h3>**
+ The getType() method is to be added to all the non-enum classes.
+ To do this:
+ 
+ 1. Add more codes to SPDXClassDecorator to add method. Here again we call many methods using ClassHolderHelper. We add return type of method, access modifiers, block and return statement to the method getType(). This piece of code is also written in start().
+  
+ 2. Compile the SPDXClassDecorator.java and run by <I>**```$ mvn install```**</I>.
+ 
+ 3. Switch to main-project and run(schema-to-java) by <I>**```$ mvn jibx:schema-codegen```**</I>
 
-
+ 
 
 
 
