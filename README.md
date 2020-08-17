@@ -6,7 +6,6 @@ Generates Java classes from the SPDX Schema. Here we use the tool, JiBX to perfo
 Either the Sun/Oracle JDK/JRE Variant or OpenJDK. 
 I used OpenJDK 11.0.7.
 
-
 # Installation
 1. Clone or download the repository.
 2. Store the xsd file in ```src/main/config``` directory.
@@ -121,9 +120,6 @@ The classes are to be extended by ```ModelObject.java``` provided the generated 
  3. Switch to main-project and run(schema-to-java) by <I>**```$ mvn jibx:schema-codegen```**</I>
 
  
-
-
-
 
 
 
