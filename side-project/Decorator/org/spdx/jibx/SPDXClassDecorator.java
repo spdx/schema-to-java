@@ -78,8 +78,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
     public void start(IClassHolder holder) {
     	   	
 		if(!(holder instanceof EnumerationClassHolder)) {
-			AST ast = ClassHolderHelper.getAST((ClassHolder)holder);
-			 
+			    AST ast = ClassHolderHelper.getAST((ClassHolder)holder);			 
 			    SingleVariableDeclaration param = ast.newSingleVariableDeclaration();
 			    SingleVariableDeclaration param1 = ast.newSingleVariableDeclaration();
 			    SingleVariableDeclaration param2 = ast.newSingleVariableDeclaration();
