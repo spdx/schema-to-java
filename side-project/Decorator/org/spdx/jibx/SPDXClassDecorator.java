@@ -161,7 +161,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
     }
 		      
         	
-        if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {    		
+        if(holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {    		
 	    holder.setSuperClassName(m_baseClass);
 	}	
 	    	
@@ -187,7 +187,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
     
   
     public void valueAdded(String basename, boolean collect, String type, FieldDeclaration field,
-            MethodDeclaration getmeth, MethodDeclaration setmeth, String descript, IClassHolder holder) {}
+        MethodDeclaration getmeth, MethodDeclaration setmeth, String descript, IClassHolder holder) {}
 
 
    
