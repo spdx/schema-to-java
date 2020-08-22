@@ -6,7 +6,6 @@ Generates Java classes from the SPDX Schema. Here we use the tool, JiBX to perfo
 Either the Sun/Oracle JDK/JRE Variant or OpenJDK. 
 I used OpenJDK 11.0.7.
 
-
 # Installation
 1. Clone or download the repository.
 2. Store the xsd file in ```src/main/config``` directory.
@@ -102,7 +101,7 @@ The classes are to be extended by ```ModelObject.java``` provided the generated 
  
  2. The ```ModelObject.java``` class in ```src/main/source-code/org/spdx/library/model``` is to be modified. The new ModelObject.java class will be completely taken from ```https://github.com/spdx/Spdx-Java-Library/blob/master/src/main/java/org/spdx/library/model/ModelObject.java```
   
- 3. Creat a class ```ClassHolderHelper``` to access methods of AST. This will help in calling and reusing the AST methods to complete our above task.  For referrence view the code in ```side-project/ClassHolderHelper```.
+ 3. Create a class ```ClassHolderHelper``` to access methods of AST. This will help in calling and reusing the AST methods to complete our above task.  For referrence view the code in ```side-project/ClassHolderHelper```.
   
  4. Compile the SPDXClassDecorator.java and run by <I>**```$ mvn install```**</I>.
  
@@ -139,9 +138,6 @@ The classes are to be extended by ```ModelObject.java``` provided the generated 
  6. Switch to main-project and run(schema-to-java) by <I>**```$ mvn jibx:schema-codegen```**</I>.
 
  
-
-
-
 
 
 

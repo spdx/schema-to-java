@@ -1,4 +1,3 @@
-/target/
 .idea
 .classpath
 .project
@@ -6,4 +5,5 @@
 .ant-targets-build.xml
 schema-to-java.eml
 schema-to-java.userlibraries
+/target/
 

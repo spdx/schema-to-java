@@ -20,37 +20,37 @@ public class StartEndPointer extends Pointer
     }
 
     /** 
-     * Get the 'startPointer' element value.
-     * 
-     * @return value
-     */
+    * Get the 'startPointer' element value.
+    * 
+    * @return value
+    */
     public SinglePointer getStartPointer() {
         return startPointer;
     }
 
     /** 
-     * Set the 'startPointer' element value.
-     * 
-     * @param startPointer
-     */
+    * Set the 'startPointer' element value.
+    * 
+    * @param startPointer
+    */
     public void setStartPointer(SinglePointer startPointer) {
         this.startPointer = startPointer;
     }
 
     /** 
-     * Get the 'endPointer' element value.
-     * 
-     * @return value
-     */
+    * Get the 'endPointer' element value.
+    * 
+    * @return value
+    */
     public SinglePointer getEndPointer() {
         return endPointer;
     }
 
     /** 
-     * Set the 'endPointer' element value.
-     * 
-     * @param endPointer
-     */
+    * Set the 'endPointer' element value.
+    * 
+    * @param endPointer
+    */
     public void setEndPointer(SinglePointer endPointer) {
         this.endPointer = endPointer;
     }

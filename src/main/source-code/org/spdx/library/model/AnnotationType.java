@@ -6,11 +6,11 @@ package org.spdx.library.model;
  */
 public enum AnnotationType implements IndividualUriValue {
     /** 
-     * A Review represents an audit and signoff by an individual, organization or tool on the information for an SpdxElement.
-     */
+    * A Review represents an audit and signoff by an individual, organization or tool on the information for an SpdxElement.
+    */
     ANNOTATION_TYPE_REVIEW("annotationType_review"), /** 
-                                                      * Type of annotation which does not fit in any of the pre-defined annotation types.
-                                                      */
+                                                     * Type of annotation which does not fit in any of the pre-defined annotation types.
+                                                     */
     ANNOTATION_TYPE_OTHER("annotationType_other");
     private final String value;
 
