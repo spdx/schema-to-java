@@ -33,6 +33,10 @@ public class _Package extends SpdxItem
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "_Package";
+    }
+
     /** 
     * Get the 'homepage' element value.
     * 

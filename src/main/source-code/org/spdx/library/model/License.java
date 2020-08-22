@@ -22,6 +22,10 @@ public class License extends SimpleLicensingInfo
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "License";
+    }
+
     /** 
     * Get the 'standardLicenseHeaderTemplate' element value. License template which describes sections of the license header which can be varied. See License Template section of the specification for format information.
     * 

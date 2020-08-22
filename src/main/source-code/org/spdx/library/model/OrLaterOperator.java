@@ -17,6 +17,10 @@ public class OrLaterOperator extends AnyLicenseInfo
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "OrLaterOperator";
+    }
+
     /** 
     * Get the 'member' element value. A license, or other licensing information, that is a member of the subject license set.
     * 

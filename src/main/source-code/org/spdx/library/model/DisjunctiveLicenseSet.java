@@ -20,6 +20,10 @@ public class DisjunctiveLicenseSet extends AnyLicenseInfo
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "DisjunctiveLicenseSet";
+    }
+
     /** 
     * Get the list of 'member' element items. A license, or other licensing information, that is a member of the subject license set.
     * 

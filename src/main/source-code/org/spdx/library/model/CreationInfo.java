@@ -24,6 +24,10 @@ public class CreationInfo extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "CreationInfo";
+    }
+
     /** 
     * Get the 'comment' element value.
     * 

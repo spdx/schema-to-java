@@ -26,6 +26,10 @@ public class SpdxDocument extends SpdxElement
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "SpdxDocument";
+    }
+
     /** 
     * Get the list of 'reviewed' element items. Reviewed
     * 

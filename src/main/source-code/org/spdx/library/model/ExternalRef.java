@@ -20,6 +20,10 @@ public class ExternalRef extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "ExternalRef";
+    }
+
     /** 
     * Get the 'comment' element value.
     * 

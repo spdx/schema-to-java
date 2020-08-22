@@ -22,6 +22,10 @@ public class Snippet extends SpdxItem
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "Snippet";
+    }
+
     /** 
     * Get the list of 'range' element items. This field defines the byte range in the original host file (in X.2) that the snippet information applies to
     * 

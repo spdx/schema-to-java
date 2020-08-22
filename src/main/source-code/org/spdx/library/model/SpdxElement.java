@@ -24,6 +24,10 @@ public class SpdxElement extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "SpdxElement";
+    }
+
     /** 
     * Get the 'name' element value. Identify name of this SpdxElement.
     * 

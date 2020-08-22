@@ -15,6 +15,10 @@ public class StartEndPointer extends Pointer
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "StartEndPointer";
+    }
+
     /** 
     * Get the 'startPointer' element value.
     * 

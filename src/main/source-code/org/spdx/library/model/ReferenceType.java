@@ -19,6 +19,10 @@ public class ReferenceType extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "ReferenceType";
+    }
+
     /** 
     * Get the 'contextualExample' element value. Example for use of the external repository identifier
     * 

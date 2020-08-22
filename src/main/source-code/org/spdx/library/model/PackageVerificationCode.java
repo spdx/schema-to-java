@@ -21,6 +21,10 @@ public class PackageVerificationCode extends ModelObject
         super(modelStore, documentUri, id, copyManager, create);
     }
 
+    public String getType() {
+        return "PackageVerificationCode";
+    }
+
     /** 
     * Get the 'packageVerificationCodeValue' element value. The actual package verification code as a hex encoded value.
     * 
