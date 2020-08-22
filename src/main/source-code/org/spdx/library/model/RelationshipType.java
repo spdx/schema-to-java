@@ -4,7 +4,7 @@ package org.spdx.library.model;
 /** 
  * Type of relationship.
  */
-public enum RelationshipType {
+public enum RelationshipType implements IndividualUriValue {
     /** 
      * To be used when SPDXRef-A is an optional component of SPDXRef-B.
      */
@@ -146,6 +146,14 @@ public enum RelationshipType {
                                                                     */
     RELATIONSHIP_TYPE_DEPENDS_ON("relationshipType_dependsOn");
     private final String value;
+
+    public String getLongName() {
+        return "longName";
+    }
+
+    public String getNameSpace() {
+        return "SpdxConstants.SPDX_NAMESPACE";
+    }
 
     private RelationshipType(String value) {
         this.value = value;

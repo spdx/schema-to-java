@@ -4,7 +4,7 @@ package org.spdx.library.model;
 /** 
  * Type of file.
  */
-public enum FileType {
+public enum FileType implements IndividualUriValue {
     /** 
      * The file is associated with an audio file (MIME type of audio/* , ie. .mp3 ); 
     IMAGE if the file is assoicated with an picture image file (MIME type of image/*,  ie. .jpg, .gif  )
@@ -41,6 +41,14 @@ public enum FileType {
                                         */
     FILE_TYPE_APPLICATION("fileType_application");
     private final String value;
+
+    public String getLongName() {
+        return "longName";
+    }
+
+    public String getNameSpace() {
+        return "SpdxConstants.SPDX_NAMESPACE";
+    }
 
     private FileType(String value) {
         this.value = value;

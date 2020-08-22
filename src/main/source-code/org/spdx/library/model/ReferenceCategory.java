@@ -4,7 +4,7 @@ package org.spdx.library.model;
 /** 
  * Category used for ExternalRef
  */
-public enum ReferenceCategory {
+public enum ReferenceCategory implements IndividualUriValue {
     REFERENCE_CATEGORY_SECURITY("referenceCategory_security"), /** 
                                                                 * These point to objects present in the Software Heritage archive by the means of persistent identifiers that are guaranteed to remain stable (persistent) over time.
                                                                 */
@@ -12,6 +12,14 @@ public enum ReferenceCategory {
             "referenceCategory_packageManager"), REFERENCE_CATEGORY_OTHER(
             "referenceCategory_other");
     private final String value;
+
+    public String getLongName() {
+        return "longName";
+    }
+
+    public String getNameSpace() {
+        return "SpdxConstants.SPDX_NAMESPACE";
+    }
 
     private ReferenceCategory(String value) {
         this.value = value;

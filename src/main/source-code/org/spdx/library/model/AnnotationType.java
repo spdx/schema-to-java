@@ -4,7 +4,7 @@ package org.spdx.library.model;
 /** 
  * This type describes the type of annotation. Annotations are usually created when someone reviews the file, and if this is the case the annotation type should be REVIEW.
  */
-public enum AnnotationType {
+public enum AnnotationType implements IndividualUriValue {
     /** 
      * A Review represents an audit and signoff by an individual, organization or tool on the information for an SpdxElement.
      */
@@ -13,6 +13,14 @@ public enum AnnotationType {
                                                       */
     ANNOTATION_TYPE_OTHER("annotationType_other");
     private final String value;
+
+    public String getLongName() {
+        return "longName";
+    }
+
+    public String getNameSpace() {
+        return "SpdxConstants.SPDX_NAMESPACE";
+    }
 
     private AnnotationType(String value) {
         this.value = value;

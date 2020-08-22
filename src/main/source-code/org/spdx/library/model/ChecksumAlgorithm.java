@@ -4,7 +4,7 @@ package org.spdx.library.model;
 /** 
  * Algorighm for Checksums.
  */
-public enum ChecksumAlgorithm {
+public enum ChecksumAlgorithm implements IndividualUriValue {
     /** 
      * Indicates the algorithm used was MD5
      */
@@ -34,6 +34,14 @@ public enum ChecksumAlgorithm {
                                                             */
     CHECKSUM_ALGORITHM_SHA512("checksumAlgorithm_sha512");
     private final String value;
+
+    public String getLongName() {
+        return "longName";
+    }
+
+    public String getNameSpace() {
+        return "SpdxConstants.SPDX_NAMESPACE";
+    }
 
     private ChecksumAlgorithm(String value) {
         this.value = value;
