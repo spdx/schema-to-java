@@ -12,6 +12,7 @@ public enum AnnotationType implements IndividualUriValue {
                                                       * Type of annotation which does not fit in any of the pre-defined annotation types.
                                                       */
     ANNOTATION_TYPE_OTHER("annotationType_other");
+    private String longName;
     private final String value;
 
     public String getLongName() {

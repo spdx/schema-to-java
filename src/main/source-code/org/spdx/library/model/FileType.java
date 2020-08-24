@@ -40,6 +40,7 @@ public enum FileType implements IndividualUriValue {
                                         *  The file is associated with a specific application type (MIME type of application/* )
                                         */
     FILE_TYPE_APPLICATION("fileType_application");
+    private String longName;
     private final String value;
 
     public String getLongName() {

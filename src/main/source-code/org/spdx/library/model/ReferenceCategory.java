@@ -11,6 +11,7 @@ public enum ReferenceCategory implements IndividualUriValue {
     REFERENCE_CATEGORY_PERSISTENT_ID("referenceCategory_persistentId"), REFERENCE_CATEGORY_PACKAGE_MANAGER(
             "referenceCategory_packageManager"), REFERENCE_CATEGORY_OTHER(
             "referenceCategory_other");
+    private String longName;
     private final String value;
 
     public String getLongName() {

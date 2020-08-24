@@ -145,6 +145,7 @@ public enum RelationshipType implements IndividualUriValue {
                                                                     * Is to be used when SPDXRef-A depends on SPDXRef-B.
                                                                     */
     RELATIONSHIP_TYPE_DEPENDS_ON("relationshipType_dependsOn");
+    private String longName;
     private final String value;
 
     public String getLongName() {
