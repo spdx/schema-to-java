@@ -19,6 +19,7 @@ import org.eclipse.jdt.core.dom.Name;
 import org.eclipse.jdt.core.dom.SimpleName;
 
 import org.eclipse.jdt.core.dom.Type;
+import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.ReturnStatement;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
 
@@ -211,7 +212,17 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
  			
 		if(holder instanceof EnumerationClassHolder){
 							
-			holder.addInterface(m_Interface);      
+			holder.addInterface(m_Interface);     
+			
+			SimpleName fieldname = ast.newSimpleName("longName");	
+			VariableDeclarationFragment fragment = ast.newVariableDeclarationFragment();
+			Modifier modifier4 = ast.newModifier(Modifier.ModifierKeyword.PRIVATE_KEYWORD); 
+			fragment.setName(fieldname);
+			FieldDeclaration field = ast.newFieldDeclaration(fragment);
+			Type returnType4 = ast.newSimpleType(ast.newName("String")); 
+			field.modifiers().add(modifier4); 
+		    field.setType(returnType4);
+		    holder.addField(field);
                   
  			InfixExpression  operator = ast.newInfixExpression();			
  					
