@@ -214,15 +214,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 							
 			holder.addInterface(m_Interface);     
 			
-			
-			SPDXNameConverter snc = new SPDXNameConverter();
-			String value="";
-			String text=snc.toConstantName(value);    //replace the parameter by enumeration  values
-			System.out.println(text);
-			   
-			
-			
-			
+						
 			SimpleName fieldname = ast.newSimpleName("longName");	
 			VariableDeclarationFragment fragment = ast.newVariableDeclarationFragment();
 			Modifier modifier4 = ast.newModifier(Modifier.ModifierKeyword.PRIVATE_KEYWORD); 

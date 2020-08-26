@@ -1,10 +1,10 @@
 <binding xmlns:ns1="http://spdx.org/rdf/terms" name="binding" package="org.spdx.library.model" trim-whitespace="true">
   <namespace uri="http://spdx.org/rdf/terms" default="elements"/>
-  <format label="ns1:ReferenceCategory" type="org.spdx.library.model.ReferenceCategory" enum-value-method="xmlValue"/>
-  <format label="ns1:ChecksumAlgorithm" type="org.spdx.library.model.ChecksumAlgorithm" enum-value-method="xmlValue"/>
-  <format label="ns1:RelationshipType" type="org.spdx.library.model.RelationshipType" enum-value-method="xmlValue"/>
-  <format label="ns1:AnnotationType" type="org.spdx.library.model.AnnotationType" enum-value-method="xmlValue"/>
-  <format label="ns1:FileType" type="org.spdx.library.model.FileType" enum-value-method="xmlValue"/>
+  <format label="ns1:ReferenceCategory" type="org.spdx.library.model.ReferenceCategory"/>
+  <format label="ns1:ChecksumAlgorithm" type="org.spdx.library.model.ChecksumAlgorithm"/>
+  <format label="ns1:RelationshipType" type="org.spdx.library.model.RelationshipType"/>
+  <format label="ns1:AnnotationType" type="org.spdx.library.model.AnnotationType"/>
+  <format label="ns1:FileType" type="org.spdx.library.model.FileType"/>
   <mapping abstract="true" type-name="ns1:CreationInfo" class="org.spdx.library.model.CreationInfo">
     <structure ordered="false">
       <value style="element" name="comment" get-method="getComment" set-method="setComment" usage="optional"/>

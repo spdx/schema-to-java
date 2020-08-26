@@ -1,9 +1,5 @@
 package org.spdx.jibx;
 
-import org.eclipse.jdt.core.dom.AST;
-import org.eclipse.jdt.core.dom.EnumDeclaration;
-import org.jibx.schema.codegen.ClassHolder;
-import org.jibx.schema.codegen.ClassHolderHelper;
 import org.jibx.schema.codegen.extend.DefaultNameConverter;
 
 public class SPDXNameConverter extends DefaultNameConverter {
@@ -11,19 +7,20 @@ public class SPDXNameConverter extends DefaultNameConverter {
 	@Override
   	public String toConstantName(String text) {
 		
-	  if(text.contains("_")){
-		  if(text.contains("FILE_TYPE_")){
-			  text=text.replace("FILE_TYPE_","");
-    	  }
-       }
-	  
-	 
-       return text;
+		 
+		  if(text.startsWith("FILE_TYPE_")) 
+			  return text.substring("FILE_TYPE_".length()); 
+		  if(text.startsWith("ANNOTATION_TYPE_"))
+				return text.substring("ANNOTATION_TYPE_".length()); 
+		  if(text.startsWith("CHECKSUM_ALGORITHM_"))
+				return text.substring("CHECKSUM_ALGORITHM_".length()); 
+		  if(text.startsWith("REFERERENCE_CATEGORY_"))
+				return text.substring("REFERERENCE_CATEGORY_".length()); 
+		  if(text.startsWith("RELATIONSHIP_TYPE_"))
+			   return text.substring("RELATIONSHIP_TYPE_".length()); 
+		  else
+			  return (text);
      }
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
 }
