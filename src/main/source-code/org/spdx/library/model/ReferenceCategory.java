@@ -11,11 +11,10 @@ public enum ReferenceCategory implements IndividualUriValue {
     PERSISTENT_ID("referenceCategory_persistentId"), PACKAGE_MANAGER(
             "referenceCategory_packageManager"), OTHER(
             "referenceCategory_other");
-    private String longName;
     private final String value;
 
     public String getLongName() {
-        return "longName";
+        return "value";
     }
 
     public String getNameSpace() {

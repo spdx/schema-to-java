@@ -33,11 +33,10 @@ public enum ChecksumAlgorithm implements IndividualUriValue {
                                          * Indicates the algorithm used was SHA512
                                          */
     SHA512("checksumAlgorithm_sha512");
-    private String longName;
     private final String value;
 
     public String getLongName() {
-        return "longName";
+        return "value";
     }
 
     public String getNameSpace() {
