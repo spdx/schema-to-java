@@ -44,8 +44,6 @@ import org.jibx.schema.codegen.extend.ClassDecorator;
 import org.jibx.schema.codegen.extend.NameMatchDecoratorBase;
 
 public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassDecorator {
-	 
-
 	private String m_baseClass;
     
     private String m_postSetName;
@@ -63,52 +61,46 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
     public void setPostSet(String name) {
         m_postSetName = name;
     }
-
-     public void setPreSet(String name) {
-        m_preSetName = name;
+    
+    public void setPreSet(String name) {
+    	m_preSetName = name;
     }
-
-      public void setPreGet(String name) {
-        m_preGetName = name;
+    
+    public void setPreGet(String name) {
+    	m_preGetName = name;
     }
-      
-      public void setInterface(String name)
-      {
-    	  m_Interface = name;
-      }
-         
+    
+    public void setInterface(String name){
+    	m_Interface = name;
+    }
+    
     public void finish(ElementBase binding, IClassHolder holder) {
     	binding.getClass().getConstructors();
     	if(matchName(holder.getName()) && (m_postSetName != null || m_preSetName != null || m_preGetName != null) ) {  
     		if (binding instanceof ContainerElementBase  ) {
     			ContainerElementBase contain = (ContainerElementBase)binding;
-                contain.setPostsetName(m_postSetName);
+    			contain.setPostsetName(m_postSetName);
                 contain.setPresetName(m_preSetName);
-                contain.setPregetName(m_preGetName);                              
-                
-            } 
+                contain.setPregetName(m_preGetName);   
+    		}
     		else {
-                throw new IllegalStateException("Class " + holder.getFullName() + " is not a data class");
-            }
-           
-        }
-     }
-  
-		
-
+    			throw new IllegalStateException("Class " + holder.getFullName() + " is not a data class");
+    		}
+    	}
+    }
+    
     public void start(IClassHolder holder) {
     	AST ast = ClassHolderHelper.getAST((ClassHolder)holder); 
-   		if(!(holder instanceof EnumerationClassHolder)) {    
-				
-			SingleVariableDeclaration param = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param1 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param2 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param3 = ast.newSingleVariableDeclaration();	
-			SingleVariableDeclaration param4 = ast.newSingleVariableDeclaration();
+    	if(!(holder instanceof EnumerationClassHolder)) {    
+    		SingleVariableDeclaration param = ast.newSingleVariableDeclaration();
+    		SingleVariableDeclaration param1 = ast.newSingleVariableDeclaration();
+    		SingleVariableDeclaration param2 = ast.newSingleVariableDeclaration();
+    		SingleVariableDeclaration param3 = ast.newSingleVariableDeclaration();	
+    		SingleVariableDeclaration param4 = ast.newSingleVariableDeclaration();
 		    SingleVariableDeclaration param5 = ast.newSingleVariableDeclaration();
-				
-			SuperConstructorInvocation sci1 = ast.newSuperConstructorInvocation();
-			SuperConstructorInvocation sci2 = ast.newSuperConstructorInvocation();
+		    
+		    SuperConstructorInvocation sci1 = ast.newSuperConstructorInvocation();
+		    SuperConstructorInvocation sci2 = ast.newSuperConstructorInvocation();
  					 
 			MethodDeclaration constr = ast.newMethodDeclaration();
 			MethodDeclaration constr2 = ast.newMethodDeclaration();
@@ -177,17 +169,17 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 		    block2.statements().add(sci2);
  				   
 			holder.addMethod(constr);  
-			holder.addMethod(constr2);   			    
+			holder.addMethod(constr2);   		
     	}
- 	
- 				
-	    if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {    		
-	        holder.setSuperClassName(m_baseClass);
-	    }	
- 				
- 			
- 		    	
-    	if(!(holder instanceof EnumerationClassHolder)) {     
+    	
+    	
+    	if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {   
+    		holder.setSuperClassName(m_baseClass);
+    	}
+    	
+    	
+    	if(!(holder instanceof EnumerationClassHolder)) {    
+    		
     		Modifier modifier = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	        
 	        MethodDeclaration method = ast.newMethodDeclaration(); 		     
 			Type returnType = ast.newSimpleType(ast.newName("String")); 				
@@ -202,16 +194,12 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
             method.setBody(block); 	            
             method.setReturnType2(returnType);                           
             holder.addMethod(method);   	        
-    	}	
- 				
- 		 	
- 			
- 			
-		if(holder instanceof EnumerationClassHolder){
-							
-			holder.addInterface(m_Interface);     
-			
-			SimpleName fieldname = ast.newSimpleName("longName");	
+    	}
+    	
+    	if(holder instanceof EnumerationClassHolder){
+    		
+    		holder.addInterface(m_Interface);   
+    		SimpleName fieldname = ast.newSimpleName("longName");	
 			VariableDeclarationFragment fragment = ast.newVariableDeclarationFragment();
 			Modifier modifier4 = ast.newModifier(Modifier.ModifierKeyword.PRIVATE_KEYWORD); 
 			fragment.setName(fieldname);
@@ -220,8 +208,8 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 			field.modifiers().add(modifier4); 
 		    field.setType(returnType4);
 		    holder.addField(field);
-                  
- 			InfixExpression  operator = ast.newInfixExpression();			
+		    
+		    InfixExpression  operator = ast.newInfixExpression();			
  					
 			Modifier modifier = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	
 			Modifier modifier2 = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	
@@ -289,22 +277,15 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
             holder.addMethod(Emethod);   
             holder.addMethod(Emethod3);  
             holder.addMethod(Emethod2);  
-		} 
-	
- 			
+    	}
     }
     
+    
+    public void valueAdded(String basename, boolean collect, String type, FieldDeclaration field,
+    		MethodDeclaration getmeth, MethodDeclaration setmeth, String descript, IClassHolder holder) {
+    	
+    }
 	
-
-	public void valueAdded(String basename, boolean collect, String type, FieldDeclaration field,
-        MethodDeclaration getmeth, MethodDeclaration setmeth, String descript, IClassHolder holder) {
-		
-	}
 	
-	
-
-    public static void main(String args[]) {
-		//System.out.println("hi");
-	
-     }
 }
+

@@ -3,7 +3,7 @@ package org.spdx.jibx;
 import org.jibx.schema.codegen.extend.DefaultNameConverter;
 
 public class SPDXNameConverter extends DefaultNameConverter {
-    
+	
 	@Override
   	public String toConstantName(String text) {
 		if(text.startsWith("fileType_"))
