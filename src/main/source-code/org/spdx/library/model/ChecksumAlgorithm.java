@@ -8,31 +8,31 @@ public enum ChecksumAlgorithm implements IndividualUriValue {
     /** 
      * Indicates the algorithm used was MD5
      */
-    md5("checksumAlgorithm_md5"), /** 
+    MD5("checksumAlgorithm_md5"), /** 
                                    * Indicates the algorithm used was MD6
                                    */
-    md6("checksumAlgorithm_md6"), /** 
+    MD6("checksumAlgorithm_md6"), /** 
                                    * Indicates the algorithm used was MD4
                                    */
-    md4("checksumAlgorithm_md4"), /** 
+    MD4("checksumAlgorithm_md4"), /** 
                                    * Indicates the algorithm used was SHA224
                                    */
-    sha224("checksumAlgorithm_sha224"), /** 
+    SHA224("checksumAlgorithm_sha224"), /** 
                                          * Indicates the algorithm used was MD2
                                          */
-    md2("checksumAlgorithm_md2"), /** 
+    MD2("checksumAlgorithm_md2"), /** 
                                    * Indicates the algorithm used was SHA-1
                                    */
-    sha1("checksumAlgorithm_sha1"), /** 
+    SHA1("checksumAlgorithm_sha1"), /** 
                                      * Indicates the algorithm used was SHA384
                                      */
-    sha384("checksumAlgorithm_sha384"), /** 
+    SHA384("checksumAlgorithm_sha384"), /** 
                                          * Indicates the algorithm used was SHA256
                                          */
-    sha256("checksumAlgorithm_sha256"), /** 
+    SHA256("checksumAlgorithm_sha256"), /** 
                                          * Indicates the algorithm used was SHA512
                                          */
-    sha512("checksumAlgorithm_sha512");
+    SHA512("checksumAlgorithm_sha512");
     private String longName;
     private final String value;
 

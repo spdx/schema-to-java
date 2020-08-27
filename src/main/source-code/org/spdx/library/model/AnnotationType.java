@@ -8,10 +8,10 @@ public enum AnnotationType implements IndividualUriValue {
     /** 
      * A Review represents an audit and signoff by an individual, organization or tool on the information for an SpdxElement.
      */
-    review("annotationType_review"), /** 
+    REVIEW("annotationType_review"), /** 
                                       * Type of annotation which does not fit in any of the pre-defined annotation types.
                                       */
-    other("annotationType_other");
+    OTHER("annotationType_other");
     private String longName;
     private final String value;
 

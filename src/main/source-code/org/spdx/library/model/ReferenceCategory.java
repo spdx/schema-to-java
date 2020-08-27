@@ -5,11 +5,11 @@ package org.spdx.library.model;
  * Category used for ExternalRef
  */
 public enum ReferenceCategory implements IndividualUriValue {
-    security("referenceCategory_security"), /** 
+    SECURITY("referenceCategory_security"), /** 
                                              * These point to objects present in the Software Heritage archive by the means of persistent identifiers that are guaranteed to remain stable (persistent) over time.
                                              */
-    persistentId("referenceCategory_persistentId"), packageManager(
-            "referenceCategory_packageManager"), other(
+    PERSISTENT_ID("referenceCategory_persistentId"), PACKAGE_MANAGER(
+            "referenceCategory_packageManager"), OTHER(
             "referenceCategory_other");
     private String longName;
     private final String value;

@@ -78,18 +78,16 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
       }
          
     public void finish(ElementBase binding, IClassHolder holder) {
-    	
-      binding.getClass().getConstructors();
-      
-        if (matchName(holder.getName()) && (m_postSetName != null || m_preSetName != null || m_preGetName != null) ) {   //false condition or control don't flow here
-             	     
-        	if (binding instanceof ContainerElementBase  ) {
-                ContainerElementBase contain = (ContainerElementBase)binding;
+    	binding.getClass().getConstructors();
+    	if(matchName(holder.getName()) && (m_postSetName != null || m_preSetName != null || m_preGetName != null) ) {  
+    		if (binding instanceof ContainerElementBase  ) {
+    			ContainerElementBase contain = (ContainerElementBase)binding;
                 contain.setPostsetName(m_postSetName);
                 contain.setPresetName(m_preSetName);
                 contain.setPregetName(m_preGetName);                              
                 
-            } else {
+            } 
+    		else {
                 throw new IllegalStateException("Class " + holder.getFullName() + " is not a data class");
             }
            
@@ -100,8 +98,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 
     public void start(IClassHolder holder) {
     	AST ast = ClassHolderHelper.getAST((ClassHolder)holder); 
-  	   
-		if(!(holder instanceof EnumerationClassHolder)) {    
+   		if(!(holder instanceof EnumerationClassHolder)) {    
 				
 			SingleVariableDeclaration param = ast.newSingleVariableDeclaration();
 			SingleVariableDeclaration param1 = ast.newSingleVariableDeclaration();
@@ -214,7 +211,6 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 							
 			holder.addInterface(m_Interface);     
 			
-						
 			SimpleName fieldname = ast.newSimpleName("longName");	
 			VariableDeclarationFragment fragment = ast.newVariableDeclarationFragment();
 			Modifier modifier4 = ast.newModifier(Modifier.ModifierKeyword.PRIVATE_KEYWORD); 
@@ -308,7 +304,7 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 	
 
     public static void main(String args[]) {
-		System.out.println("hi");
+		//System.out.println("hi");
 	
      }
 }
