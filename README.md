@@ -133,7 +133,7 @@ The classes are to be extended by ```ModelObject.java``` provided the generated 
   
  4. Add a new method ```getIndividualURI()``` with String as return type. It's return statement calls both previously created methods ie, getLongName() and getNameSpace(). These methods are created by writting codes in start() of SPDXClassDecorator.java.
  
- 5. Creat a new ```SPDXNameConverter.java``` to modify the enum values of enum classes. This class will be invoked from ```GlobalCustomization.xml``` by adding ```name-converter``` attribute. For referrence view the code in ```side-project/SPDXNameConverter.java```.
+ 5. Create a new ```SPDXNameConverter.java``` to modify the enum values of enum classes. This class will be invoked from ```GlobalCustomization.xml``` by adding ```name-converter``` attribute. For referrence view the code in ```side-project/SPDXNameConverter.java```.
  
  6. Compile the SPDXClassDecorator.java and run by <I>**```$ mvn install```**</I>.
  

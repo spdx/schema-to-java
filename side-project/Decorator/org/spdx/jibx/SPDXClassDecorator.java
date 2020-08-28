@@ -48,178 +48,106 @@ public class SPDXClassDecorator extends NameMatchDecoratorBase implements ClassD
 	
 	public void start(IClassHolder holder) {
 		AST ast = ClassHolderHelper.getAST((ClassHolder)holder);
-		if(!(holder instanceof EnumerationClassHolder)) {  
-			SingleVariableDeclaration param = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param1 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param2 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param3 = ast.newSingleVariableDeclaration();	
-			SingleVariableDeclaration param4 = ast.newSingleVariableDeclaration();
-			SingleVariableDeclaration param5 = ast.newSingleVariableDeclaration();
-				
-			SuperConstructorInvocation sci1 = ast.newSuperConstructorInvocation();
-			SuperConstructorInvocation sci2 = ast.newSuperConstructorInvocation();
- 					 
-			MethodDeclaration constr = ast.newMethodDeclaration();
-			MethodDeclaration constr2 = ast.newMethodDeclaration();
- 									
-			Block block1 = ast.newBlock() ;
-			Block block2 = ast.newBlock() ;
- 					
-			String param_nameId = "Id"; 
-			String param_nameModelStore = "modelStore";
-			String param_nameDocumentUri = "documentUri";
-			String param_name_id = "id";
-			String param_nameCopyManager = "copyManager";
-			String param_nameCreate = "create";
- 					
-			Name param_type = ast.newName("String"); 
-			Name param_type1 = ast.newName("IModelStore");
-			Name param_type2 = ast.newName("String");
-			Name param_type3 = ast.newName("String");
-			Name param_type4 = ast.newName("ModelCopyManager");        
-			Name param_type5 = ast.newName("Boolean");                
- 					
- 			String constructorName1 = holder.getName();  				 																	
-			String constructorName2 = holder.getName();         
- 					
-			SimpleName sname = ast.newSimpleName(constructorName1);
-			SimpleName sname2 = ast.newSimpleName(constructorName2);
- 			     
-			constr.setName(sname); 
-			constr2.setName(sname2);  
- 		 	        
-			constr.setConstructor(true); 
-			constr2.setConstructor(true); 
- 					
-			param.setName(ast.newSimpleName(param_nameId));				    
-			param1.setName(ast.newSimpleName(param_nameModelStore));
-			param2.setName(ast.newSimpleName(param_nameDocumentUri));
-			param3.setName(ast.newSimpleName(param_name_id));
-			param4.setName(ast.newSimpleName(param_nameCopyManager));
-			param5.setName(ast.newSimpleName(param_nameCreate));
- 				    
-			param.setType(ast.newSimpleType(param_type));
-			param1.setType(ast.newSimpleType(param_type1));
-			param2.setType(ast.newSimpleType(param_type2));
-			param3.setType(ast.newSimpleType(param_type3));
-			param4.setType(ast.newSimpleType(param_type4));
-			param5.setType(ast.newSimpleType(param_type5));
+		 if(!(holder instanceof EnumerationClassHolder)) {    
+			 String constructorName=holder.getName();
+        	String ParamNames1[]= {"Id"};
+        	String ParamTypes1[]= {"String"};
+        	SuperConstructorInvocation superConstructorInvocation1 = ast.newSuperConstructorInvocation();
+	    	MethodDeclaration constructor1 = ast.newMethodDeclaration();
+			createConstructor(ParamNames1, ParamTypes1, constructor1, superConstructorInvocation1, constructorName, holder, ast) ;
+								
+		    String	ParamNames2[]= {"modelStore", "documentUri","id", "copyManager","create"};
+		    String ParamTypes2[]= {"IModelStore","String","String","ModelCopyManager","Boolean"};	
+		    SuperConstructorInvocation superConstructorInvocation2 = ast.newSuperConstructorInvocation();
+		    MethodDeclaration constructor2 = ast.newMethodDeclaration();		 
+		    createConstructor(ParamNames2, ParamTypes2, constructor2, superConstructorInvocation2, constructorName, holder, ast) ;  
 			
-			constr.parameters().add(param);
-			constr2.parameters().add(param1);
-			constr2.parameters().add(param2);
-			constr2.parameters().add(param3);
-			constr2.parameters().add(param4);
-			constr2.parameters().add(param5);
-			
-			constr.setBody(block1);
-			constr2.setBody(block2);
-			
-			sci1.arguments().add(ast.newSimpleName(param_nameId));  
-			sci2.arguments().add(ast.newSimpleName(param_nameModelStore)); 	
-			sci2.arguments().add(ast.newSimpleName(param_nameDocumentUri)); 
-			sci2.arguments().add(ast.newSimpleName(param_name_id)); 
-			sci2.arguments().add(ast.newSimpleName(param_nameCopyManager)); 
-			sci2.arguments().add(ast.newSimpleName(param_nameCreate)); 
-			
-			block1.statements().add(sci1);
-			block2.statements().add(sci2);
- 				   
-			holder.addMethod(constr);  
-			holder.addMethod(constr2);   	
-			
-			Modifier modifierGetType = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	 
-			MethodDeclaration methodGetType = ast.newMethodDeclaration(); 	
-			Type returnType = ast.newSimpleType(ast.newName("String")); 				
-			Block blockGetType = ast.newBlock() ;     
-			ReturnStatement retGetType = ast.newReturnStatement(); 	
-			StringLiteral stringLiteral1 =  ast.newStringLiteral();    
-			stringLiteral1.setLiteralValue(holder.getName());
-			retGetType.setExpression(stringLiteral1);      
-			blockGetType.statements().add(retGetType);	
-			methodGetType.setName(ast.newSimpleName("getType"));
-			methodGetType.modifiers().add(modifierGetType);  
-			methodGetType.setBody(blockGetType); 	
-			methodGetType.setReturnType2(returnType); 
-			holder.addMethod(methodGetType); 
-		}
+         	Modifier modifierGetType = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	        
+         	Type returnType = ast.newSimpleType(ast.newName("String")); 
+         	String methodNameGetType="getType";
+		    String returnParameterGetType= holder.getName();	             
+            createMethod(modifierGetType, returnType, returnParameterGetType,  methodNameGetType,  holder,  ast, null);
+
+    	}
+	 		
 		else {
-			holder.addInterface(m_Interface);    
-			
-			InfixExpression  infix_operator = ast.newInfixExpression();			
- 					
-			Modifier modifierGetLongName = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	
-			Modifier modifierGetIndividualURI = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	
+			holder.addInterface(m_Interface);      //added interface
+				 					
+			Modifier modifierGetLongName = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD);
+			Type returnTypeGetLongName = ast.newSimpleType(ast.newName("String")); 
+			String returnParameterGetLongName= "value";
+			String methodNameGetLongName = "getLongName";
+			createMethod(modifierGetLongName, returnTypeGetLongName, returnParameterGetLongName,  methodNameGetLongName, holder, ast, null);
+						
 			Modifier modifierGetNameSpace = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD);
- 					
+			Type returnTypeGetNameSpace = ast.newSimpleType(ast.newName("String"));
+			String returnParameterGetNameSpace = "SpdxConstants.SPDX_NAMESPACE";
+			String methodNameGetNameSpace = "getNameSpace";
+			createMethod(modifierGetNameSpace, returnTypeGetNameSpace, returnParameterGetNameSpace, methodNameGetNameSpace, holder, ast, null);
+				 			
+			Modifier modifierGetIndividualURI = ast.newModifier(Modifier.ModifierKeyword.PUBLIC_KEYWORD); 	
+			Type returnTypeGetIndividualURI = ast.newSimpleType(ast.newName("String"));
+			String methodNameGetIndividualURI = "getIndividualURI";
 			MethodInvocation miGetLongName = ast.newMethodInvocation();
 			MethodInvocation miGetNameSpace = ast.newMethodInvocation();
- 					 				
 			miGetLongName.setName(ast.newSimpleName("getLongName"));
 			miGetNameSpace.setName(ast.newSimpleName("getNameSpace"));
- 			
+			InfixExpression  infix_operator = ast.newInfixExpression();	
 			infix_operator.setLeftOperand(miGetLongName);
-			infix_operator.setOperator(Operator.PLUS);
-			infix_operator.setRightOperand(miGetNameSpace);
-			
-			ReturnStatement retGetLongName = ast.newReturnStatement();
-			ReturnStatement retGetIndividualURI = ast.newReturnStatement();
-			ReturnStatement retGetNameSpace = ast.newReturnStatement();
- 					 									
-			StringLiteral stringLiteral1 =  ast.newStringLiteral();  
-			StringLiteral stringLiteral2 =  ast.newStringLiteral();  
- 					
-			Block blockGetLongName = ast.newBlock() ; 
-			Block blockGetIndividualURI = ast.newBlock() ; 
-			Block blockGetNameSpace = ast.newBlock() ; 
-			
-			MethodDeclaration EmethodGetLongName = ast.newMethodDeclaration(); 
-			MethodDeclaration EmethodGetIndividualURI = ast.newMethodDeclaration(); 
-			MethodDeclaration EmethodGetNameSpace = ast.newMethodDeclaration(); 
-		        
-			Type returnType = ast.newSimpleType(ast.newName("String")); 
-			Type returnType2 = ast.newSimpleType(ast.newName("String"));
-			Type returnType3 = ast.newSimpleType(ast.newName("String"));
-			
-			String paramPassed = "value";
-			String paramPassed1 = "SpdxConstants.SPDX_NAMESPACE";
-			
-			stringLiteral1.setLiteralValue(paramPassed);
-			stringLiteral2.setLiteralValue(paramPassed1);
-			
-			retGetLongName.setExpression(stringLiteral1);   
-			retGetNameSpace.setExpression(stringLiteral2);  
-			retGetIndividualURI.setExpression(infix_operator);
-			
-			blockGetLongName.statements().add(retGetLongName);
-			blockGetIndividualURI.statements().add(retGetIndividualURI);
-			blockGetNameSpace.statements().add(retGetNameSpace);
-			
-			EmethodGetLongName.setName(ast.newSimpleName("getLongName"));
-			EmethodGetIndividualURI.setName(ast.newSimpleName("getIndividualURI"));
-			EmethodGetNameSpace.setName(ast.newSimpleName("getNameSpace"));
-			
-			EmethodGetLongName.modifiers().add(modifierGetLongName);  
-			EmethodGetIndividualURI.modifiers().add(modifierGetIndividualURI);
-			EmethodGetNameSpace.modifiers().add(modifierGetNameSpace);
-			
-			EmethodGetLongName.setBody(blockGetLongName); 
-			EmethodGetIndividualURI.setBody(blockGetIndividualURI); 
-			EmethodGetNameSpace.setBody(blockGetNameSpace); 
-			
-			EmethodGetLongName.setReturnType2(returnType);
-			EmethodGetIndividualURI.setReturnType2(returnType2); 
-			EmethodGetNameSpace.setReturnType2(returnType3); 
-			
-			holder.addMethod(EmethodGetLongName);   
-			holder.addMethod(EmethodGetNameSpace);  
-			holder.addMethod(EmethodGetIndividualURI);  
+		    infix_operator.setOperator(Operator.PLUS);
+		    infix_operator.setRightOperand(miGetNameSpace);		
+			createMethod(modifierGetIndividualURI, returnTypeGetIndividualURI, null, methodNameGetIndividualURI, holder,  ast, infix_operator);
+							
 		} 
 		
 		if( holder.getSuperClassName()==null &&  matchName(holder.getName()) && !(holder instanceof EnumerationClassHolder) )  {    		
 		        holder.setSuperClassName(m_baseClass);
 		}	
 	}
+	
+	public void createMethod(Modifier modifier, Type returnType, String returnParameter, String methodName, IClassHolder holder, AST ast, InfixExpression infix_operator) {
+	    ReturnStatement returnStatement = ast.newReturnStatement(); 
+	    MethodDeclaration methodDeclaration = ast.newMethodDeclaration(); 
+	    StringLiteral  stringLiteral =  ast.newStringLiteral();  
+		Block block = ast.newBlock() ;     
+		if(returnParameter!=null) {
+			stringLiteral.setLiteralValue(returnParameter);
+			returnStatement.setExpression(stringLiteral);  
+		}
+		else
+			returnStatement.setExpression(infix_operator); 				
+        block.statements().add(returnStatement);	
+        SimpleName name=ast.newSimpleName(methodName);
+   	    methodDeclaration.setName(name);
+   	    methodDeclaration.modifiers().add(modifier);  	
+   	    methodDeclaration.setBody(block); 	        
+   	    methodDeclaration.setReturnType2(returnType);        
+        holder.addMethod(methodDeclaration); 
+	}
+
+
+
+    public void createConstructor(String ParamNames [], String ParamType [], MethodDeclaration methodDeclaration, SuperConstructorInvocation superConstructorInvocation,
+    		String constructorName, IClassHolder holder, AST ast) {
+    	for(int i=0;i<ParamNames.length;i++)
+	    {
+    		SingleVariableDeclaration param = ast.newSingleVariableDeclaration();
+    		String paramName = ParamNames[i];
+    		Name paramType = ast.newName(ParamType[i]);
+    		param.setName(ast.newSimpleName(paramName));
+    		param.setType(ast.newSimpleType(paramType));
+    		methodDeclaration.parameters().add(param);
+    		superConstructorInvocation.arguments().add(ast.newSimpleName(paramName)); 	
+	    }
+		
+		Block block = ast.newBlock() ;
+		SimpleName simpleName = ast.newSimpleName(constructorName);
+		methodDeclaration.setName(simpleName); 
+		methodDeclaration.setConstructor(true);
+		methodDeclaration.setBody(block);
+		block.statements().add(superConstructorInvocation);
+		holder.addMethod(methodDeclaration); 
+    }
 	
 	public void valueAdded(String basename, boolean collect, String type, FieldDeclaration field,
         MethodDeclaration getmeth, MethodDeclaration setmeth, String descript, IClassHolder holder) {}

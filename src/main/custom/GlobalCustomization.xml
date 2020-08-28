@@ -1,8 +1,8 @@
 <schema prefer-inline ="true" show-schema="false" import-docs ="true" use-inner="true">
       
-       <class-decorator class="org.spdx.jibx.SPDXClassDecorator" base-class="org.spdx.library.model.ModelObject"  interface="IndividualUriValue"   />
+       <class-decorator class="org.spdx.jibx.SPDXClassDecorator"  base-class="org.spdx.library.model.ModelObject"  interface="IndividualUriValue"   />
        
-       <name-converter class="org.spdx.jibx.SPDXNameConverter"/>
+       <name-converter class="org.spdx.jibx.SPDXNameConverter"  />
   
    <!-- add  list-class="Collection" in class-decorator element-->        
 </schema>
