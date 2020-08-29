@@ -22,19 +22,19 @@ public class ExtractedLicensingInfo extends SimpleLicensingInfo
     }
 
     /** 
-    * Get the 'extractedText' element value. Verbatim license or licensing notice text that was discovered.
-    * 
-    * @return value
-    */
+     * Get the 'extractedText' element value. Verbatim license or licensing notice text that was discovered.
+     * 
+     * @return value
+     */
     public String getExtractedText() {
         return extractedText;
     }
 
     /** 
-    * Set the 'extractedText' element value. Verbatim license or licensing notice text that was discovered.
-    * 
-    * @param extractedText
-    */
+     * Set the 'extractedText' element value. Verbatim license or licensing notice text that was discovered.
+     * 
+     * @param extractedText
+     */
     public void setExtractedText(String extractedText) {
         this.extractedText = extractedText;
     }
